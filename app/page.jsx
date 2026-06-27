@@ -1,4 +1,6 @@
 import Image from "next/image";
+
+import Navbar from "./components/Navbar";
 import Title from "./components/Title";
 import Button from "./components/Button";
 import ServiceCard from "./components/ServiceCard";
@@ -7,6 +9,7 @@ export default function Home() {
   return (
     <div>
       <main>
+        <Navbar />
         <section className="typography">
           <span className="hero">Hero font</span>
           <h1>h1 header 1</h1>

@@ -18,12 +18,15 @@ const Button = ({ text, icon, variant = "primary", onClick }) => {
     <button
       onClick={onClick}
       className={`
+        flex
+        flex-col
         w-fit
-        px-8 py-4
+        h-fit
+        px-5 py-2.5
         rounded-default
         transition-all duration-300
         cursor-pointer
-        body-bold
+        font-semibold
         shadow-default
         ${variants[variant]}
       `}
