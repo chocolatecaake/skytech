@@ -15,7 +15,9 @@ import AccordionSection from "./components/Accordin";
 
 export default function Home() {
   return (
-    <div className="bg-accent">
+    <div>
+      <Navbar />
+      <NavBar2 />
       <main>
         <section className="typography">
           <span className="hero">Hero font</span>
