@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Title from "./components/Title";
 import Button from "./components/Button";
 import ServiceCard from "./components/ServiceCard";
-import NavBar from "./components/NavBar2";
+import NavBar2 from "./components/NavBar2";
 import Footer from "./components/Footer";
 import AccordionSection from "./components/Accordin";
 
