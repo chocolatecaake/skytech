@@ -1,16 +1,21 @@
 import Image from "next/image";
 
 import Navbar from "./components/Navbar";
+import NavBar2 from "./components/NavBar2";
+
 import Title from "./components/Title";
 import Button from "./components/Button";
 import ServiceCard from "./components/ServiceCard";
-import NavBar2 from "./components/NavBar2";
+import WhatsAppButton from "./components/Whatsapp";
+import { FaWhatsapp } from "react-icons/fa";
+
+// import NavBar2 from "./components/NavBar2";
 import Footer from "./components/Footer";
 import AccordionSection from "./components/Accordin";
 
 export default function Home() {
   return (
-    <div className = "bg-accent">
+    <div className="bg-accent">
       <main>
         <section className="typography">
           <span className="hero">Hero font</span>
@@ -77,9 +82,15 @@ export default function Home() {
               icon={<Image src={"/next.svg"} alt="" width={88} height={88} />}
             />
           </div>
-          <AccordionSection />
+          {/* <AccordionSection /> */}
+          <WhatsAppButton
+            phoneNumber="+971501234567"
+            message="Hi! I'd like to request a quote."
+          >
+            <FaWhatsapp size={40} className="text-white" />
+          </WhatsAppButton>
         </section>
-        <Footer/>
+        <Footer />
       </main>
     </div>
   );
