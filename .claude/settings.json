@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm -rf /Users/mohammedzaminkhan/Developer/skytech/.next)"
+    ],
+    "additionalDirectories": [
+      "/Users/mohammedzaminkhan/Developer/skytech/.next"
+    ]
+  }
+}

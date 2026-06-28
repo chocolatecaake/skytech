@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Title from "./components/Title";
 import Button from "./components/Button";
 import ServiceCard from "./components/ServiceCard";
+import AccordionSection from "./components/Accordin";
 
 export default function Home() {
   return (
@@ -75,6 +76,7 @@ export default function Home() {
               icon={<Image src={"/next.svg"} alt="" width={88} height={88} />}
             />
           </div>
+          <AccordionSection />
         </section>
       </main>
     </div>
