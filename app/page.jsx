@@ -1,15 +1,17 @@
 import Image from "next/image";
+
+import Navbar from "./components/Navbar";
 import Title from "./components/Title";
 import Button from "./components/Button";
 import ServiceCard from "./components/ServiceCard";
 import NavBar from "./components/NavBar2";
 import Footer from "./components/Footer";
+import AccordionSection from "./components/Accordin";
 
 export default function Home() {
   return (
     <div className = "bg-accent">
       <main>
-        <NavBar />
         <section className="typography">
           <span className="hero">Hero font</span>
           <h1>h1 header 1</h1>
@@ -75,6 +77,7 @@ export default function Home() {
               icon={<Image src={"/next.svg"} alt="" width={88} height={88} />}
             />
           </div>
+          <AccordionSection />
         </section>
         <Footer/>
       </main>
