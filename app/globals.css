@@ -12,12 +12,15 @@
   --blue-accent-half: rgba(241, 246, 254, 1);
   --dark-blue: rgba(0, 67, 168, 1);
 
+  --dot-color: rgba(0, 0, 0, 0.08);
+
   --space-section: 96px;
   --space-content: 64px;
   --space-heading: 32px;
 
   --radius: 8px;
   --shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --shadow-blue: 0px 2px 4px rgba(119, 174, 255, 0.5);
 }
 
 @theme inline {
@@ -38,6 +41,28 @@
   --radius-default: var(--radius);
 
   --shadow-default: var(--shadow);
+  --shadow-blue: var(--shadow-blue);
+
+  --animate-marquee: marquee var(--duration) infinite linear;
+
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -59,6 +84,13 @@ html {
 
 body {
   background: var(--background);
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.06) 2px,
+    transparent 1.1px
+  );
+
+  background-size: 30px 30px;
   color: var(--primary);
 }
 

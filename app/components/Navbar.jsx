@@ -30,7 +30,7 @@ const links = [
 ];
 const Navbar = () => {
   return (
-    <header className="bg-primary py-2 shadow-xl sticky top-0">
+    <header className="bg-primary py-2 shadow-xl z-1 sticky top-0">
       <div className="flex justify-between items-center container mx-auto">
         <Image
           src="/assets/logo.png"
@@ -51,9 +51,7 @@ const Navbar = () => {
           </ul>
         </nav>
         <Button text="Request a quote" variant="CTA" />
-        {/* <div className="xl:hidden">
-          <NavMobile />
-        </div> */}
+        <div className="xl:hidden">{/* <NavMobile /> */}</div>
       </div>
     </header>
   );

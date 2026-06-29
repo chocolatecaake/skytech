@@ -9,6 +9,8 @@ import ServiceCard from "./components/ServiceCard";
 import WhatsAppButton from "./components/Whatsapp";
 import { FaWhatsapp } from "react-icons/fa";
 
+import { Testimonials } from "./components/Testimonials";
+
 // import NavBar2 from "./components/NavBar2";
 import Footer from "./components/Footer";
 import AccordionSection from "./components/Accordin";
@@ -17,7 +19,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <NavBar2 />
+      {/* <NavBar2 /> */}
       <main>
         <section className="typography">
           <span className="hero">Hero font</span>
@@ -50,7 +52,7 @@ export default function Home() {
           <Button text="Secondary" variant="secondary" />
           <Button text="Badge" variant="badge" />
         </section>
-        <section className="bg-primary flex">
+        <section className="bg-primary">
           <Button text="Tertiary" variant="tertiary" />
           <Button
             variant="glassBadge"
@@ -91,6 +93,9 @@ export default function Home() {
           >
             <FaWhatsapp size={40} className="text-white" />
           </WhatsAppButton>
+        </section>
+        <section>
+          <Testimonials />
         </section>
         <Footer />
       </main>
