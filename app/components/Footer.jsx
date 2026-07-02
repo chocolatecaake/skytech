@@ -63,11 +63,11 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className = "flex justify-between px-24 pb-6 items-center">
-        <h1 className="text-8xl tracking-widest font-black bg-gradient-to-t from-[#77aeff] via-[#547ab3] to-[#486699] bg-clip-text text-transparent">
+      <div className = "flex flex-col md:flex-row justify-between px-24 pb-6 items-center">
+        <h1 className="footer-font tracking-widest bg-gradient-to-t from-[#77aeff]/0 via-[#547ab3]/75 to-[#486699]/100 bg-clip-text text-transparent">
           SKYTECH
         </h1> 
-        <span className = "text-gray-400 text-sm">© 2026 SkyTech General Contracting LLC. All rights reserved.</span>
+        <span className = "text-white text-sm">© 2026 SkyTech General Contracting LLC. All rights reserved.</span>
       </div> 
     </footer>
   );

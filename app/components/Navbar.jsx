@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import NavMobile from "./NavMobile";
 import Button from "./Button";
+import {useState, useEffect} from "react";
 
 const links = [
   {
@@ -30,8 +32,25 @@ const links = [
 ];
 
 const Navbar = () => {
+
+  const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="bg-primary shadow-xl z-1 border-b-1 border-white sticky top-0">
+    <header className={`fixed w-full p-2 text-white transition-all duration-200 z-1
+         ${scrolled
+        ? "bg-[#0b1c2c] shadow-lg border-white "
+        : "bg-transparent backdrop-blur-md"
+      }`}
+    >
       <div className="min-h-[64px] flex justify-between items-center container mx-auto px-4 xl:px-0">
         <Image
           src="/assets/logo.webp"
@@ -40,7 +59,8 @@ const Navbar = () => {
           alt="skytech logo"
         />
 
-        <nav className="hidden xl:block xl:flex items-center gap-12">
+        <nav className={`hidden xl:block xl:flex items-center gap-12
+           ${scrolled ? "bg-transparent" : "bg-white/20 backdrop-blur-md rounded-xl shadow-lg border border-white p-4"}`}>
           <ul className="flex gap-12">
             {links.map((link, index) => {
               return (
