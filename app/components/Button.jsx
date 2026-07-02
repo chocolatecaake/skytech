@@ -6,7 +6,8 @@ const Button = ({ text, icon, variant = "primary", onClick }) => {
 
     secondary: "bg-white hover:bg-accent",
 
-    tertiary: "bg-white/10 text-white inset-border hover:bg-accent",
+    tertiary:
+      "bg-white/10 text-white inset-border backdrop-blur hover:bg-accent",
 
     // tertiary:
     //   "inset-border bg-white text-primary backdrop-blur hover:bg-accent",

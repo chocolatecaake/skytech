@@ -32,7 +32,7 @@ const links = [
 const Navbar = () => {
   return (
     <header className="bg-primary shadow-xl z-1 border-b-1 border-white sticky top-0">
-      <div className="min-h-[64px] flex justify-between items-center container mx-auto px-4 lg:px-0">
+      <div className="min-h-[64px] flex justify-between items-center container mx-auto px-4 xl:px-0">
         <Image
           src="/assets/logo.webp"
           width={156}

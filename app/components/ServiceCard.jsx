@@ -1,7 +1,7 @@
 const ServiceCard = ({ idx, title, desc, icon }) => {
   return (
     <div className="flex flex-col w-full space-y-3">
-      <h2 className="text-yellow text-right">{idx}</h2>
+      <h3 className="text-yellow text-right">{idx}</h3>
       <div
         className="
         flex

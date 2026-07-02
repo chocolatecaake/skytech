@@ -7,9 +7,11 @@ import Title from "./components/Title";
 import Button from "./components/Button";
 import ServiceCard from "./components/ServiceCard";
 import WhatsAppButton from "./components/Whatsapp";
+
 import { FaWhatsapp } from "react-icons/fa";
 
 import { Testimonials } from "./components/Testimonials";
+import CTASection from "./components/CTASection";
 
 // import NavBar2 from "./components/NavBar2";
 import Footer from "./components/Footer";
@@ -97,6 +99,18 @@ export default function Home() {
         <section>
           <Testimonials />
         </section>
+        <CTASection
+          img="/assets/construction.webp"
+          title="CTA Section title"
+          subtitle="this is the subtitle for the cta section"
+          button={<Button variant="tertiary" text="Click here" />}
+        />
+        <CTASection
+          img="/assets/construction.webp"
+          title="CTA Section title"
+          subtitle="this is the subtitle for the cta section"
+          button={<Button variant="CTA" text="Click here" />}
+        />
         <Footer />
       </main>
     </div>
