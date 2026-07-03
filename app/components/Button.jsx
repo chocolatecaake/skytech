@@ -20,7 +20,9 @@ const Button = ({ text, icon, variant = "primary", onClick }) => {
       onClick={onClick}
       className={`
         flex
-        flex-col
+        flex-row
+        items-center
+        gap-2
         w-fit
         h-fit
         px-5 py-2.5

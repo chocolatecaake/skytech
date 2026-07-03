@@ -6,6 +6,7 @@ import NavBar2 from "./components/NavBar2";
 import Title from "./components/Title";
 import Button from "./components/Button";
 import ServiceCard from "./components/ServiceCard";
+import ProjectCard from "./components/ProjectCard";
 import WhatsAppButton from "./components/Whatsapp";
 
 import { FaWhatsapp } from "react-icons/fa";
@@ -97,6 +98,35 @@ export default function Home() {
             <FaWhatsapp size={40} className="text-white" />
           </WhatsAppButton>
         </section>
+        <div className="flex flex-col justify-center md:flex-row items-center gap-6 my-10">
+            <ProjectCard
+              Progress="Completed"
+              Img="/next.svg"
+              title="Akoya by Damac"
+              loc="DXB"
+              Client="ABC Properties"
+              Value="AED 45 Million"
+              ProjType="GRP Pipeline Installation"
+            />
+            <ProjectCard
+              Progress="Completed"
+              Img="/next.svg"
+              title="Akoya by Damac"
+              loc="DXB"
+              Client="ABC Properties"
+              Value="AED 45 Million"
+              ProjType="GRP Pipeline Installation"
+            />
+            <ProjectCard
+              Progress="Completed"
+              Img="/next.svg"
+              title="Akoya by Damac"
+              loc="DXB"
+              Client="ABC Properties"
+              Value="AED 45 Million"
+              ProjType="GRP Pipeline Installation"
+            />
+          </div>
         <section>
           <Testimonials />
         </section>
@@ -114,7 +144,7 @@ export default function Home() {
         />
         <section className="bg-primary text-white">
           <Title header="FAQ" align="left" />
-          <Faq />
+          <Faq/>
         </section>
         <Footer />
       </main>
