@@ -2,7 +2,7 @@
 import Image from "next/image";
 import NavMobile from "./NavMobile";
 import Button from "./Button";
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 
 const links = [
   {
@@ -32,10 +32,9 @@ const links = [
 ];
 
 const Navbar = () => {
-
   const [scrolled, setScrolled] = useState(false);
 
-    useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
@@ -45,11 +44,13 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className={`fixed w-full p-2 text-white transition-all duration-200 z-1
-         ${scrolled
-        ? "bg-[#0b1c2c] shadow-lg border-white "
-        : "bg-transparent backdrop-blur-md"
-      }`}
+    <header
+      className={`fixed w-full sticky top-0 p-2 text-white transition-all duration-200 z-1
+         ${
+           scrolled
+             ? "bg-primary shadow-lg border-white "
+             : "bg-transparent backdrop-blur-md"
+         }`}
     >
       <div className="min-h-[64px] flex justify-between items-center container mx-auto px-4 xl:px-0">
         <Image
@@ -59,8 +60,10 @@ const Navbar = () => {
           alt="skytech logo"
         />
 
-        <nav className={`hidden xl:block xl:flex items-center gap-12
-           ${scrolled ? "bg-transparent" : "bg-white/20 backdrop-blur-md rounded-xl shadow-lg border border-white p-4"}`}>
+        <nav
+          className={`hidden xl:block xl:flex items-center gap-12
+           ${scrolled ? "bg-transparent" : "bg-white/20 backdrop-blur-md rounded-xl shadow-lg border border-white p-4"}`}
+        >
           <ul className="flex gap-12">
             {links.map((link, index) => {
               return (
