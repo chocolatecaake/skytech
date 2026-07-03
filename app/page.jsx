@@ -13,6 +13,8 @@ import { FaWhatsapp } from "react-icons/fa";
 import { Testimonials } from "./components/Testimonials";
 import CTASection from "./components/CTASection";
 
+import Faq from "./components/Faq";
+
 // import NavBar2 from "./components/NavBar2";
 import Footer from "./components/Footer";
 import AccordionSection from "./components/Accordin";
@@ -61,8 +63,7 @@ export default function Home() {
             icon={<Image src={"/next.svg"} alt="" width={20} height={20} />}
             text="Glass badge"
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {" "}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <ServiceCard
               idx="01"
               title="Title Card"
@@ -111,6 +112,10 @@ export default function Home() {
           subtitle="this is the subtitle for the cta section"
           button={<Button variant="CTA" text="Click here" />}
         />
+        <section className="bg-primary text-white">
+          <Title header="FAQ" align="left" />
+          <Faq />
+        </section>
         <Footer />
       </main>
     </div>

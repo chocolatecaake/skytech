@@ -12,7 +12,7 @@ const ServiceCard = ({ idx, title, desc, icon }) => {
         h-full
         mx-auto
         text-center
-        px-14 py-20
+        p-8
         space-y-8
         glass"
       >
