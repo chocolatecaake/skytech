@@ -39,7 +39,7 @@ const ProjectCard = ({Progress, Img, title, loc, Client, Value, ProjType}) => {
     </div> 
     <div
       onClick={() => setIsExpanded(!isExpanded)}
-      className="flex self-start cursor-pointer items-center gap-2 text-[#486699] font-semibold hover:text-[#36527d] transition-colors"
+      className="flex self-start cursor-pointer items-center gap-2 font-semibold hover:text-accent transition-colors"
     >
       <span>{isExpanded ? "Hide Details" : "View Details"}</span>
       {isExpanded ? <FaChevronUp /> : <FaChevronDown />}

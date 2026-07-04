@@ -6,6 +6,7 @@ import NavBar2 from "./components/NavBar2";
 import Title from "./components/Title";
 import Button from "./components/Button";
 import ServiceCard from "./components/ServiceCard";
+import ServiceDetailCard from "./components/ServiceDetailCard";
 import ProjectCard from "./components/ProjectCard";
 import WhatsAppButton from "./components/Whatsapp";
 
@@ -98,7 +99,7 @@ export default function Home() {
             <FaWhatsapp size={40} className="text-white" />
           </WhatsAppButton>
         </section>
-        <div className="flex flex-col justify-center md:flex-row items-center gap-6 my-10">
+          <div className="flex flex-col justify-center md:flex-row items-center gap-6 my-10">
             <ProjectCard
               Progress="Completed"
               Img="/next.svg"
@@ -125,6 +126,26 @@ export default function Home() {
               Client="ABC Properties"
               Value="AED 45 Million"
               ProjType="GRP Pipeline Installation"
+            />
+          </div>
+          <div className="flex flex-col justify-center md:flex-row items-center gap-6 my-10">
+            <ServiceDetailCard
+              id = "1"
+              Img="/next.svg"
+              title="Chemical Storage Tank Lining"
+              desc = "In-situ lamination of chemical storage tanks and benching lamination. In-situ lamination of chemical In-situ lamination of chemical storage tanks and benching lamination. In-situ lamination of chemical ..."
+            />
+            <ServiceDetailCard
+              id = "2"
+              Img="/next.svg"
+              title="Akoya by Damac"
+              desc = "In-situ lamination of chemical storage tanks and benching lamination. In-situ lamination of chemical In-situ lamination of chemical storage tanks and benching lamination. In-situ lamination of chemical ..."
+            />
+            <ServiceDetailCard
+              id = "3"
+              Img="/next.svg"
+              title="Akoya by Damac"
+              desc = "In-situ lamination of chemical storage tanks and benching lamination. In-situ lamination of chemical In-situ lamination of chemical storage tanks and benching lamination. In-situ lamination of chemical ..."
             />
           </div>
         <section>
