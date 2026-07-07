@@ -1,8 +1,5 @@
 import Image from "next/image";
 
-import Navbar from "./components/Navbar";
-import NavBar2 from "./components/NavBar2";
-
 import Title from "./components/Title";
 import Button from "./components/Button";
 import ServiceCard from "./components/ServiceCard";
@@ -17,14 +14,11 @@ import CTASection from "./components/CTASection";
 
 import Faq from "./components/Faq";
 
-// import NavBar2 from "./components/NavBar2";
 import AccordionSection from "./components/Accordin";
 
 export default function Home() {
   return (
     <div>
-      {/* <Navbar /> */}
-      {/* <NavBar2 /> */}
       <main>
         <section className="typography">
           <span className="hero">Hero font</span>
@@ -91,12 +85,12 @@ export default function Home() {
             />
           </div>
           {/* <AccordionSection /> */}
-          <WhatsAppButton
+          {/* <WhatsAppButton
             phoneNumber="+971501234567"
             message="Hi! I'd like to request a quote."
           >
             <FaWhatsapp size={40} className="text-white" />
-          </WhatsAppButton>
+          </WhatsAppButton> */}
         </section>
         <div className="flex flex-col justify-center md:flex-row items-center gap-6 my-10">
           <ProjectCard
