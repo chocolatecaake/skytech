@@ -1,20 +1,20 @@
 import Image from "next/image";
 
-import Title from "@/components/Title";
-import Button from "@/components/Button";
-import ServiceCard from "@/components/ServiceCard";
-import ServiceDetailCard from "@/components/ServiceDetailCard";
-import ProjectCard from "@/components/ProjectCard";
-import WhatsAppButton from "@/components/Whatsapp";
+import Title from "@/components/common/Title";
+import Button from "@/components/common/Button";
+import ServiceCard from "@/components/cards/ServiceCard";
+import ServiceDetailCard from "@/components/cards/ServiceDetailCard";
+import ProjectCard from "@/components/cards/ProjectCard";
+import WhatsAppButton from "@/components/common/Whatsapp";
 
 import { FaWhatsapp } from "react-icons/fa";
 
-import { Testimonials } from "@/components/Testimonials";
-import CTASection from "@/components/CTASection";
+import { Testimonials } from "@/components/cards/Testimonials";
+import CTASection from "@/components/common/CTASection";
 
-import Faq from "@/components/Faq";
+import Faq from "@/components/sections/FAQ";
 
-import AccordionSection from "@/components/Accordin";
+import AccordionSection from "@/components/sections/Accordin";
 
 export default function Tester() {
   return (

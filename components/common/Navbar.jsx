@@ -5,40 +5,13 @@ import Button from "./Button";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-const links = [
-  {
-    name: "ABOUT",
-    path: "/about",
-  },
-  {
-    name: "SERVICES",
-    path: "/services",
-  },
-  {
-    name: "PROJECTS",
-    path: "/projects",
-  },
-  {
-    name: "BLOGS",
-    path: "/blogs",
-  },
-  {
-    name: "CERTIFICATIONS",
-    path: "/certifications",
-  },
-  {
-    name: "GALLERY",
-    path: "/gallery",
-  },
-  {
-    name: "Tester",
-    path: "/tester",
-  },
-];
+import { links } from "@/constants/navigation";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,7 +24,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed w-full sticky top-0 p-2 text-white transition-all duration-200 z-1
+      className={`fixed w-full sticky top-0 p-2 text-white uppercase transition-all duration-200 z-1
          ${
            scrolled
              ? "bg-primary shadow-lg border-white "
@@ -77,7 +50,11 @@ const Navbar = () => {
               return (
                 <li
                   key={index}
-                  className="text-white font-semibold hover:text-accent"
+                  className={`font-semibold transition-colors ${
+                    pathname === link.path
+                      ? "text-accent"
+                      : "text-white hover:text-accent"
+                  }`}
                 >
                   <Link href={link.path}>{link.name}</Link>
                 </li>

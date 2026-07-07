@@ -17,35 +17,15 @@ import { RiMenu3Fill } from "react-icons/ri";
 
 import { useState } from "react";
 
-const links = [
-  {
-    name: "ABOUT",
-    path: "home",
-  },
-  {
-    name: "SERVICES",
-    path: "about",
-  },
-  {
-    name: "PROJECTS",
-    path: "services",
-  },
-  {
-    name: "BLOGS",
-    path: "projects",
-  },
-  {
-    name: "CERTIFICATIONS",
-    path: "contact",
-  },
-  {
-    name: "GALLERY",
-    path: "contact",
-  },
-];
+import { links } from "@/constants/navigation";
+import { usePathname } from "next/navigation";
+
+import Link from "next/link";
 
 const NavMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger
@@ -58,12 +38,14 @@ const NavMobile = () => {
         <div>
           <SheetHeader>
             <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-            <Image
-              src="/assets/logo.webp"
-              width={156}
-              height={40}
-              alt="skytech logo"
-            />
+            <Link href="/">
+              <Image
+                src="/assets/logo.webp"
+                width={156}
+                height={40}
+                alt="skytech logo"
+              />
+            </Link>
             <SheetDescription className="sr-only">
               Navigation Menu
             </SheetDescription>
@@ -73,19 +55,13 @@ const NavMobile = () => {
               return (
                 <li
                   key={index}
-                  className="text-white uppercase cursor-pointer hover:text-accent"
+                  className={`font-semibold transition-colors uppercase ${
+                    pathname === link.path
+                      ? "text-accent"
+                      : "text-white hover:text-accent"
+                  }`}
                 >
-                  <span> {link.name}</span>
-                  {/* <ScrollLink
-                    to={link.path}
-                    smooth
-                    spy
-                    duration={500}
-                    className="cursor-pointer"
-                    activeClass="text-accent"
-                    onClick={() => setIsOpen(false)}
-                  >
-                  </ScrollLink> */}
+                  <Link href={link.path}>{link.name}</Link>
                 </li>
               );
             })}

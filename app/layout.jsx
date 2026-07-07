@@ -1,7 +1,7 @@
 import { Inter, Epilogue, Mohave } from "next/font/google";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import WhatsAppButton from "../components/Whatsapp";
+import Navbar from "@/components/common/Navbar";
+import Footer from "@/components/common/Footer";
+import WhatsAppButton from "@/components/common/Whatsapp";
 import "./globals.css";
 
 const inter = Inter({
@@ -34,9 +34,9 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${inter.variable} ${epilogue.variable} ${mohave.variable} h-full antialiased`}
     >
-      <body>
+      <body className="min-h-full flex flex-col">
         <Navbar />
-        <main className="min-h-full flex flex-col">
+        <main className="flex-1">
           <WhatsAppButton
             phoneNumber="+971501234567"
             message="Hi! I'd like to request a quote."

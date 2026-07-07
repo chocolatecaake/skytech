@@ -7,7 +7,7 @@ import { FaLocationDot } from "react-icons/fa6";
 export default function Footer() {
   return (
     <footer className="bg-primary w-full">
-      <div className = "flex flex-col md:flex-row justify-between p-24 pb-12 gap-8">
+      <div className="flex flex-col md:flex-row justify-between p-24 pb-12 gap-8">
         <div className="flex flex-col text-white space-y-4">
           <h4>Skytech General Contracting L.L.C</h4>
           <span className="body-large">P.O. Box 132415</span>
@@ -63,12 +63,14 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className = "flex flex-col md:flex-row justify-between px-24 pb-6 items-center">
+      <div className="flex flex-col md:flex-row justify-between px-24 pb-6 items-center">
         <h1 className="footer-font tracking-widest bg-gradient-to-t from-[#77aeff]/0 via-[#547ab3]/75 to-[#486699]/100 bg-clip-text text-transparent">
           SKYTECH
-        </h1> 
-        <span className = "text-white text-sm">© 2026 SkyTech General Contracting LLC. All rights reserved.</span>
-      </div> 
+        </h1>
+        <span className="text-white text-sm">
+          © 2026 SkyTech General Contracting LLC. All rights reserved.
+        </span>
+      </div>
     </footer>
   );
 }
