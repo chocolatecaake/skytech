@@ -2,32 +2,38 @@
 import Image from "next/image";
 import NavMobile from "./NavMobile";
 import Button from "./Button";
+
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 const links = [
   {
     name: "ABOUT",
-    path: "home",
+    path: "/about",
   },
   {
     name: "SERVICES",
-    path: "about",
+    path: "/services",
   },
   {
     name: "PROJECTS",
-    path: "services",
+    path: "/projects",
   },
   {
     name: "BLOGS",
-    path: "projects",
+    path: "/blogs",
   },
   {
     name: "CERTIFICATIONS",
-    path: "contact",
+    path: "/certifications",
   },
   {
     name: "GALLERY",
-    path: "contact",
+    path: "/gallery",
+  },
+  {
+    name: "Tester",
+    path: "/tester",
   },
 ];
 
@@ -53,12 +59,14 @@ const Navbar = () => {
          }`}
     >
       <div className="min-h-[64px] flex justify-between items-center container mx-auto px-4 xl:px-0">
-        <Image
-          src="/assets/logo.webp"
-          width={156}
-          height={40}
-          alt="skytech logo"
-        />
+        <Link href="/">
+          <Image
+            src="/assets/logo.webp"
+            width={156}
+            height={40}
+            alt="skytech logo"
+          />
+        </Link>
 
         <nav
           className={`hidden xl:block xl:flex items-center gap-12
@@ -71,7 +79,7 @@ const Navbar = () => {
                   key={index}
                   className="text-white font-semibold hover:text-accent"
                 >
-                  {link.name}
+                  <Link href={link.path}>{link.name}</Link>
                 </li>
               );
             })}
