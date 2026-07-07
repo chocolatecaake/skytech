@@ -1,4 +1,7 @@
 import { Inter, Epilogue, Mohave } from "next/font/google";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
 import "./globals.css";
 
 const inter = Inter({
@@ -27,7 +30,11 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${inter.variable} ${epilogue.variable} ${mohave.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body>
+        <Navbar />
+        <main className="min-h-full flex flex-col">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
