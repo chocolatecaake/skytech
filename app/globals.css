@@ -116,16 +116,16 @@ span {
 }
 
 .hero {
-  font-weight: 600;
-  font-size: clamp(40px, 5vw, 56px);
-  line-height: 130%;
-  letter-spacing: 0%;
-  text-transform: capitalize;
+  font-weight: 600 !important;
+  font-size: clamp(36px, 4vw, 56px) !important;
+  line-height: 130% !important;
+  letter-spacing: 0% !important;
+  text-transform: capitalize !important;
 }
 
 h1 {
   font-weight: 600;
-  font-size: clamp(36px, 4.5vw, 52px);
+  font-size: clamp(36px, 3.5vw, 52px);
   line-height: 130%;
   letter-spacing: 0%;
   text-transform: capitalize;
@@ -133,7 +133,7 @@ h1 {
 
 h2 {
   font-weight: 600;
-  font-size: clamp(32px, 3.5vw, 40px);
+  font-size: clamp(32px, 3vw, 40px);
   line-height: normal;
   letter-spacing: 0%;
   text-transform: capitalize;
@@ -141,7 +141,7 @@ h2 {
 
 h3 {
   font-weight: 600;
-  font-size: clamp(28px, 3vw, 32px);
+  font-size: clamp(28px, 2.5vw, 32px);
   line-height: 130%;
   letter-spacing: 0%;
   text-transform: capitalize;
