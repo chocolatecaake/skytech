@@ -34,17 +34,7 @@ const Stats = () => {
   return (
     <section className="bg-primary">
       <div ref={ref} className="container mx-auto">
-        <div
-          className="
-          flex 
-          flex-col 
-          md:flex-row 
-          justify-between 
-          items-center 
-          gap-8
-          text-white
-        "
-        >
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-white">
           {statsData.map((stat, index) => (
             <div key={index} className="contents">
               {/* Stat */}
@@ -69,16 +59,7 @@ const Stats = () => {
 
               {/* Separator */}
               {index !== statsData.length - 1 && (
-                <div
-                  className="
-                  md:block
-                  w-2
-                  h-2
-                  rounded-full
-                  bg-yellow
-                  flex-shrink-0
-                "
-                />
+                <div className="md:block w-2 h-2 rounded-full bg-yellow flex-shrink-0" />
               )}
             </div>
           ))}

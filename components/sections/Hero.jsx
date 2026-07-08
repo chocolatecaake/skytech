@@ -6,6 +6,8 @@ import Image from "next/image";
 
 import Button from "@/components/common/Button";
 
+import { cn } from "@/lib/utils";
+
 const heroImages = [
   "/assets/hero.webp",
   "/assets/construction.webp",
@@ -32,24 +34,26 @@ export default function Hero() {
   return (
     <section className="relative h-screen -mt-20 overflow-hidden">
       {/* Background Images */}
-      <AnimatePresence mode="sync">
+      {heroImages.map((image, index) => (
         <motion.div
-          key={currentImage}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 1 }}
+          key={image}
+          animate={{
+            opacity: currentImage === index ? 1 : 0,
+          }}
+          transition={{
+            duration: 1,
+          }}
           className="absolute inset-0"
         >
           <Image
-            src={heroImages[currentImage]}
-            alt="Hero Background"
+            src={image}
+            alt=""
             fill
-            priority
+            priority={index === 0}
             className="object-cover"
           />
         </motion.div>
-      </AnimatePresence>
+      ))}
 
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/50 z-10" />
@@ -98,26 +102,25 @@ export default function Hero() {
 
       {/* Pagination */}
       <div
-        className="
-          absolute
-          bottom-6
-          left-1/2
-          -translate-x-1/2
-          z-20
-          flex
-          flex-row
-          gap-4
-          hidden
-
-          lg:flex
-          lg:bottom-auto
-          lg:left-auto
-          lg:right-10
-          lg:top-1/2
-          lg:translate-x-0
-          lg:-translate-y-1/2
-          lg:flex-col
-        "
+        className={cn(
+          "absolute",
+          "bottom-6",
+          "left-1/2",
+          "-translate-x-1/2",
+          "z-20",
+          "flex",
+          "flex-row",
+          "gap-4",
+          "hidden",
+          "lg:flex",
+          "lg:bottom-auto",
+          "lg:left-auto",
+          "lg:right-10",
+          "lg:top-1/2",
+          "lg:translate-x-0",
+          "lg:-translate-y-1/2",
+          "lg:flex-col",
+        )}
       >
         {heroImages.map((_, index) => (
           <button
