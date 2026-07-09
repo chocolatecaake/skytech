@@ -1,4 +1,4 @@
-import { Inter, Epilogue, Mohave } from "next/font/google";
+import { Inter, Epilogue, Mohave, Momo_Signature } from "next/font/google";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import WhatsAppButton from "@/components/common/Whatsapp";
@@ -19,6 +19,12 @@ const mohave = Mohave({
   subsets: ["latin"],
 });
 
+const momo = Momo_Signature({
+  variable: "--font-signature",
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export const metadata = {
   title: {
     default: "SkyTech Piping Solutions",
@@ -32,7 +38,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${epilogue.variable} ${mohave.variable} h-full antialiased`}
+      className={`${inter.variable} ${epilogue.variable} ${mohave.variable} ${momo.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
