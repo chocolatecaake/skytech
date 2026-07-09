@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/ui/marquee";
 import { Star, Quote } from "lucide-react";
+import Title from "../common/Title";
 
 const testimonials = [
   {
@@ -74,14 +75,18 @@ const TestimonialCard = ({ name, role, stars, content }) => {
 
 export function Testimonials() {
   return (
-    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-      <Marquee pauseOnHover className="[--duration:30s]">
-        {testimonials.map((review) => (
-          <TestimonialCard key={review.name} {...review} />
-        ))}
-      </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background" />
-    </div>
+    <section>
+      <Title header="Hear from our trusted clients" align="left" size="h2" />
+
+      <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
+        <Marquee pauseOnHover className="[--duration:30s]">
+          {testimonials.map((review) => (
+            <TestimonialCard key={review.name} {...review} />
+          ))}
+        </Marquee>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background" />
+      </div>
+    </section>
   );
 }

@@ -6,6 +6,7 @@ import CTASection from "@/components/common/CTASection";
 import Button from "@/components/common/Button";
 import Title from "@/components/common/Title";
 import About from "@/components/sections/About";
+import Services from "@/components/sections/Services";
 
 export default function Home() {
   return (
@@ -13,11 +14,9 @@ export default function Home() {
       <Hero />
       <Stats />
       <About />
-      <section>
-        <Testimonials />
-      </section>
-      <section className="bg-primary text-white">
-        <Title header="FAQ" align="left" />
+      <Services />
+      <Testimonials />
+      <section className="bg-primary">
         <FAQ />
       </section>
       <CTASection

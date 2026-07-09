@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { RiSubtractFill, RiAddFill } from "react-icons/ri";
-
+import Title from "../common/Title";
 import { faqItems } from "@/constants/faq";
 
 const faqVariants = {
@@ -54,22 +54,25 @@ const FAQItem = ({ title, description }) => {
 
 const FAQ = () => {
   return (
-    <div className="container mx-auto">
-      <ul className="w-full flex flex-col space-y-6">
-        {faqItems.map((item, index) => (
-          <motion.li
-            key={index}
-            variants={faqVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            custom={index}
-          >
-            <FAQItem title={item.title} description={item.description} />
-          </motion.li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <Title header="FAQ" align="left" variant="light" />
+      <div className="container mx-auto">
+        <ul className="w-full flex flex-col space-y-6">
+          {faqItems.map((item, index) => (
+            <motion.li
+              key={index}
+              variants={faqVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.3 }}
+              custom={index}
+            >
+              <FAQItem title={item.title} description={item.description} />
+            </motion.li>
+          ))}
+        </ul>
+      </div>
+    </>
   );
 };
 
