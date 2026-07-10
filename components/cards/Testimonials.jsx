@@ -2,30 +2,10 @@ import { cn } from "@/lib/utils";
 import { Marquee } from "@/components/ui/marquee";
 import { Star, Quote } from "lucide-react";
 import Title from "../common/Title";
+import { testimonials } from "@/constants/testimonials";
+import Image from "next/image";
 
-const testimonials = [
-  {
-    name: "Méschac Irung",
-    role: "Creator",
-    stars: 5,
-    content:
-      "Using Tailark has been like unlocking a secret design superpower. It's the perfect fusion of simplicity.",
-  },
-  {
-    name: "Théo Balick",
-    role: "Frontend Dev",
-    stars: 4,
-    content:
-      "Aspect is amazing.Tailark has transformed the way I develop web applications. The flexibility to customize every aspect is amazing.",
-  },
-  {
-    name: "Glodie Lukose",
-    role: "Frontend Dev",
-    stars: 5,
-    content:
-      "The extensive collection of UI components has significantly accelerated my workflow.",
-  },
-];
+const clients = ["adnoc", "cnooc", "damac", "petrofac", "taqa"];
 
 const TestimonialCard = ({ name, role, stars, content }) => {
   return (
@@ -76,14 +56,33 @@ const TestimonialCard = ({ name, role, stars, content }) => {
 export function Testimonials() {
   return (
     <section>
-      <Title header="Hear from our trusted clients" align="left" size="h2" />
-
+      <div className="bg-background">
+        <Title header="Hear from our trusted clients" align="left" size="h2" />
+      </div>
       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-        <Marquee pauseOnHover className="[--duration:30s]">
+        <Marquee pauseOnHover className="[--duration:30s]  mb-[4vw]">
           {testimonials.map((review) => (
             <TestimonialCard key={review.name} {...review} />
           ))}
         </Marquee>
+
+        <Marquee
+          reverse
+          pauseOnHover
+          className="[--duration:30s] bg-background"
+        >
+          {clients.map((client) => (
+            <Image
+              key={client}
+              src={`/assets/clients/${client}.webp`}
+              alt={`${client} logo`}
+              width={180}
+              height={80}
+              className="object-contain mx-8"
+            />
+          ))}
+        </Marquee>
+
         <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background" />
       </div>

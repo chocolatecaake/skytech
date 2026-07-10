@@ -42,7 +42,7 @@ const Stats = () => {
                 <div className="h3 text-accent">
                   {inView && (
                     <CountUp
-                      start={0}
+                      start={1}
                       end={stat.endCountNum}
                       delay={0.5}
                       duration={3}
