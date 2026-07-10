@@ -1,7 +1,7 @@
 const Title = ({ pretitle, header, align, variant, size }) => {
   return (
     <div
-      className={`flex flex-col ${variant === "light" ? "text-white" : ""} text-${align} 
+      className={`flex flex-col ${variant === "light" ? "text-white" : "bg-background"} text-${align} 
       ${
         align === "center"
           ? "items-center"
@@ -12,11 +12,13 @@ const Title = ({ pretitle, header, align, variant, size }) => {
   `}
     >
       <div className="w-fit">
-        <span
-          className={`block mb-4 spaced ${variant === "light" ? "text-white" : "text-tertiary"}`}
-        >
-          {pretitle}
-        </span>
+        {pretitle && (
+          <span
+            className={`block mb-4 spaced ${variant === "light" ? "text-white" : "text-tertiary bg-background"}`}
+          >
+            {pretitle}
+          </span>
+        )}
         <div className={`${size ?? "h1"} mb-6`}>{header}</div>
         <div className="h-[3px] bg-secondary rounded-full" />
       </div>

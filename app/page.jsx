@@ -1,12 +1,12 @@
 import Hero from "@/components/sections/Hero";
 import Stats from "@/components/sections/Stats";
-import FAQ from "@/components/sections/FAQ";
-import { Testimonials } from "@/components/cards/Testimonials";
-import CTASection from "@/components/common/CTASection";
-import Button from "@/components/common/Button";
-import Title from "@/components/common/Title";
 import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
+import Projects from "@/components/sections/Projects";
+import { Testimonials } from "@/components/cards/Testimonials";
+import FAQ from "@/components/sections/FAQ";
+import CTASection from "@/components/common/CTASection";
+import Button from "@/components/common/Button";
 
 export default function Home() {
   return (
@@ -15,6 +15,7 @@ export default function Home() {
       <Stats />
       <About />
       <Services />
+      <Projects />
       <Testimonials />
       <section className="bg-primary">
         <FAQ />

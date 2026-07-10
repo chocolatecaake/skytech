@@ -1,14 +1,10 @@
 "use client";
+
+import { useState } from "react";
+import Image from "next/image";
 import Button from "../common/Button";
 import { FaCheckCircle } from "react-icons/fa";
-import { useState } from "react";
-import {
-  FaLocationDot,
-  FaUserTie,
-  FaMoneyBillWave,
-  FaChevronDown,
-  FaChevronUp,
-} from "react-icons/fa6";
+import { FaLocationDot, FaChevronDown, FaChevronUp } from "react-icons/fa6";
 
 const ProjectCard = ({
   Progress,
@@ -20,52 +16,71 @@ const ProjectCard = ({
   ProjType,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+
   return (
-    <div
-      className={`bg-white w-[410px] rounded-2xl flex flex-col p-3 gap-3 items-center
-  ${isExpanded ? "h-[610px]" : "h-[545px]"}`}
-    >
-      <div className="relative h-[380px] overflow-hidden rounded-xl bg-accent flex items-center justify-center w-full">
-        <img src={Img} alt={title} className="w-full h-full object-cover" />
-        <div className="absolute left-4 top-4 rounded-full text-sm font-semibold text-white">
+    <div className="flex h-full flex-col rounded-default bg-white p-4 shadow-default  hover:scale-105">
+      {/* Image */}
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-default">
+        <Image
+          src={Img}
+          alt={title}
+          fill
+          className="object-cover transition-transform duration-500 hover:scale-105"
+        />
+
+        {/* Status */}
+        <div className="absolute left-3 top-3">
           <Button
             variant="glassBadge"
             icon={<FaCheckCircle />}
             text={Progress}
           />
         </div>
-        <div className="absolute p-2 bottom-0 rounded-full text-sm font-semibold text-white flex flex-row justify-between w-full">
-          <p className="body-large">{title}</p>
-          <p className="flex items-center">
-            <FaLocationDot className="mr-2 text-yellow-300" />
-            {loc}
-          </p>
+
+        {/* Bottom Overlay */}
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
+          <h4 className="text-lg font-semibold text-white md:text-xl">
+            {title}
+          </h4>
+
+          <div className="mt-2 flex items-center gap-2 text-sm text-white">
+            <FaLocationDot className="text-yellow shrink-0" />
+            <span className="truncate">{loc}</span>
+          </div>
         </div>
       </div>
-      <div>
-        <Button text={ProjType} variant="badge" className="w-full" />
-      </div>
-      <div
-        onClick={() => setIsExpanded(!isExpanded)}
-        className="flex self-start cursor-pointer items-center gap-2 font-semibold hover:text-accent transition-colors"
-      >
-        <span>{isExpanded ? "Hide Details" : "View Details"}</span>
-        {isExpanded ? <FaChevronUp /> : <FaChevronDown />}
-      </div>
-      <div
-        className={`overflow-hidden transition-all duration-500 w-full ${
-          isExpanded ? "max-h-32 opacity-100" : "max-h-0 opacity-0"
-        }`}
-      >
-        <div className="border-t pt-4 flex flex-col self-start">
-          <div className="flex items-center gap-3">
-            <p className="text-xs text-gray-500 ">Client: </p>
-            <p className="font-medium">{Client}</p>
-          </div>
 
-          <div className="flex items-center gap-3">
-            <p className="text-xs text-gray-500">Project Value: </p>
-            <p className="font-medium">{Value}</p>
+      {/* Content */}
+      <div className="mt-5 flex flex-1 flex-col gap-5">
+        <Button text={ProjType} variant="badge" />
+
+        {/* Expand Button */}
+        {/* <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="flex items-center gap-2 self-start font-semibold transition-colors hover:text-accent"
+        >
+          {isExpanded ? "Hide Details" : "View Details"}
+
+          {isExpanded ? <FaChevronUp /> : <FaChevronDown />}
+        </button>
+ */}
+        {/* Details */}
+        {/* <div
+          className={`overflow-hidden transition-all duration-500 ${
+            isExpanded ? "max-h-60 opacity-100" : "max-h-60 opacity-100"
+          }`}
+        > */}
+        <div className="overflow-hidden transition-all duration-500 max-h-60 opacity-100">
+          <div className="space-y-4 border-t border-tertiary/50 pt-4">
+            <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+              <span className="text-sm text-gray-500">Client</span>
+              <span className="font-medium text-gray-900">{Client}</span>
+            </div>
+
+            <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+              <span className="text-sm text-gray-500">Project Value</span>
+              <span className="font-medium text-gray-900">{Value}</span>
+            </div>
           </div>
         </div>
       </div>

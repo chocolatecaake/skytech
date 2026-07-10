@@ -12,7 +12,7 @@ const Button = ({ text, icon, variant = "primary", onClick }) => {
     // tertiary:
     //   "inset-border bg-white text-primary backdrop-blur hover:bg-accent",
     badge: "bg-lightaccent text-darkblue shadow-none",
-    glassBadge: "glass",
+    glassBadge: "glass backdrop-blur",
   };
 
   return (

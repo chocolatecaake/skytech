@@ -19,3 +19,19 @@ export const fadeIn = (direction, delay) => {
     },
   };
 };
+
+export const cardVariants = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
+  visible: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: index * 0.1,
+      duration: 0.4,
+      ease: "easeOut",
+    },
+  }),
+};

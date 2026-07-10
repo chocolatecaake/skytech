@@ -56,9 +56,7 @@ const TestimonialCard = ({ name, role, stars, content }) => {
 export function Testimonials() {
   return (
     <section>
-      <div className="bg-background">
-        <Title header="Hear from our trusted clients" align="left" size="h2" />
-      </div>
+      <Title header="Hear from our trusted clients" align="left" size="h2" />
       <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
         <Marquee pauseOnHover className="[--duration:30s]  mb-[4vw]">
           {testimonials.map((review) => (

@@ -4,24 +4,9 @@ import ServiceCard from "../cards/ServiceCard";
 import Title from "../common/Title";
 import { services } from "@/constants/services";
 import { motion } from "framer-motion";
+import { cardVariants } from "@/constants/variants";
 
 const Services = () => {
-  const cardVariants = {
-    hidden: {
-      opacity: 0,
-      y: 30,
-    },
-    visible: (index) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: index * 0.1,
-        duration: 0.4,
-        ease: "easeOut",
-      },
-    }),
-  };
-
   return (
     <section className="bg-primary">
       <Title
