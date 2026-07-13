@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { RiSubtractFill, RiAddFill } from "react-icons/ri";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import Title from "../common/Title";
 import { faqItems } from "@/constants/faq";
 
@@ -22,31 +22,35 @@ const FAQItem = ({ title, description }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="glass">
-      <div className="flex p-5 items-center justify-between">
-        <h4 className={`body-large ${isOpen ? "text-yellow" : ""}`}>{title}</h4>
+    <div
+      className={`border border-1 rounded-default  ${isOpen ? "border-accent" : ""}`}
+    >
+      <div className="glass">
+        <div className="flex p-5 items-center justify-between">
+          <h4 className={`body-large ${isOpen ? "text-accent" : ""}`}>
+            {title}
+          </h4>
 
-        <button
-          className={`bg-accent p-2 rounded-default cursor-pointer hover:bg-yellow ${
-            isOpen ? "bg-yellow" : ""
+          <button
+            className={`cursor-pointer ${isOpen ? "text-accent" : ""}`}
+            onClick={() => setIsOpen(!isOpen)}
+            aria-expanded={isOpen}
+          >
+            {isOpen ? (
+              <FaChevronUp className="h-8 w-8" />
+            ) : (
+              <FaChevronDown className="h-8 w-8 hover:text-accent" />
+            )}
+          </button>
+        </div>
+
+        <div
+          className={`overflow-hidden transition-all duration-500 ease-in-out ${
+            isOpen ? "max-h-[200px] opacity-100 p-5" : "max-h-0 opacity-0 p-0"
           }`}
-          onClick={() => setIsOpen(!isOpen)}
-          aria-expanded={isOpen}
         >
-          {isOpen ? (
-            <RiSubtractFill className="text-primary" />
-          ) : (
-            <RiAddFill className="text-primary" />
-          )}
-        </button>
-      </div>
-
-      <div
-        className={`overflow-hidden transition-all duration-500 ease-in-out ${
-          isOpen ? "max-h-[200px] opacity-100 p-5" : "max-h-0 opacity-0 p-0"
-        }`}
-      >
-        <p className="flex items-center">{description}</p>
+          <p className="flex items-center">{description}</p>
+        </div>
       </div>
     </div>
   );
