@@ -1,7 +1,6 @@
 import { GiPipes } from "react-icons/gi";
 import { MdEngineering } from "react-icons/md";
 import { GiTeePipe } from "react-icons/gi";
-import { details } from "motion/react-client";
 
 export const services = [
   {

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Title from "@/components/common/Title";
 import Button from "@/components/common/Button";
 import ServiceCard from "@/components/cards/ServiceCard";
-import ServiceDetailCard from "@/components/cards/ServiceDetailCard";
+import DetailCard from "@/components/cards/DetailCard";
 import ProjectCard from "@/components/cards/ProjectCard";
 import WhatsAppButton from "@/components/common/Whatsapp";
 
@@ -122,19 +122,19 @@ export default function Tester() {
           />
         </div>
         <div className="flex flex-col justify-center md:flex-row items-center gap-6 my-10">
-          <ServiceDetailCard
+          <DetailCard
             id="1"
             Img="/next.svg"
             title="Chemical Storage Tank Lining"
             desc="In-situ lamination of chemical storage tanks and benching lamination. In-situ lamination of chemical In-situ lamination of chemical storage tanks and benching lamination. In-situ lamination of chemical ..."
           />
-          <ServiceDetailCard
+          <DetailCard
             id="2"
             Img="/next.svg"
             title="Akoya by Damac"
             desc="In-situ lamination of chemical storage tanks and benching lamination. In-situ lamination of chemical In-situ lamination of chemical storage tanks and benching lamination. In-situ lamination of chemical ..."
           />
-          <ServiceDetailCard
+          <DetailCard
             id="3"
             Img="/next.svg"
             title="Akoya by Damac"
