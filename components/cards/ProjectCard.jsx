@@ -18,9 +18,9 @@ const ProjectCard = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="flex h-full flex-col rounded-default bg-white p-4 shadow-default  hover:scale-105">
+    <div className="flex h-full flex-col rounded-default bg-white p-4 shadow-default  hover:scale-105 transition duration-500">
       {/* Image */}
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-default">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-default justify-between">
         <Image
           src={Img}
           alt={title}
@@ -38,7 +38,7 @@ const ProjectCard = ({
         </div>
 
         {/* Bottom Overlay */}
-        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 flex justify-between">
           <h4 className="text-lg font-semibold text-white md:text-xl">
             {title}
           </h4>
