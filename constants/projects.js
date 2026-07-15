@@ -1,2 +1,57 @@
 /*USE THIS FILE TO STORE ALL PROJECTS */
-export const projects = [{}];
+export const projects = [
+  {
+    progress: "Completed",
+    img: "/assets/projects/akoya.webp",
+    title: "Akoya by Damac",
+    loc: "DXB",
+    Client: "ABC Properties",
+    Value: "AED 45 Million",
+    ProjType: "GRP Pipeline Installation",
+  },
+  {
+    progress: "In progress",
+    img: "/assets/projects/canal.webp",
+    title: "Dubai Canal",
+    loc: "DXB",
+    Client: "122 3",
+    Value: "AED 32 Million",
+    ProjType: "GRP/GRE Installation",
+  },
+  {
+    progress: "Completed",
+    img: "/assets/projects/abudhabi.webp",
+    title: "Abu Dhabi",
+    loc: "AD",
+    Client: "ABC Properties",
+    Value: "AED 45 Million",
+    ProjType: "Lining",
+  },
+  {
+    progress: "In progress",
+    img: "/assets/projects/deira.webp",
+    title: "Deira City Center",
+    loc: "DXB",
+    Client: "ABC Properties",
+    Value: "AED 45 Million",
+    ProjType: "GRP Pipeline Installation",
+  },
+  {
+    progress: "In progress",
+    img: "/assets/projects/noorisland.webp",
+    title: "Noor Island",
+    loc: "SHJ",
+    Client: "ABC Properties",
+    Value: "AED 45 Million",
+    ProjType: "GRP Pipeline Installation",
+  },
+  {
+    progress: "Completed",
+    img: "/assets/projects/canal.webp",
+    title: "Akoya by Damac",
+    loc: "DXB",
+    Client: "ABC Properties",
+    Value: "AED 45 Million",
+    ProjType: "GRP Pipeline Installation",
+  },
+];
