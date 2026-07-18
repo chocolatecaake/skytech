@@ -12,7 +12,7 @@ const Services = () => {
   return (
     <section className="bg-primary">
       <Title
-        pretitle="our services"
+        pretitle="Our Services"
         header="Services we provide"
         align="right"
         variant="light"

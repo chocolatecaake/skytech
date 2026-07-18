@@ -14,7 +14,7 @@ const Title = ({ pretitle, header, align, variant, size }) => {
       <div className="w-fit">
         {pretitle && (
           <span
-            className={`block mb-4 spaced ${variant === "light" ? "text-white" : "text-tertiary bg-background"}`}
+            className={`block mb-3 spaced ${variant === "light" ? "text-yellow" : "text-tertiary bg-background"}`}
           >
             {pretitle}
           </span>

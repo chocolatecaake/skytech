@@ -65,7 +65,7 @@ const NavMobile = () => {
                 </li>
               );
             })}
-            <Button text="Request a quote" variant="CTA" />
+            <Button text="Request a quote" variant="CTA" href="/contact" />
           </ul>
         </div>
       </SheetContent>
