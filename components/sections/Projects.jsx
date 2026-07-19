@@ -1,6 +1,12 @@
+"use client";
+
 import Title from "../common/Title";
 import Button from "../common/Button";
 import ProjectCard from "../cards/ProjectCard";
+
+import { motion } from "framer-motion";
+import { cardVariants } from "@/constants/variants";
+import { projects } from "@/constants/projects";
 
 const Projects = () => {
   return (
@@ -12,35 +18,27 @@ const Projects = () => {
           <Button text="See All Projects" variant="primary" />
         </div>
         <div className="grid grid-cols-1 gap-7 md:grid-cols-2 xl:grid-cols-3 items-start">
-          <ProjectCard
-            Progress="Completed"
-            Img="/assets/construction.webp"
-            title="Akoya by Damac"
-            loc="DXB"
-            Client="ABC Properties"
-            Value="AED 45 Million"
-            ProjType="GRP Pipeline Installation"
-          />
-
-          <ProjectCard
-            Progress="Completed"
-            Img="/assets/construction.webp"
-            title="Akoya by Damac"
-            loc="DXB"
-            Client="ABC Properties"
-            Value="AED 45 Million"
-            ProjType="GRP Pipeline Installation GRP"
-          />
-
-          <ProjectCard
-            Progress="Completed"
-            Img="/assets/construction.webp"
-            title="Akoya by Damac"
-            loc="DXB"
-            Client="ABC Properties"
-            Value="AED 45 Million"
-            ProjType="GRP Pipeline Installation"
-          />
+          {projects.slice(0, 3).map((project, index) => (
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.2 }}
+              custom={index}
+            >
+              <ProjectCard
+                key={index}
+                Progress={project.progress}
+                Img={project.img}
+                title={project.title}
+                loc={project.loc}
+                Client={project.Client}
+                Value={project.Value}
+                ProjType={project.ProjType}
+              />
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>

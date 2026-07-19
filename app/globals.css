@@ -175,7 +175,7 @@ h4,
 
 .body-large {
   font-weight: 500 !important;
-  font-size: clamp(16px, 2vw, 18px) !important;
+  font-size: clamp(16px, 2.5vw, 18px) !important;
   line-height: 160% !important;
   letter-spacing: 0% !important;
 }
@@ -225,4 +225,18 @@ section {
 
   box-shadow: 0 2px 1px rgba(255, 255, 255, 0.25);
   border-radius: var(--radius);
+}
+
+/*Form*/
+
+.form-field {
+  width: 100%;
+  border-radius: var(--radius);
+  border: solid 1.5px lightgray;
+  padding: 16px;
+  outline: none;
+}
+
+.form-field:focus {
+  border-color: var(--secondary-accent);
 }

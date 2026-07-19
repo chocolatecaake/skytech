@@ -66,7 +66,7 @@ const Navbar = () => {
           </ul>
         </nav>
         <div className="hidden xl:block">
-          <Button text="Request a quote" variant="CTA" />
+          <Button text="Request a quote" variant="CTA" href="/contact" />
         </div>
         <div className="xl:hidden">
           <NavMobile />
