@@ -14,7 +14,7 @@ export const testimonials = [
       "Aspect is amazing.Tailark has transformed the way I develop web applications. The flexibility to customize every aspect is amazing.",
   },
   {
-    name: "Glodie Lukose",
+    name: "Poopy Man",
     role: "Frontend Dev",
     stars: 5,
     content:
