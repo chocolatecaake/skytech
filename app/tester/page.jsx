@@ -5,6 +5,7 @@ import Button from "@/components/common/Button";
 import ServiceCard from "@/components/cards/ServiceCard";
 import DetailCard from "@/components/cards/DetailCard";
 import ProjectCard from "@/components/cards/ProjectCard";
+import CertificationCard from "@/components/cards/CertificationCard";
 import WhatsAppButton from "@/components/common/Whatsapp";
 
 import { FaWhatsapp } from "react-icons/fa";
@@ -15,6 +16,9 @@ import CTASection from "@/components/common/CTASection";
 import Faq from "@/components/sections/FAQ";
 
 import AccordionSection from "@/components/sections/Accordin";
+
+import Certificate from "@/public/assets/Certificate/Certificate.webp";
+import iso from "@/public/assets/about/iso.webp";
 
 export default function Tester() {
   return (
@@ -139,6 +143,16 @@ export default function Tester() {
             Img="/next.svg"
             title="Akoya by Damac"
             desc="In-situ lamination of chemical storage tanks and benching lamination. In-situ lamination of chemical In-situ lamination of chemical storage tanks and benching lamination. In-situ lamination of chemical ..."
+          />
+        </div>
+        <div className="flex flex-col justify-center md:flex-row items-center gap-6 my-10">
+          <CertificationCard
+          badge = {iso}
+          title = "ISO Certificate: ISO 9000"
+          img = {Certificate}
+          CerficationNo = "000001"
+          ObtainOn = "9 June 2026"
+          ValidUntil = "9 June 2026"
           />
         </div>
         <section>
