@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import { fadeIn } from "@/constants/variants";
 
 import Button from "@/components/common/Button";
 
@@ -64,25 +65,49 @@ export default function Hero() {
         <div className="flex-1 flex items-center">
           <div className="max-w-5xl text-white space-y-8">
             <div className="space-y-6">
-              <div className="hero mt-18">
+              <motion.div
+                variants={fadeIn("up", 0.2)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.0 }}
+                className="hero mt-18"
+              >
                 Engineering Reliable Pipeline Infrastructure
                 <span className="hero text-yellow"> Across The UAE</span>
-              </div>
+              </motion.div>
 
-              <h4 className="max-w-3xl">
+              <motion.h4
+                variants={fadeIn("up", 0.4)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: false, amount: 0.0 }}
+                className="max-w-3xl"
+              >
                 Delivering High-Performance Infrastructure Projects Across The
                 UAE For Over 20 Years.
-              </h4>
+              </motion.h4>
             </div>
-            <div className="flex gap-4">
+            <motion.div
+              variants={fadeIn("up", 0.6)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.0 }}
+              className="flex gap-4"
+            >
               <Button text="See Our Projects" variant="tertiary" />
               <Button text="Get In Touch" variant="secondary" />
-            </div>
+            </motion.div>
           </div>
         </div>
 
         {/* Bottom Certifications */}
-        <div className="flex gap-4">
+        <motion.div
+          variants={fadeIn("up", 0.8)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.0 }}
+          className="flex gap-4"
+        >
           {certImages.map((certImage, index) => (
             <div
               key={index}
@@ -97,7 +122,7 @@ export default function Hero() {
               />
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* Pagination */}
@@ -126,7 +151,7 @@ export default function Hero() {
           <button
             key={index}
             onClick={() => setCurrentImage(index)}
-            className={`h-3 w-3 rounded-full border-2 transition-all duration-500 ${
+            className={`h-3 w-3 rounded-full border-2 transition-all duration-500 cursor-pointer ${
               currentImage === index
                 ? "bg-yellow border-yellow scale-125"
                 : "border-yellow"
