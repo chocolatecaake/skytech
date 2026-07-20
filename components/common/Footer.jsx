@@ -3,6 +3,8 @@ import { FaPhone } from "react-icons/fa6";
 import { AiFillPrinter } from "react-icons/ai";
 import { IoMdMail } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
+import { services } from "@/constants/services";
+import { links } from "@/constants/navigation";
 
 export default function Footer() {
   return (
@@ -45,21 +47,28 @@ export default function Footer() {
         </div>
         <div className="flex flex-col text-white space-y-6">
           <h4 className="text-accent">Services</h4>
-          <div className="flex flex-col space-y-4 body-large">
-            <span>Service</span>
-            <span>Service</span>
-            <span>Service</span>
-            <span>Service</span>
-          </div>
+          <Link href="/services">
+            <div className="flex flex-col space-y-4 body-large">
+              {services.map((service, idx) => (
+                <span key={idx} className="hover:text-yellow">
+                  {service.title}
+                </span>
+              ))}
+            </div>
+          </Link>
         </div>
         <div className="flex flex-col text-white space-y-6">
           <h4 className="text-accent">Quick Links</h4>
           <div className="flex flex-col space-y-4 body-large">
-            <Link href="/">About</Link>
-            <Link href="/">Project</Link>
-            <Link href="/">Blogs</Link>
-            <Link href="/">Brochures</Link>
-            <Link href="/">Contact Us</Link>
+            {links.map((link, idx) => (
+              <Link
+                key={idx}
+                href={link.path}
+                className="capitalize hover:text-yellow"
+              >
+                {link.name}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
