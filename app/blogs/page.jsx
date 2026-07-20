@@ -14,7 +14,7 @@ const page = () => {
     <>
       <section>
         <Title
-          pretitle="our blogs"
+          pretitle="Our Blogs"
           header="Latest insights and trends"
           align="center"
         />

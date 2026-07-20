@@ -14,7 +14,7 @@ const page = () => {
     <>
       <section>
         <Title
-          pretitle="our services"
+          pretitle="Our Services"
           header="see what we can do for you"
           align="center"
         />

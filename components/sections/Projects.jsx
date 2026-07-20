@@ -11,7 +11,7 @@ import { projects } from "@/constants/projects";
 const Projects = () => {
   return (
     <section>
-      <Title pretitle="our projects" header="See our work" align="center" />
+      <Title pretitle="Our Projects" header="See our work" align="center" />
 
       <div className="flex flex-col gap-10">
         <div className="flex justify-end">

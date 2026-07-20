@@ -13,7 +13,7 @@ const page = () => {
   return (
     <>
       <section>
-        <Title pretitle="our projects" header="see our work" align="center" />
+        <Title pretitle="Our Projects" header="see our work" align="center" />
         <div>
           <div className="grid grid-cols-1 h-full gap-8 sm:grid-cols-2 xl:grid-cols-3">
             {projects.map((project, idx) => (

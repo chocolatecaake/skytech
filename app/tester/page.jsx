@@ -41,9 +41,9 @@ export default function Tester() {
           <div className="w-20 h-20 bg-darkred"></div>
         </section>
         <section>
-          <Title pretitle="about us" header="who we are" align="left" />
-          <Title pretitle="about us" header="who we are" align="center" />
-          <Title pretitle="about us" header="who we are" align="right" />
+          <Title pretitle="About Us" header="who we are" align="left" />
+          <Title pretitle="About Us" header="who we are" align="center" />
+          <Title pretitle="About Us" header="who we are" align="right" />
         </section>
         <section>
           <Button text="CTA" variant="CTA" />
