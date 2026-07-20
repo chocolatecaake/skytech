@@ -61,11 +61,15 @@ const NavMobile = () => {
                       : "text-white hover:text-accent"
                   }`}
                 >
-                  <Link href={link.path}>{link.name}</Link>
+                  <Link href={link.path} onClick={() => setIsOpen(false)}>
+                    {link.name}
+                  </Link>
                 </li>
               );
             })}
-            <Button text="Request a quote" variant="CTA" href="/contact" />
+            <div onClick={() => setIsOpen(false)}>
+              <Button text="Request a quote" variant="CTA" href="/contact" />
+            </div>
           </ul>
         </div>
       </SheetContent>
