@@ -1,11 +1,13 @@
 "use client";
 
-import { useState } from "react";
 import Title from "@/components/common/Title";
 import Image from "next/image";
-import { cn } from "@/lib/utils";
 
+import { useState } from "react";
+import { cn } from "@/lib/utils";
 import { galleryImages } from "@/constants/gallery";
+import { cardVariants } from "@/constants/variants";
+import { motion } from "framer-motion";
 
 const GalleryPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -32,7 +34,15 @@ const GalleryPage = () => {
       {/* Gallery Grid */}
       <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
         {currentImages.map((image, index) => (
-          <div className="relative aspect-[4/3] overflow-hidden rounded-default shadow-lg">
+          <motion.div
+            key={index}
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.2 }}
+            custom={index}
+            className="relative aspect-[4/3] overflow-hidden rounded-default shadow-lg"
+          >
             <Image
               src={image.src}
               alt={image.alt}
@@ -42,7 +52,7 @@ const GalleryPage = () => {
             (max-width: 1024px) 50vw,
             33vw"
             />
-          </div>
+          </motion.div>
         ))}
       </div>
 
