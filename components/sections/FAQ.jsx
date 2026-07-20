@@ -37,9 +37,9 @@ const FAQItem = ({ title, description }) => {
             aria-expanded={isOpen}
           >
             {isOpen ? (
-              <FaChevronUp className="h-8 w-8" />
+              <FaChevronUp className="h-4 w-4" />
             ) : (
-              <FaChevronDown className="h-8 w-8 hover:text-accent" />
+              <FaChevronDown className="h-4 w-4 hover:text-accent" />
             )}
           </button>
         </div>
