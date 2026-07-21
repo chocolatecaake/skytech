@@ -18,7 +18,7 @@ const page = () => {
           header="see what we can do for you"
           align="center"
         />
-        <span className="body-large text-center">
+        <span className="body-large bg-background text-center">
           SKYTECH aims, to achieve customer satisfaction through superior
           services and commitment, without any compromise on international
           quality standards

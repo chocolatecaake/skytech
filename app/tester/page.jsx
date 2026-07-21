@@ -17,7 +17,7 @@ import Faq from "@/components/sections/FAQ";
 
 import AccordionSection from "@/components/sections/Accordin";
 
-import Certificate from "@/public/assets/Certificate/Certificate.webp";
+import Certificate from "@/public/assets/certifications/Certificate.webp";
 import iso from "@/public/assets/about/iso.webp";
 
 export default function Tester() {
@@ -147,12 +147,12 @@ export default function Tester() {
         </div>
         <div className="flex flex-col justify-center md:flex-row items-center gap-6 my-10">
           <CertificationCard
-          badge = {iso}
-          title = "ISO Certificate: ISO 9000"
-          img = {Certificate}
-          CerficationNo = "000001"
-          ObtainOn = "9 June 2026"
-          ValidUntil = "9 June 2026"
+            badge={iso}
+            title="ISO Certificate: ISO 9000"
+            img={Certificate}
+            CerficationNo="000001"
+            ObtainOn="9 June 2026"
+            ValidUntil="9 June 2026"
           />
         </div>
         <section>
