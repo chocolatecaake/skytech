@@ -8,6 +8,8 @@ import CertificationCard from "@/components/cards/CertificationCard";
 
 import Certificate from "@/public/assets/certifications/Certificate.webp";
 import iso from "@/public/assets/about/iso.webp";
+import adnoc from "@/public/assets/about/adnoc.webp";
+import icv from "@/public/assets/about/icv.webp";
 
 import { cardVariants } from "@/constants/variants";
 import { motion } from "framer-motion";
@@ -57,7 +59,7 @@ const page = () => {
                 whileInView="visible"
                 viewport={{ once: false, amount: 0.2 }}
                 custom={index}
-                className="flex flex-col bg-background space-y-4 items-center justify-center p-4 border-1 border-tertiary/10 shadow-default rounded-default"
+                className="flex flex-col bg-white space-y-4 items-center justify-center p-4 border-1 border-tertiary/10 shadow-default rounded-default"
               >
                 <div className="relative w-32 h-32">
                   <Image
@@ -86,7 +88,7 @@ const page = () => {
             ValidUntil="9 June 2026"
           />
           <CertificationCard
-            badge={iso}
+            badge={adnoc}
             title="ISO Certificate: ISO 9000"
             img={Certificate}
             CerficationNo="000001"
@@ -94,7 +96,7 @@ const page = () => {
             ValidUntil="9 June 2026"
           />
           <CertificationCard
-            badge={iso}
+            badge={icv}
             title="ISO Certificate: ISO 9000"
             img={Certificate}
             CerficationNo="000001"
