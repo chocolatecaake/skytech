@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 const About = () => {
   return (
     <section className="overflow-x-hidden">
-      <div className="flex flex-col xl:flex-row xl:items-stretch gap-8">
+      <div className="flex flex-col xl:flex-row xl:items-stretch gap-default">
         <motion.div
           variants={fadeIn("right", 0.2)}
           initial="hidden"

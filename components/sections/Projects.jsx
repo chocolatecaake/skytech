@@ -13,11 +13,11 @@ const Projects = () => {
     <section>
       <Title pretitle="Our Projects" header="See our work" align="center" />
 
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-default">
         <div className="flex justify-end">
           <Button text="See All Projects" variant="primary" />
         </div>
-        <div className="grid grid-cols-1 gap-7 md:grid-cols-2 xl:grid-cols-3 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-default">
           {projects.slice(0, 3).map((project, index) => (
             <motion.div
               key={index}

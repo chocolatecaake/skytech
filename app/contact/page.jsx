@@ -86,7 +86,7 @@ const ContactForm = () => {
       <div className="absolute inset-0 bg-black/40" />
 
       <div className="relative z-10 container mx-auto px-4">
-        <div className="grid items-stretch gap-10 lg:grid-cols-2">
+        <div className="grid items-stretch gap-12 lg:grid-cols-2">
           {/* LEFT SIDE */}
 
           <div className="flex flex-col space-y-8">

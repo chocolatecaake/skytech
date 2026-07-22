@@ -32,7 +32,7 @@ const GalleryPage = () => {
       />
 
       {/* Gallery Grid */}
-      <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-default">
         {currentImages.map((image, index) => (
           <motion.div
             key={index}
@@ -58,7 +58,7 @@ const GalleryPage = () => {
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <div className="flex justify-center gap-3">
+        <div className="flex justify-center gap-small">
           {Array.from({ length: totalPages }).map((_, index) => (
             <button
               key={index}

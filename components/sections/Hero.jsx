@@ -92,7 +92,7 @@ export default function Hero() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: false, amount: 0.0 }}
-              className="flex gap-4"
+              className="flex gap-small"
             >
               <Button text="See Our Projects" variant="tertiary" />
               <Button text="Get In Touch" variant="secondary" />
@@ -106,7 +106,7 @@ export default function Hero() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: false, amount: 0.0 }}
-          className="flex gap-4"
+          className="flex gap-small"
         >
           {certImages.map((certImage, index) => (
             <div
@@ -135,7 +135,7 @@ export default function Hero() {
           "z-20",
           "flex",
           "flex-row",
-          "gap-4",
+          "gap-small",
           "hidden",
           "lg:flex",
           "lg:bottom-auto",

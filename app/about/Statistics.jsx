@@ -33,18 +33,13 @@ const Statistics = () => {
 
   return (
     <section className="relative overflow-hidden">
-        {/* Background Image */}
-      <Image
-        src={construction}
-        alt="about"
-        fill
-        className="object-cover"
-      />
+      {/* Background Image */}
+      <Image src={construction} alt="about" fill className="object-cover" />
 
       {/* Tint Overlay */}
       <div className="absolute inset-0 bg-primary/80" />
       <div ref={ref} className="container mx-auto">
-        <div className="relative flex flex-col md:flex-row justify-between items-center gap-8 text-white">
+        <div className="relative flex flex-col md:flex-row justify-between items-center gap-default text-white">
           {statsData.map((stat, index) => (
             <div key={index} className="contents">
               {/* Stat */}

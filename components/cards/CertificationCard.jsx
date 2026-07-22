@@ -15,14 +15,14 @@ const CertificationCard = ({
   return (
     <div className="card bg-white border-1 border-tertiary/10">
       {/* Header */}
-      <div className="flex gap-3 justify-between items-center">
+      <div className="flex gap-small justify-between items-center">
         <div className="relative w-12 h-12">
           <Image src={badge} alt={title} fill className="object-contain" />
         </div>
         <p className="body-large !font-bold">{title}</p>
       </div>
       {/* Content */}
-      <div className="flex flex-col gap-6 md:flex-row">
+      <div className="flex flex-col gap-default md:flex-row">
         {/* Certificate Image */}
         <div className="w-full md:flex-1">
           <Image

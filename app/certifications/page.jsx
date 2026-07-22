@@ -50,7 +50,7 @@ const page = () => {
           quality standards
         </span>
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-7">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-default">
             {qualityCerts.map((cert, index) => (
               <motion.div
                 key={index}
@@ -78,7 +78,7 @@ const page = () => {
         </div>
 
         <Title header="Verification Documents" align="left" size="h2" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-7">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-default">
           <CertificationCard
             badge={iso}
             title="ISO Certificate: ISO 9000"

@@ -17,7 +17,7 @@ const page = () => {
           align="center"
         />
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-7">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-default">
             {blogs.map((blog, idx) => (
               <motion.div
                 key={idx}

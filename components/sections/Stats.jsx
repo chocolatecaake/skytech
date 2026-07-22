@@ -34,7 +34,7 @@ const Stats = () => {
   return (
     <section className="bg-primary">
       <div ref={ref} className="container mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-white">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-default text-white">
           {statsData.map((stat, index) => (
             <div key={index} className="contents">
               {/* Stat */}

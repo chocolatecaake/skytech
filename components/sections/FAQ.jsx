@@ -61,7 +61,7 @@ const FAQ = () => {
     <>
       <Title header="FAQ" align="left" variant="light" />
       <div className="container mx-auto">
-        <ul className="w-full flex flex-col space-y-6">
+        <ul className="w-full flex flex-col gap-default">
           {faqItems.map((item, index) => (
             <motion.li
               key={index}

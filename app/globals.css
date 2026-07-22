@@ -11,6 +11,8 @@
   --secondary-800: rgba(173, 6, 26, 1);
   --blue-accent-half: rgba(241, 246, 254, 1);
   --dark-blue: rgba(0, 67, 168, 1);
+  --gap-default: 28px;
+  --gap-small: 16px;
 
   --dot-color: rgba(0, 0, 0, 0.08);
 
@@ -44,6 +46,9 @@
 
   --shadow-default: var(--shadow);
   --shadow-blue: var(--shadow-blue);
+
+  --gap-default: var(--gap-default);
+  --gap-small: var(--gap-small);
 
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;

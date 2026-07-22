@@ -9,7 +9,7 @@ import { links } from "@/constants/navigation";
 export default function Footer() {
   return (
     <footer className="bg-primary w-full">
-      <div className="flex flex-col md:flex-row justify-between p-24 pb-12 gap-8">
+      <div className="flex flex-col md:flex-row justify-between p-24 pb-12 gap-default">
         <div className="flex flex-col text-white space-y-4">
           <h4>Skytech General Contracting L.L.C</h4>
           <span className="body-large">P.O. Box 132415</span>
