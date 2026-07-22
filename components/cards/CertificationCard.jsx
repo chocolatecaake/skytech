@@ -21,7 +21,6 @@ const CertificationCard = ({
         </div>
         <p className="body-large !font-bold">{title}</p>
       </div>
-
       {/* Content */}
       <div className="flex flex-col gap-6 md:flex-row">
         {/* Certificate Image */}
@@ -57,6 +56,32 @@ const CertificationCard = ({
           />
         </div>
       </div>
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={() => setIsOpen(false)}
+        >
+          <div
+            className="relative h-[90vh] w-[90vw] max-w-5xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute -top-4 -right-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white text-black shadow-lg"
+            >
+              ✕
+            </button>
+
+            <Image
+              src={img}
+              alt={title}
+              fill
+              className="object-contain rounded-default"
+              sizes="90vw"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
