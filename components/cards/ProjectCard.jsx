@@ -18,9 +18,9 @@ const ProjectCard = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="flex h-full flex-col rounded-default bg-white p-4 shadow-default  hover:scale-105 transition duration-500">
+    <div className="card bg-white">
       {/* Image */}
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-default justify-between">
+      <div className="card-img">
         <Image
           src={Img}
           alt={title}
@@ -51,7 +51,7 @@ const ProjectCard = ({
       </div>
 
       {/* Content */}
-      <div className="mt-5 flex flex-1 flex-col gap-5">
+      <div className="flex flex-1 flex-col gap-5">
         <Button text={ProjType} variant="badge" />
 
         {/* Expand Button */}
@@ -71,8 +71,8 @@ const ProjectCard = ({
           }`}
         > */}
         <div className="overflow-hidden transition-all duration-500 max-h-60 opacity-100">
-          <div className="space-y-4 border-t border-tertiary/50 pt-4">
-            <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+          <div className="space-y-4 border-t border-tertiary/50">
+            <div className="flex flex-col gap-1 mt-4 sm:flex-row sm:items-center sm:justify-between">
               <span className="text-sm text-gray-500">Client</span>
               <span className="font-medium text-gray-900">{Client}</span>
             </div>

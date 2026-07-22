@@ -18,35 +18,31 @@ const TestimonialCard = ({ name, role, stars, content }) => {
 
       <figure
         className={cn(
-          "flex h-full flex-col rounded-default border border-accent bg-lightaccent shadow-blue hover:border-primary",
+          "flex h-full flex-col justify-between p-8 rounded-default border border-accent bg-lightaccent shadow-blue hover:border-primary",
         )}
       >
-        <div className="flex h-full flex-col justify-between p-8">
-          {/* Stars */}
-          <div className="flex gap-1" aria-label={`${stars} out of 5 stars`}>
-            {Array.from({ length: 5 }).map((_, i) => (
-              <Star
-                key={i}
-                className={cn(
-                  "h-6 w-6",
-                  i < stars
-                    ? "fill-yellow stroke-yellow"
-                    : "fill-foreground/15 stroke-transparent",
-                )}
-              />
-            ))}
-          </div>
+        {/* Stars */}
+        <div className="flex gap-1" aria-label={`${stars} out of 5 stars`}>
+          {Array.from({ length: 5 }).map((_, i) => (
+            <Star
+              key={i}
+              className={cn(
+                "h-6 w-6",
+                i < stars
+                  ? "fill-yellow stroke-yellow"
+                  : "fill-foreground/15 stroke-transparent",
+              )}
+            />
+          ))}
+        </div>
 
-          {/* testimonial */}
-          <p className="my-6 flex-1 text-foreground leading-relaxed">
-            {content}
-          </p>
+        {/* testimonial */}
+        <p className="my-6 flex-1 text-foreground leading-relaxed">{content}</p>
 
-          {/* Name */}
-          <div className="flex flex-col">
-            <span className="body-large text-accent">{name}</span>
-            <span className="small">{role}</span>
-          </div>
+        {/* Name */}
+        <div className="flex flex-col">
+          <span className="body-large text-accent">{name}</span>
+          <span className="small">{role}</span>
         </div>
       </figure>
     </div>

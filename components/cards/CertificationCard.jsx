@@ -13,7 +13,7 @@ const CertificationCard = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="bg-white rounded-default space-y-4 p-4 border-1 border-tertiary/10 shadow-default">
+    <div className="card bg-white border-1 border-tertiary/10">
       {/* Header */}
       <div className="flex gap-3 justify-between items-center">
         <div className="relative w-12 h-12">

@@ -18,9 +18,9 @@ const DetailCard = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="w-full rounded-default h-full bg-white p-4 flex flex-col space-y-4 shadow-default">
+    <div className="card bg-white">
       {/* Image */}
-      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-default bg-accent">
+      <div className="card-img">
         <Image
           src={img}
           alt={title}

@@ -112,16 +112,14 @@ const ContactForm = () => {
                   key={contact.title}
                   className="
                     glass rounded-default 
-                    p-5 backdrop-blur-lg
+                    p-4 backdrop-blur-lg
                     "
                 >
-                  <div className="flex items-center gap-4">
-                    <Icon size={28} className="text-yellow" />
-
+                  <div className="flex items-center space-y-4">
                     <div>
-                      <p className="body-large text-yellow">{contact.title}</p>
+                      <p className="text-yellow">{contact.title}</p>
 
-                      <p className="text-white">{contact.value}</p>
+                      <p className="body-large text-white">{contact.value}</p>
                     </div>
                   </div>
                 </div>
@@ -136,9 +134,9 @@ const ContactForm = () => {
             className="
             rounded-default
             bg-background
-            p-6
+            p-5
             shadow-default
-            space-y-5
+            space-y-4
             "
             aria-label="Request quote form"
           >

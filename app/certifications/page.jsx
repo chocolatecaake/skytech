@@ -32,7 +32,7 @@ const page = () => {
       logo: "/assets/certifications/adnoc.webp",
       title: "Adnoc: Details",
       subtitle: "quality management system",
-      desc: "Certification provided by International Organisation for Standardisation for SkyTechs Exceptional Quality Processes",
+      desc: "Certification provided by International Organisation  for Standardisation for SkyTechs Exceptional Quality Processes",
     },
   ];
 
@@ -50,7 +50,7 @@ const page = () => {
           quality standards
         </span>
         <div>
-          <div className="grid grid-cols-1 h-full gap-7 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-7">
             {qualityCerts.map((cert, index) => (
               <motion.div
                 key={index}
@@ -59,7 +59,7 @@ const page = () => {
                 whileInView="visible"
                 viewport={{ once: false, amount: 0.2 }}
                 custom={index}
-                className="flex flex-col bg-white space-y-4 items-center justify-center p-4 border-1 border-tertiary/10 shadow-default rounded-default"
+                className="card bg-white items-center justify-center border-1 border-tertiary/10"
               >
                 <div className="relative w-32 h-32">
                   <Image
@@ -78,7 +78,7 @@ const page = () => {
         </div>
 
         <Title header="Verification Documents" align="left" size="h2" />
-        <div className="grid grid-cols-1 h-full gap-7 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-7">
           <CertificationCard
             badge={iso}
             title="ISO Certificate: ISO 9000"
