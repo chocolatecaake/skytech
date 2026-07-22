@@ -67,7 +67,7 @@ const CertificationCard = ({
           >
             <button
               onClick={() => setIsOpen(false)}
-              className="absolute -top-4 -right-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white text-black shadow-lg"
+              className="absolute -top-4 -right-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white text-black shadow-lg cursor-pointer hover:bg-accent"
             >
               ✕
             </button>
