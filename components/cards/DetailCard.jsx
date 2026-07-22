@@ -3,11 +3,12 @@
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
+import Image from "next/image";
 
 const DetailCard = ({
   variant = "service",
   id,
-  Img,
+  img,
   title,
   desc,
   author,
@@ -19,8 +20,13 @@ const DetailCard = ({
   return (
     <div className="w-full rounded-default h-full bg-white p-4 flex flex-col space-y-4 shadow-default">
       {/* Image */}
-      <div className="relative w-full overflow-hidden rounded-default aspect-[410/380] bg-accent">
-        <img src={Img} alt={title} className="h-full w-full object-cover" />
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-default bg-accent">
+        <Image
+          src={img}
+          alt={title}
+          fill
+          className="h-full w-full object-cover"
+        />
 
         {variant === "service" && (
           <div className="absolute right-3 top-3 sm:right-4 sm:top-4">

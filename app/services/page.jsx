@@ -37,7 +37,7 @@ const page = () => {
                 <DetailCard
                   key={idx}
                   id={String(idx + 1).padStart(2, "0")}
-                  Img={service.img}
+                  img={service.img}
                   title={service.title}
                   desc={service.details}
                 />

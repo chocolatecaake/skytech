@@ -29,7 +29,7 @@ const page = () => {
               >
                 <DetailCard
                   variant="blog"
-                  Img={blog.img}
+                  img={blog.img}
                   title={blog.title}
                   author={blog.author}
                   date={blog.date}
