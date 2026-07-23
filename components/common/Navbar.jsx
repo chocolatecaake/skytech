@@ -41,6 +41,8 @@ const Navbar = () => {
             width={156}
             height={40}
             alt="skytech logo"
+            className="h-auto"
+            loading="eager"
           />
         </Link>
 

@@ -15,7 +15,7 @@ const page = () => {
       <section>
         <Title pretitle="Our Projects" header="see our work" align="center" />
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-default">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
             {projects.map((project, idx) => (
               <motion.div
                 key={idx}

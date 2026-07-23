@@ -52,6 +52,7 @@ export default function Hero() {
             fill
             priority={index === 0}
             className="object-cover"
+            loading="eager"
           />
         </motion.div>
       ))}

@@ -24,7 +24,7 @@ const page = () => {
           quality standards
         </span>
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-default">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
             {services.map((service, idx) => (
               <motion.div
                 key={idx}
