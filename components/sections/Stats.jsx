@@ -38,7 +38,7 @@ const Stats = () => {
           {statsData.map((stat, index) => (
             <div key={index} className="contents">
               {/* Stat */}
-              <div className="flex flex-col items-center flex-1 space-y-4">
+              <div className="flex flex-col items-center flex-1 space-y-small">
                 <div className="h3 text-accent">
                   {inView && (
                     <CountUp

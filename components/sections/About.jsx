@@ -55,7 +55,7 @@ const About = () => {
             className="h-15 w-15 rotate-180 fill-accent stroke-accent"
             strokeWidth={1.5}
           />
-          <div className="flex flex-col space-y-8 bg-background">
+          <div className="flex flex-col space-y-default bg-background">
             <Title header="What we stand for" />
             <p>
               With over two decades of experience, we combine engineering

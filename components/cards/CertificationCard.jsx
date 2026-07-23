@@ -33,7 +33,7 @@ const CertificationCard = ({
         </div>
 
         {/* Details */}
-        <div className="w-full md:flex-1 flex flex-col space-y-4">
+        <div className="w-full md:flex-1 flex flex-col space-y-small">
           <div className="flex justify-between md:flex-col">
             <p className="text-tertiary">Certificate No</p>
             <p className="body-large">{CerficationNo}</p>

@@ -71,7 +71,7 @@ const ProjectCard = ({
           }`}
         > */}
         <div className="overflow-hidden transition-all duration-500 max-h-60 opacity-100">
-          <div className="space-y-4 border-t border-tertiary/50">
+          <div className="border-t border-tertiary/50">
             <div className="flex flex-col gap-2 mt-4 sm:flex-row sm:items-center sm:justify-between">
               <span className="text-sm text-gray-500">Client</span>
               <span className="font-medium text-gray-900">{Client}</span>

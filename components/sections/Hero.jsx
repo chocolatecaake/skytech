@@ -63,7 +63,7 @@ export default function Hero() {
       <div className="relative z-20 container mx-auto h-full flex flex-col">
         {/* Center Content */}
         <div className="flex-1 flex items-center">
-          <div className="max-w-5xl text-white space-y-8">
+          <div className="max-w-5xl text-white space-y-default">
             <div className="space-y-6">
               <motion.div
                 variants={fadeIn("up", 0.2)}

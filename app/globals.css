@@ -11,14 +11,13 @@
   --secondary-800: rgba(173, 6, 26, 1);
   --blue-accent-half: rgba(241, 246, 254, 1);
   --dark-blue: rgba(0, 67, 168, 1);
-  --gap-default: 28px;
-  --gap-small: 16px;
 
   --dot-color: rgba(0, 0, 0, 0.08);
 
-  --space-section: 96px;
-  --space-content: 64px;
-  --space-heading: 32px;
+  --spacing-small: 16px;
+  --spacing-default: 28px;
+  --spacing-content: 64px;
+  --spacing-section: 96px;
 
   --radius: 8px;
   --shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -47,8 +46,10 @@
   --shadow-default: var(--shadow);
   --shadow-blue: var(--shadow-blue);
 
-  --gap-default: var(--gap-default);
-  --gap-small: var(--gap-small);
+  --spacing-small: var(--spacing-small);
+  --spacing-default: var(--spacing-default);
+  --spacing-content: var(--spacing-content);
+  --spacing-section: var(--spacing-section);
 
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
@@ -114,11 +115,6 @@ h4,
 .hero,
 .spaced {
   font-family: var(--font-primary) !important;
-}
-
-p,
-span {
-  font-family: var(--font-secondary) !important;
 }
 
 .hero {
@@ -191,6 +187,7 @@ span {
   font-size: 16px;
   line-height: 160%;
   letter-spacing: 0%;
+  font-family: var(--font-secondary) !important;
 }
 
 /* .body-bold {
@@ -210,10 +207,14 @@ span {
 /*Layout*/
 
 section {
-  padding: clamp(16px, 6vw, 96px);
+  padding: clamp(16px, 6vw, var(--spacing-section));
   display: flex;
   flex-direction: column;
-  gap: clamp(24px, 4vw, 64px);
+  gap: clamp(24px, 4vw, (var(--spacing-content)));
+}
+
+.grid {
+  gap: var(--spacing-default);
 }
 
 .card {
@@ -222,10 +223,12 @@ section {
   flex-direction: column;
   height: 100%;
   width: 100%;
-  gap: 16px;
+  gap: var(--spacing-small);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  transition: transform 500ms ease;
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease;
 }
 
 .card-img {
@@ -237,7 +240,8 @@ section {
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-blue);
 }
 
 .inset-border {

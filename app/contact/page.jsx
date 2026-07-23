@@ -89,8 +89,8 @@ const ContactForm = () => {
         <div className="grid items-stretch gap-12 lg:grid-cols-2">
           {/* LEFT SIDE */}
 
-          <div className="flex flex-col space-y-8">
-            <div className="space-y-5">
+          <div className="flex flex-col space-y-default">
+            <div className="space-y-default">
               <Title
                 pretitle="Get In Touch"
                 header="Request A Quote"
@@ -115,7 +115,7 @@ const ContactForm = () => {
                     p-4 backdrop-blur-lg
                     "
                 >
-                  <div className="flex items-center space-y-4">
+                  <div className="flex items-center">
                     <div>
                       <p className="text-yellow">{contact.title}</p>
 
@@ -134,15 +134,15 @@ const ContactForm = () => {
             className="
             rounded-default
             bg-background
-            p-5
+            p-4
             shadow-default
-            space-y-4
+            space-y-small
             "
             aria-label="Request quote form"
           >
             {/* NAME */}
 
-            <div className="space-y-2">
+            <div>
               <label className="sr-only">Your Name</label>
 
               <input
@@ -162,7 +162,7 @@ const ContactForm = () => {
 
             {/* EMAIL */}
 
-            <div className="space-y-2">
+            <div>
               <label className="sr-only">Email Address</label>
 
               <input
@@ -182,7 +182,7 @@ const ContactForm = () => {
 
             {/* PHONE */}
 
-            <div className="space-y-2">
+            <div>
               <label className="sr-only">Mobile Number</label>
 
               <input
@@ -211,7 +211,7 @@ const ContactForm = () => {
 
             {/* MESSAGE */}
 
-            <div className="space-y-2">
+            <div>
               <textarea
                 rows={5}
                 {...register("message")}

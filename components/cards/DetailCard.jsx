@@ -47,7 +47,7 @@ const DetailCard = ({
       <h4>{title}</h4>
 
       {/* Description */}
-      <div className="flex flex-col space-y-4">
+      <div className="flex flex-col space-y-small">
         <p
           className={`text-tertiary  ${variant === "blog" ? "line-clamp-3" : ""}`}
         >
