@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { FaPhone } from "react-icons/fa6";
 import { AiFillPrinter } from "react-icons/ai";
+import { FaLinkedin } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
 import { services } from "@/constants/services";
@@ -9,7 +10,7 @@ import { links } from "@/constants/navigation";
 export default function Footer() {
   return (
     <footer className="bg-primary w-full">
-      <div className="flex flex-col md:flex-row justify-between p-24 pb-12 gap-default">
+      <div className="flex flex-col md:flex-row justify-between p-12 sm:p-24 sm:pb-1 gap-default">
         <div className="flex flex-col text-white space-y-4">
           <h4>Skytech General Contracting L.L.C</h4>
           <span className="body-large">P.O. Box 132415</span>
@@ -43,6 +44,12 @@ export default function Footer() {
               <IoMdMail className="inline mr-2 text-yellow-300" />
               sales@skytechuae.com
             </span>
+            <Link
+              href="https://www.linkedin.com/company/sky-tech-general-contracting/people/"
+              target="_blank"
+            >
+              <FaLinkedin className="inline text-yellow-300" />
+            </Link>
           </div>
         </div>
         <div className="flex flex-col text-white space-y-6">
@@ -72,11 +79,11 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between px-24 pb-6 items-center">
+      <div className="flex flex-col md:flex-row justify-between px-12 sm:px-24 pb-6 items-center">
         <h1 className="footer-font tracking-widest bg-gradient-to-t from-[#77aeff]/0 via-[#547ab3]/75 to-[#486699]/100 bg-clip-text text-transparent">
           SKYTECH
         </h1>
-        <span className="text-white text-sm">
+        <span className="text-white text-sm text-center">
           © 2026 SkyTech General Contracting LLC. All rights reserved.
         </span>
       </div>
