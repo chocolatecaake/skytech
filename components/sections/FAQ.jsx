@@ -23,7 +23,9 @@ const FAQItem = ({ title, description }) => {
 
   return (
     <div
-      className={`border border-1 rounded-default  ${isOpen ? "border-accent" : ""}`}
+      className={`border border-1 rounded-default cursor-pointer hover:border-accent ${isOpen ? "border-accent" : ""}`}
+      onClick={() => setIsOpen(!isOpen)}
+      aria-expanded={isOpen}
     >
       <div className="glass">
         <div className="flex p-5 items-center justify-between">
@@ -31,11 +33,7 @@ const FAQItem = ({ title, description }) => {
             {title}
           </h4>
 
-          <button
-            className={`cursor-pointer ${isOpen ? "text-accent" : ""}`}
-            onClick={() => setIsOpen(!isOpen)}
-            aria-expanded={isOpen}
-          >
+          <button className={`cursor-pointer ${isOpen ? "text-accent" : ""}`}>
             {isOpen ? (
               <FaChevronUp className="h-4 w-4" />
             ) : (
@@ -45,7 +43,7 @@ const FAQItem = ({ title, description }) => {
         </div>
 
         <div
-          className={`overflow-hidden transition-all duration-500 ease-in-out ${
+          className={`overflow-hidden transition-all duration-300 ease-in-out ${
             isOpen ? "max-h-[200px] opacity-100 p-5" : "max-h-0 opacity-0 p-0"
           }`}
         >
