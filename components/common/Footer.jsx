@@ -5,6 +5,7 @@ import { IoMdMail } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
 import { services } from "@/constants/services";
 import { links } from "@/constants/navigation";
+import { FaLinkedin } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -33,16 +34,22 @@ export default function Footer() {
           <div className="flex flex-col space-y-small">
             <span className="body-large items-center">
               <FaPhone className="inline mr-2 text-yellow-300" />
-              +971 50 259 7150
+              +971 50 259 7150, +971 55 646 4942
             </span>
             <span className="body-large">
               <AiFillPrinter className="inline mr-2 text-yellow-300" />
-              +971 50 259 7150 (Fax)
+              +971 2 553 4307 (Fax)
             </span>
             <span className="body-large">
               <IoMdMail className="inline mr-2 text-yellow-300" />
               sales@skytechuae.com
             </span>
+            <Link
+              href="https://www.linkedin.com/company/sky-tech-general-contracting/people/"
+              target="_blank"
+            >
+              <FaLinkedin className="inline w-6 h-6 text-yellow-300" />
+            </Link>
           </div>
         </div>
         <div className="flex flex-col text-white space-y-default">

@@ -23,8 +23,8 @@ export const links = [
     name: "Gallery",
     path: "/gallery",
   },
-  {
-    name: "Tester",
-    path: "/tester",
-  },
+  // {
+  //   name: "Tester",
+  //   path: "/tester",
+  // },
 ];

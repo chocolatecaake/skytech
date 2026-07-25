@@ -5,7 +5,7 @@ import { GiTeePipe } from "react-icons/gi";
 export const services = [
   {
     title: "GRP & GRE Lamination",
-    desc: "Specialized in lamination, double bell coupling & rubber seal lock joints",
+    desc: "Specialized in GRP and GRE pipe field jointing",
     details:
       "Specialized in GRP and GRE pipe field jointing: lamination, double bell coupling, adhesive & rubber seal lock joints, spools & fittings fabrication",
     icon: GiPipes,
@@ -13,7 +13,7 @@ export const services = [
   },
   {
     title: "PVC, PPR & HDPE Jointing",
-    desc: "Expert jointing of PVC & PPR pipes and jointing for a wide range of industrial applications",
+    desc: "Expert jointing of PVC & PPR pipes",
     details:
       "Expert jointing of PVC & PPR pipes and HDPE butt fusion and electro fusion jointing for a wide range of industrial applications",
     icon: MdEngineering,
@@ -29,7 +29,7 @@ export const services = [
   },
   {
     title: "Pipe System Installation",
-    desc: "Full installation of pipe systems and supports for steam, hot water, heating",
+    desc: "Full installation of pipe systems, supports, and hydraulic/pneumatic equipment",
     details:
       "Full installation of pipe systems, supports, and hydraulic/pneumatic equipment for steam, hot water, heating, cooling, lubricating, and industrial systems",
     icon: MdEngineering,

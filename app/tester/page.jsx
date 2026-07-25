@@ -10,7 +10,7 @@ import WhatsAppButton from "@/components/common/Whatsapp";
 
 import { FaWhatsapp } from "react-icons/fa";
 
-import { Testimonials } from "@/components/cards/Testimonials";
+import { Testimonials } from "@/components/sections/Testimonials";
 import CTASection from "@/components/common/CTASection";
 
 import Faq from "@/components/sections/FAQ";

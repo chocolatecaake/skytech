@@ -18,7 +18,7 @@ const statsData = [
   {
     endCountNum: 3,
     endcountText: "+",
-    text: "Quality Certifications",
+    text: "Locations in the UAE",
   },
   {
     endCountNum: 99,

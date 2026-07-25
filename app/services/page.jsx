@@ -18,10 +18,10 @@ const page = () => {
           header="see what we can do for you"
           align="center"
         />
-        <span className="body-large bg-background text-center">
-          SKYTECH aims, to achieve customer satisfaction through superior
-          services and commitment, without any compromise on international
-          quality standards
+        <span className="block max-w-5xl mx-auto body-large text-center">
+          Skytech is committed to delivering outstanding service solutions of
+          the highest international quality standards and strong professional
+          values.
         </span>
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
@@ -49,8 +49,8 @@ const page = () => {
       <CTASection
         img="/assets/construction.webp"
         title="Need help choosing a Service ?"
-        subtitle="Get a quotation from our Experienced Engineers"
-        button={<Button variant="CTA" text="Get a Quote" />}
+        subtitle="Talk to our experienced consultants to find the right solution for your project"
+        button={<Button variant="CTA" text="Contact Us" />}
       />
     </>
   );

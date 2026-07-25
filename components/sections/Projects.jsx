@@ -17,7 +17,7 @@ const Projects = () => {
         <div className="flex justify-end">
           <Button text="See All Projects" variant="primary" />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-default">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
           {projects.slice(0, 3).map((project, index) => (
             <motion.div
               key={index}

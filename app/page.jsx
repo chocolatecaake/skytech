@@ -3,7 +3,7 @@ import Stats from "@/components/sections/Stats";
 import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
 import Projects from "@/components/sections/Projects";
-import { Testimonials } from "@/components/cards/Testimonials";
+import { Testimonials } from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 import CTASection from "@/components/common/CTASection";
 import Button from "@/components/common/Button";

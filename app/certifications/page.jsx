@@ -40,14 +40,13 @@ const page = () => {
     <>
       <section>
         <Title
-          pretitle="Our Certifications"
+          pretitle="Our Qualifications"
           header="see our certifications"
           align="center"
         />
-        <span className="body-large bg-background text-center">
-          SKYTECH aims, to achieve customer satisfaction through superior
-          services and commitment, without any compromise on international
-          quality standards
+        <span className="block max-w-5xl mx-auto body-large text-left md:text-center">
+          We are committed to meeting internationally recognized quality
+          standards to ensure reliability, safety, and customer satisfaction.
         </span>
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">

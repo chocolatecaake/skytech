@@ -5,7 +5,7 @@ import Title from "../common/Title";
 import { testimonials } from "@/constants/testimonials";
 import Image from "next/image";
 
-const clients = ["adnoc", "cnooc", "damac", "petrofac", "taqa"];
+const clients = ["adnoc", "cnooc", "damac", "petrofac", "taqa", "nbtc"];
 
 const TestimonialCard = ({ name, role, stars, content }) => {
   return (

@@ -24,7 +24,7 @@ const ContactForm = () => {
     },
     {
       title: "Call Us",
-      value: "+971 2 123 4567",
+      value: "+971 50 259 7150",
       icon: Phone,
     },
   ];

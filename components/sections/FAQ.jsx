@@ -23,7 +23,7 @@ const FAQItem = ({ title, description }) => {
 
   return (
     <div
-      className={`border border-1 rounded-default cursor-pointer hover:border-accent ${isOpen ? "border-accent" : ""}`}
+      className={`border border-1 rounded-default cursor-pointer hover:border-accent ${isOpen ? "border-accent shadow-blue" : ""}`}
       onClick={() => setIsOpen(!isOpen)}
       aria-expanded={isOpen}
     >
