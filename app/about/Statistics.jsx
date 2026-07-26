@@ -5,6 +5,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import construction from "@/public/assets/construction.webp";
 import CountUp from "react-countup";
+import { Fragment } from "react";
 
 const statsData = [
   {
@@ -38,40 +39,37 @@ const Statistics = () => {
 
       {/* Tint Overlay */}
       <div className="absolute inset-0 bg-primary/80" />
-      <div ref={ref} className="container mx-auto">
-        <div className="relative flex flex-col md:flex-row justify-between items-center gap-default text-white">
+
+      <div ref={ref} className="container relative mx-auto">
+        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-6 lg:gap-10 text-white">
           {statsData.map((stat, index) => (
-            <div key={index} className="contents">
-              {/* Stat */}
-              <div className="flex flex-col items-center flex-1 space-y-4">
-                <div className="hero text-accent">
+            <Fragment key={index}>
+              <div className="flex flex-1 flex-col items-center text-center space-y-4">
+                <div className="h1 text-accent">
                   {inView && (
                     <CountUp
                       start={1}
                       end={stat.endCountNum}
                       delay={0.5}
                       duration={3}
-                      className="hero"
+                      className="h1"
                     />
                   )}
                   {stat.endcountText}
                 </div>
 
                 {/* Line */}
-                <div className="h-1 w-100 bg-white" />
-                <div className="h3 text-center !font-bold leading-tight text-center">
-                  {stat.text}
-                </div>
-                <div className="body-large text-center  leading-tight text-center">
-                  {stat.desc}
-                </div>
+                <div className="h-1 w-full max-w-[200px] bg-white" />
+
+                <div className="h4 !font-bold">{stat.text}</div>
+
+                <p className="body-large max-w-sm">{stat.desc}</p>
               </div>
 
-              {/* Separator */}
-              {index !== statsData.length - 1 && (
-                <div className="md:block w-2 h-2 rounded-full bg-yellow flex-shrink-0" />
+              {index < statsData.length - 1 && (
+                <div className="hidden md:block w-2 h-2 rounded-full bg-yellow flex-shrink-0" />
               )}
-            </div>
+            </Fragment>
           ))}
         </div>
       </div>

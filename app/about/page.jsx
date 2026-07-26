@@ -1,3 +1,5 @@
+"use client";
+
 import Title from "@/components/common/Title";
 import About from "@/public/assets/About.webp";
 import icv from "@/public/assets/about/icv.webp";
@@ -6,102 +8,171 @@ import iso from "@/public/assets/about/iso.webp";
 import Button from "@/components/common/Button";
 import Image from "next/image";
 import Statistics from "./Statistics.jsx";
+import Link from "next/link.js";
 
-import { MdOutlineVerified } from "react-icons/md";
-import { FaCircle } from "react-icons/fa6";
-import { CgProfile } from "react-icons/cg";
-import { LuFlower2 } from "react-icons/lu";
+import { MdVerified } from "react-icons/md";
+import { RiUser2Fill } from "react-icons/ri";
+import { RiTreeFill } from "react-icons/ri";
 import { MdAddLocationAlt } from "react-icons/md";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
+import { motion } from "framer-motion";
+import { fadeIn } from "@/constants/variants";
+
 const page = () => {
+  const skytechValues = [
+    {
+      icon: <MdVerified className="h-8 w-8 text-secondary" />,
+      text: "Highest Quality of international standards",
+    },
+    {
+      icon: <RiUser2Fill className="h-8 w-8 text-secondary" />,
+      text: "Certified engineers and skilled technicians",
+    },
+    {
+      icon: <RiTreeFill className="h-8 w-8 text-secondary" />,
+      text: "Focus on Sustainability, health and safety",
+    },
+    {
+      icon: <MdAddLocationAlt className="h-8 w-8 text-secondary" />,
+      text: "Proven track record of success across the UAE",
+    },
+  ];
+
   return (
     <>
-      <section>
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
-          <div className="flex flex-col gap-5">
-            <Title
-              pretitle="About Us"
-              header="Serving Customers Through Innovative Excellence"
-              align="left"
-            />
+      <section className="overflow-x-hidden">
+        <div className="flex flex-col xl:flex-row gap-content xl:gap-section">
+          <motion.div
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.3 }}
+            className="flex flex-col flex-2"
+          >
+            <div className="flex flex-col space-y-default bg-background">
+              <Title
+                pretitle="About Us"
+                header="Serving Customers Through Innovative Excellence"
+                align="left"
+              />
+              <p>
+                SKYTECH is an innovative company providing cutting edge, cost
+                effective solutions in the supply and installation of
+                Fiberglass, Thermoplastic, CS, and SS Systems.
+              </p>
+              <p>
+                We believe that through efficient, timely and economically
+                viable execution, and commitment to international quality
+                standards, we will be able to provide stellar service and
+                achieve customer satisfaction.
+              </p>
+              <Link href="/certifications">
+                <div className="flex items-center gap-small">
+                  <div className="relative w-12 h-12">
+                    <Image
+                      src={icv}
+                      alt="icv logo"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
 
-            <p className="mt-6 text-gray-600 leading-8">
-              SKYTECH is an innovative company providing cutting edge, cost
-              effective solutions in the supply and installation of Fiberglass,
-              Thermoplastic, CS, and SS Systems. We believe that through
-              efficient, timely and economically viable execution, and
-              commitment to international quality standards, we will be able to
-              provide stellar service and achieve customer satisfaction.
-            </p>
-            <div className=" relative flex flex-row items-center gap-5">
-              <div>
-                <Image src={icv} alt="About Us" className="w-auto h-auto" />
-              </div>
-              <div>
-                <Image src={iso} alt="About Us" className="w-auto h-auto" />
-              </div>
-              <div>
-                <Image src={adnoc} alt="About Us" className="w-auto h-auto" />
-              </div>
+                  <div className="relative w-12 h-12">
+                    <Image
+                      src={iso}
+                      alt="iso logo"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+
+                  <div className="relative w-12 h-12">
+                    <Image
+                      src={adnoc}
+                      alt="adnoc logo"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              </Link>
+              <Button
+                text="See Our Projects"
+                variant="primary"
+                href="/projects"
+              />
             </div>
-            <Button text="See Our Projects" variant="primary" />
-          </div>
-          <div className="shrink-0">
-            <Image src={About} alt="About Us" className="w-auto h-auto" />
-          </div>
+          </motion.div>
+
+          <motion.div
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.3 }}
+            className="relative flex-1 flex justify-center xl:justify-start"
+          >
+            <Image
+              src={About}
+              alt="About Us"
+              className="rounded-default object-cover shadow-default border-3 border-primary xl:border-none"
+            />
+          </motion.div>
         </div>
       </section>
-      <div className="flex flex-col lg:flex-row w-full bg-lightaccent items-center p-5 gap-5">
-        <div className="flex flex-col items-center gap-4">
-          <MdOutlineVerified className="h-[80] w-[80] text-red-600 bg-red-100 rounded-full p-5" />
-          <h4 className="text-center">
-            Highest Quality of international standards
-          </h4>
+      <section className="bg-background">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-default">
+          {skytechValues.map((stat, index) => (
+            <div key={index} className="contents">
+              {/* Stat */}
+              <div className="flex flex-col items-center flex-1 space-y-small">
+                <div className="bg-red-100 p-2 rounded-full">{stat.icon}</div>
+
+                <div className="h4 text-center leading-tight">{stat.text}</div>
+              </div>
+
+              {/* Separator */}
+              {index !== skytechValues.length - 1 && (
+                <div className="md:block w-2 h-2 rounded-full bg-yellow flex-shrink-0" />
+              )}
+            </div>
+          ))}
         </div>
-        <FaCircle />
-        <div className="flex flex-col items-center gap-4">
-          <CgProfile className="h-[80] w-[80] text-red-600 bg-red-100 rounded-full p-5" />
-          <h4 className="text-center">
-            Certified engineers and skilled technicians
-          </h4>
-        </div>
-        <FaCircle />
-        <div className="flex flex-col items-center gap-4">
-          <LuFlower2 className="h-[80] w-[80] text-red-600 bg-red-100 rounded-full p-5" />
-          <h4 className="text-center">
-            Focus on Sustainability, health and safety
-          </h4>
-        </div>
-        <FaCircle />
-        <div className="flex flex-col items-center gap-4">
-          <MdAddLocationAlt className="h-[80] w-[80] text-red-600 bg-red-100 rounded-full p-5" />
-          <h4 className="text-center">
-            Proven track record of success across the UAE
-          </h4>
-        </div>
-      </div>
+      </section>
       <Statistics />
-      <div className="relative flex flex-col lg:flex-row justify-between items-center gap-20 p-10">
-        <FaQuoteLeft className="absolute text-accent h-[100px] w-[100px] top-1 " />
-        <FaQuoteRight className="absolute text-accent h-[100px] w-[100px] bottom-1 right-10" />
-        <div className="flex flex-col bg-primary text-center p-20 rounded-[15] gap-5">
-          <span className="h3 text-yellow">Our Vision</span>
-          <span className="body-large text-white">
-            SKYTECH aims, to achieve customer satisfaction through superior
-            services and commitment, without any compromise on international
-            quality standards.{" "}
-          </span>
+      <div className="px-4 sm:px-8 xl:px-section py-10 overflow-hidden">
+        <div className="relative flex flex-col lg:flex-row justify-center items-center gap-0 xl:gap-content">
+          {/* Vision */}
+          <div className="relative w-full max-w-xl py-4 sm:py-10">
+            <FaQuoteLeft className="absolute text-accent h-14 w-14 sm:h-20 sm:w-20 -top-2 left-2 sm:left-5" />
+
+            <div className="flex flex-col bg-primary text-center p-6 sm:p-10 lg:p-12 rounded-default space-y-small">
+              <span className="h3 text-yellow">Our Vision</span>
+
+              <span className="body-large text-left text-white">
+                SKYTECH aims, to achieve customer satisfaction through superior
+                services and commitment, without any compromise on international
+                quality standards.
+              </span>
+            </div>
+          </div>
+
+          {/* Mission */}
+          <div className="relative w-full max-w-xl py-4 sm:py-10">
+            <FaQuoteRight className="absolute text-accent h-14 w-14 sm:h-20 sm:w-20 -bottom-2 right-2 sm:right-5" />
+
+            <div className="flex flex-col bg-primary text-center p-6 sm:p-10 lg:p-12 rounded-default space-y-small">
+              <span className="h3 text-yellow-500">Our Mission</span>
+
+              <span className="body-large text-left text-white">
+                SKYTECH aims, to achieve customer satisfaction through superior
+                services and commitment, without any compromise on international
+                quality standards.
+              </span>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col bg-primary text-center p-20 rounded-[15] gap-5">
-          <span className="h3 text-yellow-500">Our Mission</span>
-          <span className="body-large text-white ">
-            SKYTECH aims, to achieve customer satisfaction through superior
-            services and commitment, without any compromise on international
-            quality standards.{" "}
-          </span>
-        </div>
-      </div>
+      </div>{" "}
     </>
   );
 };
