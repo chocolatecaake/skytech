@@ -24,7 +24,7 @@ export default function Home() {
         img="/assets/construction.webp"
         title="Ready to build something amazing Together ?"
         subtitle="Get a quotation from our Experienced Engineers"
-        button={<Button variant="CTA" text="Get In Touch" />}
+        button={<Button variant="CTA" text="Get In Touch" href="/contact" />}
       />
     </div>
   );

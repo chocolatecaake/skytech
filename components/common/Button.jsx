@@ -31,7 +31,7 @@ const Button = ({ text, icon, variant = "primary", href, onClick }) => {
 
   if (href) {
     return (
-      <Link href={href} className={classes}>
+      <Link href={href} className={classes} target="_blank">
         {icon}
         {text}
       </Link>

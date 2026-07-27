@@ -143,7 +143,13 @@ const page = () => {
       <div className="px-4 sm:px-8 xl:px-section py-10 overflow-hidden">
         <div className="relative flex flex-col lg:flex-row justify-center items-center gap-0 xl:gap-content">
           {/* Vision */}
-          <div className="relative w-full max-w-xl py-4 sm:py-10">
+          <motion.div
+            variants={fadeIn("right", 0.2)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.3 }}
+            className="relative w-full max-w-xl py-4 sm:py-10"
+          >
             <FaQuoteLeft className="absolute text-accent h-14 w-14 sm:h-20 sm:w-20 -top-2 left-2 sm:left-5" />
 
             <div className="flex flex-col bg-primary text-center p-6 sm:p-10 lg:p-12 rounded-default space-y-small">
@@ -155,10 +161,17 @@ const page = () => {
                 quality standards.
               </span>
             </div>
-          </div>
+          </motion.div>
 
           {/* Mission */}
-          <div className="relative w-full max-w-xl py-4 sm:py-10">
+
+          <motion.div
+            variants={fadeIn("left", 0.2)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.3 }}
+            className="relative w-full max-w-xl py-4 sm:py-10"
+          >
             <FaQuoteRight className="absolute text-accent h-14 w-14 sm:h-20 sm:w-20 -bottom-2 right-2 sm:right-5" />
 
             <div className="flex flex-col bg-primary text-center p-6 sm:p-10 lg:p-12 rounded-default space-y-small">
@@ -170,9 +183,9 @@ const page = () => {
                 quality standards.
               </span>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>{" "}
+      </div>
     </>
   );
 };

@@ -51,7 +51,7 @@ const page = () => {
         img="/assets/construction2.webp"
         title="start a project with us"
         subtitle="Get a quotation from our Experienced Engineers"
-        button={<Button variant="CTA" text="Get a Quote" />}
+        button={<Button variant="CTA" text="Get a Quote" href="/contact" />}
       />
     </>
   );

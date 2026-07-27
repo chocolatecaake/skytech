@@ -50,7 +50,7 @@ const page = () => {
         img="/assets/construction.webp"
         title="Need help choosing a Service ?"
         subtitle="Talk to our experienced consultants to find the right solution for your project"
-        button={<Button variant="CTA" text="Contact Us" />}
+        button={<Button variant="CTA" text="Contact Us" href="/contact" />}
       />
     </>
   );
