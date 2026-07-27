@@ -18,7 +18,7 @@ const page = () => {
           header="see what we can do for you"
           align="center"
         />
-        <span className="block max-w-5xl mx-auto body-large text-center">
+        <span className="bg-background block max-w-5xl mx-auto body-large text-center">
           Skytech is committed to delivering outstanding service solutions of
           the highest international quality standards and strong professional
           values.

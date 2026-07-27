@@ -14,7 +14,7 @@ const page = () => {
     <>
       <section>
         <Title pretitle="Our Projects" header="see our work" align="center" />
-        <span className="block max-w-5xl mx-auto body-large text-left md:text-center">
+        <span className="bg-background block max-w-5xl mx-auto body-large text-left md:text-center">
           Our extensive experience and reputation for quality, reliability and
           integrity embodies our commitment to excellence. We strive to build
           strong relationships with our clients and depend not only on our

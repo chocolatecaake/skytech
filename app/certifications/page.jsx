@@ -44,7 +44,7 @@ const page = () => {
           header="see our certifications"
           align="center"
         />
-        <span className="block max-w-5xl mx-auto body-large text-left md:text-center">
+        <span className="bg-background block max-w-5xl mx-auto body-large text-left md:text-center">
           We are committed to meeting internationally recognized quality
           standards to ensure reliability, safety, and customer satisfaction.
         </span>
