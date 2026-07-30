@@ -1,23 +1,20 @@
 export const testimonials = [
   {
-    name: "Méschac Irung",
-    role: "Creator",
-    stars: 5,
+    name: "Middle East Pipes Installation and Contracting",
+    role: "Project Director",
     content:
-      "Using Tailark has been like unlocking a secret design superpower. It's the perfect fusion of simplicity.",
+      "Skytech delivered our GRE piping scope on schedule despite a tight site window. Their QC documentation was thorough, and coordination with our project team was smooth from procurement through final handover. A dependable subcontracting partner.",
   },
   {
-    name: "Théo Balick",
-    role: "Frontend Dev",
-    stars: 4,
+    name: "Middle East Fiberglass Industry",
+    role: "Technical Manager",
     content:
-      "Aspect is amazing.Tailark has transformed the way I develop web applications. The flexibility to customize every aspect is amazing.",
+      "We've worked with Skytech across multiple GRP lining and piping packages. Their ADNOC-approved quality standards and attention to lamination detail have consistently met our specifications, even on complex scopes.",
   },
   {
-    name: "Poopy Man",
-    role: "Frontend Dev",
-    stars: 5,
+    name: "Global Link Technical Services",
+    role: "Site Manager",
     content:
-      "The extensive collection of UI components has significantly accelerated my workflow.",
+      "Skytech's team is responsive, safety-conscious, and easy to work with on multi-site projects. Their ISO-certified processes gave us confidence throughout execution.",
   },
 ];

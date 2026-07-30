@@ -8,12 +8,12 @@ const statsData = [
   {
     endCountNum: 20,
     endcountText: "+",
-    text: "Years Experience",
+    text: "Years of Experience",
   },
   {
-    endCountNum: 10,
+    endCountNum: 40,
     endcountText: "+",
-    text: "Successful Projects",
+    text: "Projects in the UAE",
   },
   {
     endCountNum: 3,

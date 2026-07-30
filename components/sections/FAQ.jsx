@@ -28,7 +28,7 @@ const FAQItem = ({ title, description }) => {
       aria-expanded={isOpen}
     >
       <div className="glass">
-        <div className="flex p-5 items-center justify-between">
+        <div className="flex p-5 items-center justify-between gap-2">
           <h4 className={`body-large ${isOpen ? "text-accent" : ""}`}>
             {title}
           </h4>

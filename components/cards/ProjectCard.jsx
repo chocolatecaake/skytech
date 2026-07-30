@@ -12,7 +12,7 @@ const ProjectCard = ({
   title,
   loc,
   Client,
-  Value,
+  Contractor,
   ProjType,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -38,7 +38,7 @@ const ProjectCard = ({
         </div>
 
         {/* Bottom Overlay */}
-        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 flex justify-between">
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 flex flex-col">
           <h4 className="text-lg font-semibold text-white md:text-xl">
             {title}
           </h4>
@@ -72,14 +72,16 @@ const ProjectCard = ({
         > */}
         <div className="overflow-hidden transition-all duration-500 max-h-60 opacity-100">
           <div className="border-t border-tertiary/50">
-            <div className="flex flex-col gap-2 mt-4 sm:flex-row sm:items-center sm:justify-between">
-              <span className="text-sm text-gray-500">Client</span>
-              <span className="font-medium text-gray-900">{Client}</span>
+            <div className="flex flex-col gap-2 mt-4">
+              <span className="text-gray-500">
+                Client: <span className="text-gray-900">{Client}</span>
+              </span>
             </div>
 
-            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-              <span className="text-sm text-gray-500">Project Value</span>
-              <span className="font-medium text-gray-900">{Value}</span>
+            <div className="flex flex-col gap-2 mt-4">
+              <span className="text-gray-500">
+                Contractor: <span className="text-gray-900">{Contractor}</span>
+              </span>
             </div>
           </div>
         </div>

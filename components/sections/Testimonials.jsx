@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const clients = ["adnoc", "cnooc", "damac", "petrofac", "taqa", "nbtc"];
 
-const TestimonialCard = ({ name, role, stars, content }) => {
+const TestimonialCard = ({ name, role, content }) => {
   return (
     <div className="relative w-88 pt-5">
       {/* Floating quote */}
@@ -22,17 +22,9 @@ const TestimonialCard = ({ name, role, stars, content }) => {
         )}
       >
         {/* Stars */}
-        <div className="flex gap-1" aria-label={`${stars} out of 5 stars`}>
+        <div className="flex gap-1" aria-label={`5 out of 5 stars`}>
           {Array.from({ length: 5 }).map((_, i) => (
-            <Star
-              key={i}
-              className={cn(
-                "h-6 w-6",
-                i < stars
-                  ? "fill-yellow stroke-yellow"
-                  : "fill-foreground/15 stroke-transparent",
-              )}
-            />
+            <Star key={i} className="h-6 w-6 fill-yellow stroke-yellow" />
           ))}
         </div>
 
