@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { fadeIn } from "@/constants/variants";
 
+import Image from "next/image";
+import Link from "next/link";
 import Button from "@/components/common/Button";
 
 import { cn } from "@/lib/utils";
@@ -95,8 +96,12 @@ export default function Hero() {
               viewport={{ once: false, amount: 0.0 }}
               className="flex gap-small"
             >
-              <Button text="See Our Projects" variant="tertiary" />
-              <Button text="Get In Touch" variant="secondary" />
+              <Button
+                text="See Our Projects"
+                variant="tertiary"
+                href="/projects"
+              />
+              <Button text="Get In Touch" variant="secondary" href="/contact" />
             </motion.div>
           </div>
         </div>
@@ -110,9 +115,11 @@ export default function Hero() {
           className="flex gap-small"
         >
           {certImages.map((certImage, index) => (
-            <div
+            <Link
               key={index}
-              className="glass p-4 flex items-center justify-center backdrop-blur-lg"
+              href="/certifications"
+              target="_blank"
+              className="glass p-4 flex cursor-pointer items-center justify-center backdrop-blur-lg transition duration-500 hover:scale-105"
             >
               <Image
                 src={certImage}
@@ -121,7 +128,7 @@ export default function Hero() {
                 height={60}
                 className="object-contain"
               />
-            </div>
+            </Link>
           ))}
         </motion.div>
       </div>

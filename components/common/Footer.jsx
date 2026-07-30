@@ -15,7 +15,7 @@ export default function Footer() {
           <h4>Skytech General Contracting L.L.C</h4>
           <span className="body-large">P.O. Box 132415</span>
           <span className="body-large">
-            <FaLocationDot className="inline mr-2 text-yellow-300" />
+            <FaLocationDot className="inline mr-small text-yellow-300" />
             Abu Dhabi, UAE
           </span>
           <div className="rounded-default overflow-hidden border border-white shadow-xl">
@@ -32,16 +32,19 @@ export default function Footer() {
         <div className="flex flex-col text-white space-y-default">
           <h4 className="text-accent">Quick Contact</h4>
           <div className="flex flex-col space-y-small">
-            <span className="body-large items-center">
-              <FaPhone className="inline mr-2 text-yellow-300" />
-              +971 50 259 7150, +971 55 646 4942
+            <span className="flex body-large items-center">
+              <FaPhone className="inline mr-small text-yellow-300" />
+              <div>
+                <p className="body-large">+971 50 259 7150,</p>
+                <p className="body-large">+971 55 646 4942</p>
+              </div>
             </span>
             <span className="body-large">
-              <AiFillPrinter className="inline mr-2 text-yellow-300" />
+              <AiFillPrinter className="inline mr-small text-yellow-300" />
               +971 2 553 4307 (Fax)
             </span>
             <span className="body-large">
-              <IoMdMail className="inline mr-2 text-yellow-300" />
+              <IoMdMail className="inline mr-small text-yellow-300" />
               sales@skytechuae.com
             </span>
             <Link

@@ -15,7 +15,7 @@ const Projects = () => {
 
       <div className="flex flex-col gap-default">
         <div className="flex justify-end">
-          <Button text="See All Projects" variant="primary" />
+          <Button text="See All Projects" variant="primary" href="/projects" />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
           {projects.slice(0, 3).map((project, index) => (
@@ -34,7 +34,7 @@ const Projects = () => {
                 title={project.title}
                 loc={project.loc}
                 Client={project.Client}
-                Value={project.Value}
+                Contractor={project.Contractor}
                 ProjType={project.ProjType}
               />
             </motion.div>
