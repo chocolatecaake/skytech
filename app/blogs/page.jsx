@@ -28,7 +28,9 @@ const page = () => {
                 custom={idx}
               >
                 <DetailCard
+                  key={blog.slug}
                   variant="blog"
+                  slug={blog.slug}
                   img={blog.img}
                   title={blog.title}
                   author={blog.author}

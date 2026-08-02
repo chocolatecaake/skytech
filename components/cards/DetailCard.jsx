@@ -3,20 +3,20 @@
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
+import Link from "next/link";
 import Image from "next/image";
 
 const DetailCard = ({
   variant = "service",
   id,
+  slug,
   img,
   title,
   desc,
   author,
   date,
-  href,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-
   return (
     <div className="card bg-white">
       {/* Image */}
@@ -56,12 +56,12 @@ const DetailCard = ({
 
         <div className="mt-auto flex justify-end">
           {variant === "blog" && (
-            <a
-              href={href}
+            <Link
+              href={`/blogs/${slug}`}
               className="font-semibold text-darkblue hover:underline underline-offset-4"
             >
               Read More <span className="body-large">→</span>
-            </a>
+            </Link>
           )}
         </div>
         {/* <button

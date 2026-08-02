@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { Turnstile } from "@marsidev/react-turnstile";
 import { useState } from "react";
 
 import { useForm } from "react-hook-form";
@@ -15,6 +16,7 @@ import Button from "@/components/common/Button";
 const ContactForm = () => {
   const [success, setSuccess] = useState(false);
   const [submitError, setSubmitError] = useState("");
+  const [captchaToken, setCaptchaToken] = useState(null);
 
   const contacts = [
     {
@@ -47,29 +49,22 @@ const ContactForm = () => {
   });
 
   const onSubmit = async (data) => {
-    try {
-      setSubmitError("");
-      setSuccess(false);
-
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (!response.ok) {
-        throw new Error("Something went wrong");
-      }
-
-      setSuccess(true);
-      reset();
-    } catch (error) {
-      console.error(error);
-
-      setSubmitError("Unable to send your request. Please try again.");
+    if (!captchaToken) {
+      return;
     }
+
+    const payload = {
+      ...data,
+      captchaToken,
+    };
+
+    await fetch("/api/quote", {
+      method: "POST",
+      body: JSON.stringify(payload),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   };
 
   return (
@@ -112,12 +107,12 @@ const ContactForm = () => {
                   key={contact.title}
                   className="
                     glass rounded-default 
-                    p-4 backdrop-blur-lg
+                    px-8 py-2 backdrop-blur-lg
                     "
                 >
                   <div className="flex items-center">
                     <div>
-                      <p className="text-yellow">{contact.title}</p>
+                      <p className="body-large text-yellow">{contact.title}</p>
 
                       <p className="body-large text-white">{contact.value}</p>
                     </div>
@@ -150,7 +145,7 @@ const ContactForm = () => {
                 autoComplete="name"
                 {...register("name")}
                 placeholder="Your Name"
-                className="form-field"
+                className="form-field placeholder:text-gray-800"
               />
 
               {errors.name && (
@@ -170,7 +165,7 @@ const ContactForm = () => {
                 autoComplete="email"
                 {...register("email")}
                 placeholder="Email Address"
-                className="form-field"
+                className="form-field placeholder:text-gray-800"
               />
 
               {errors.email && (
@@ -190,7 +185,7 @@ const ContactForm = () => {
                 autoComplete="tel"
                 {...register("phone")}
                 placeholder="Mobile Number"
-                className="form-field"
+                className="form-field placeholder:text-gray-800"
               />
 
               {errors.phone && (
@@ -206,7 +201,7 @@ const ContactForm = () => {
               type="text"
               {...register("company")}
               placeholder="Company Name"
-              className="form-field"
+              className="form-field placeholder:text-gray-800"
             />
 
             {/* MESSAGE */}
@@ -216,7 +211,7 @@ const ContactForm = () => {
                 rows={5}
                 {...register("message")}
                 placeholder="Tell us about your project"
-                className="form-field resize-none"
+                className="form-field resize-none placeholder:text-gray-800"
               />
 
               {errors.message && (
@@ -237,10 +232,19 @@ const ContactForm = () => {
 
             {submitError && <p className="text-secondary">{submitError}</p>}
 
+            {/* TURNSTILE */}
+            <div className="flex justify-center">
+              <Turnstile
+                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+                onSuccess={(token) => setCaptchaToken(token)}
+                onExpire={() => setCaptchaToken(null)}
+              />
+            </div>
+
             <div className="flex justify-end">
               <Button
                 type="submit"
-                disabled={isSubmitting}
+                disabled={isSubmitting || !captchaToken}
                 text={isSubmitting ? "Sending..." : "Request Quote"}
                 variant="CTA"
               />
