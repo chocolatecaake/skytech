@@ -18,7 +18,7 @@ export default function BlogPage() {
   }
 
   return (
-    <main className="py-10 px-4 sm:px-8">
+    <section>
 
       {/* Page container */}
       <div className="max-w-7xl mx-auto">
@@ -133,6 +133,6 @@ export default function BlogPage() {
 
       </div>
 
-    </main>
+    </section>
   );
 }
