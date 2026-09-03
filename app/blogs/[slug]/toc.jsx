@@ -33,9 +33,10 @@ const TableOfContents = ({ sections }) => {
   }, [sections]);
 
   return (
-    <aside className="hidden lg:block w-[350px] mt-20">
-      <div className="sticky top-24 rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-        <h3 className="mb-4 text-lg font-semibold">
+    <div className="w-full min-w-0">
+      <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+        
+        <h3 className="mb-4 h4">
           Table of Contents
         </h3>
 
@@ -44,7 +45,7 @@ const TableOfContents = ({ sections }) => {
             <li key={section.id}>
               <a
                 href={`#${section.id}`}
-                className={`transition-colors ${
+                className={`block break-words transition-colors ${
                   activeSection === section.id
                     ? "text-red-600 font-semibold"
                     : "text-gray-600 hover:text-red-600"
@@ -55,8 +56,9 @@ const TableOfContents = ({ sections }) => {
             </li>
           ))}
         </ul>
+
       </div>
-    </aside>
+    </div>
   );
 };
 
