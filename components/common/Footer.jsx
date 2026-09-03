@@ -29,30 +29,33 @@ export default function Footer() {
             ></iframe>
           </div>
         </div>
-        <div className="flex flex-col text-white space-y-default">
+        <div className="flex flex-col text-white space-y-default text-base">
           <h4 className="text-accent">Quick Contact</h4>
           <div className="flex flex-col space-y-small">
             <span className="flex body-large items-center">
               <FaPhone className="inline mr-small text-yellow-300" />
               <div>
-                <p className="body-large">+971 50 259 7150,</p>
-                <p className="body-large">+971 55 646 4942</p>
+                <p>+971 50 259 7150,</p>
+                <p>+971 55 646 4942</p>
               </div>
             </span>
-            <span className="body-large">
+            <span>
               <AiFillPrinter className="inline mr-small text-yellow-300" />
               +971 2 553 4307 (Fax)
             </span>
-            <span className="body-large">
+            <span>
               <IoMdMail className="inline mr-small text-yellow-300" />
               sales@skytechuae.com
             </span>
+            <span>
             <Link
               href="https://www.linkedin.com/company/sky-tech-general-contracting/people/"
               target="_blank"
             >
-              <FaLinkedin className="inline w-6 h-6 text-yellow-300" />
+              <FaLinkedin className="inline mr-small text-yellow-300" />
+              Skytech
             </Link>
+            </span>
           </div>
         </div>
         <div className="flex flex-col text-white space-y-default">
@@ -60,7 +63,7 @@ export default function Footer() {
           <Link href="/services">
             <div className="flex flex-col space-y-small">
               {services.map((service, idx) => (
-                <span key={idx} className="body-large hover:text-yellow">
+                <span key={idx} className="hover:text-yellow">
                   {service.title}
                 </span>
               ))}
@@ -69,7 +72,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col text-white space-y-default">
           <h4 className="text-accent">Quick Links</h4>
-          <div className="flex flex-col space-y-small body-large">
+          <div className="flex flex-col space-y-small">
             {links.map((link, idx) => (
               <Link
                 key={idx}
