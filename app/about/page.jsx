@@ -10,10 +10,8 @@ import Image from "next/image";
 import Statistics from "./Statistics.jsx";
 import Link from "next/link.js";
 
-import { MdVerified } from "react-icons/md";
-import { RiUser2Fill } from "react-icons/ri";
-import { RiTreeFill } from "react-icons/ri";
-import { MdAddLocationAlt } from "react-icons/md";
+import { MdVerified, MdAddLocationAlt } from "react-icons/md";
+import { RiUser2Fill, RiTreeFill } from "react-icons/ri";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 import { motion } from "framer-motion";
@@ -41,32 +39,40 @@ const page = () => {
 
   return (
     <>
-      <section className="overflow-x-hidden">
-        <div className="flex flex-col xl:flex-row gap-content xl:gap-section">
+      {/* About Us */}
+      <section className="overflow-hidden bg-background">
+        <div className="flex flex-col xl:flex-row items-center justify-between gap-10 xl:gap-20 px-4 sm:px-8 xl:px-section">
+          
+          {/* Text Content */}
           <motion.div
             variants={fadeIn("left", 0.2)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.3 }}
-            className="flex flex-col flex-2"
+            viewport={{ once: true, amount: 0.2 }}
+            className="w-full xl:w-[70%]"
           >
-            <div className="flex flex-col space-y-default bg-background">
+            <div className="flex flex-col space-y-default max-w-2xl">
               <Title
                 pretitle="About Us"
                 header="Serving Customers Through Innovative Excellence"
                 align="left"
               />
-              <p>
-                SKYTECH is an innovative company providing cutting edge, cost
-                effective solutions in the supply and installation of
-                Fiberglass, Thermoplastic, CS, and SS Systems.
-              </p>
-              <p>
-                We believe that through efficient, timely and economically
-                viable execution, and commitment to international quality
-                standards, we will be able to provide stellar service and
-                achieve customer satisfaction.
-              </p>
+
+              <div className="flex flex-col gap-4">
+                <p>
+                  SKYTECH is an innovative company providing cutting edge, cost
+                  effective solutions in the supply and installation of
+                  Fiberglass, Thermoplastic, CS, and SS Systems.
+                </p>
+
+                <p>
+                  We believe that through efficient, timely and economically
+                  viable execution, and commitment to international quality
+                  standards, we will be able to provide stellar service and
+                  achieve customer satisfaction.
+                </p>
+              </div>
+
               <Link href="/certifications">
                 <div className="flex items-center gap-small">
                   <div className="relative w-12 h-12">
@@ -97,6 +103,7 @@ const page = () => {
                   </div>
                 </div>
               </Link>
+
               <Button
                 text="See Our Projects"
                 variant="primary"
@@ -105,55 +112,67 @@ const page = () => {
             </div>
           </motion.div>
 
+          {/* Image */}
           <motion.div
             variants={fadeIn("right", 0.2)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.3 }}
-            className="relative flex-1 flex justify-center xl:justify-start"
+            viewport={{ once: true, amount: 0.2 }}
+            className="w-full xl:w-[30%] flex justify-center xl:justify-end"
           >
             <Image
               src={About}
               alt="About Us"
-              className="rounded-default object-cover shadow-default border-3 border-primary xl:border-none"
+              className="w-full max-w-sm rounded-default object-cover shadow-default border-3 border-primary xl:border-none"
             />
           </motion.div>
         </div>
       </section>
-      <section className="bg-background">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-default">
-          {skytechValues.map((stat, index) => (
-            <div key={index} className="contents">
-              {/* Stat */}
-              <div className="flex flex-col items-center flex-1 space-y-small">
-                <div className="bg-red-100 p-2 rounded-full">{stat.icon}</div>
 
-                <div className="h4 text-center leading-tight">{stat.text}</div>
+      {/* Company Values */}
+      <section className="px-4 sm:px-8 xl:px-section py-12 bg-blue-100/30">
+        <div className="flex flex-col md:flex-row justify-between items-stretch gap-8 md:gap-4">
+          {skytechValues.map((stat, index) => (
+            <div key={index} className="flex items-center flex-1">
+              <div className="flex flex-col items-center flex-1 space-y-small">
+                <div className="bg-red-100 p-2 rounded-full">
+                  {stat.icon}
+                </div>
+
+                <div className="h4 text-center leading-tight max-w-xs">
+                  {stat.text}
+                </div>
               </div>
 
-              {/* Separator */}
               {index !== skytechValues.length - 1 && (
-                <div className="md:block w-2 h-2 rounded-full bg-yellow flex-shrink-0" />
+                <div className="hidden md:block w-2 h-2 rounded-full bg-yellow flex-shrink-0" />
               )}
             </div>
           ))}
         </div>
       </section>
+
+      {/* Statistics */}
       <Statistics />
-      <div className="px-4 sm:px-8 xl:px-section py-10 overflow-hidden">
-        <div className="relative flex flex-col lg:flex-row justify-center items-center gap-0 xl:gap-content">
+
+      {/* Vision & Mission */}
+      <section className="px-4 sm:px-8 xl:px-section py-16 overflow-hidden">
+        <div className="relative flex flex-col lg:flex-row justify-center items-center gap-8 xl:gap-12">
+
           {/* Vision */}
           <motion.div
             variants={fadeIn("right", 0.2)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.3 }}
-            className="relative w-full max-w-xl py-4 sm:py-10"
+            viewport={{ once: true, amount: 0.2 }}
+            className="relative w-full max-w-xl"
           >
             <FaQuoteLeft className="absolute text-accent h-14 w-14 sm:h-20 sm:w-20 -top-2 left-2 sm:left-5" />
 
             <div className="flex flex-col bg-primary text-center p-6 sm:p-10 lg:p-12 rounded-default space-y-small">
-              <span className="h3 text-yellow">Our Vision</span>
+              <span className="h3 text-yellow">
+                Our Vision
+              </span>
 
               <span className="body-large text-left text-white">
                 SKYTECH aims, to achieve customer satisfaction through superior
@@ -164,18 +183,19 @@ const page = () => {
           </motion.div>
 
           {/* Mission */}
-
           <motion.div
             variants={fadeIn("left", 0.2)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.3 }}
-            className="relative w-full max-w-xl py-4 sm:py-10"
+            viewport={{ once: true, amount: 0.2 }}
+            className="relative w-full max-w-xl"
           >
             <FaQuoteRight className="absolute text-accent h-14 w-14 sm:h-20 sm:w-20 -bottom-2 right-2 sm:right-5" />
 
             <div className="flex flex-col bg-primary text-center p-6 sm:p-10 lg:p-12 rounded-default space-y-small">
-              <span className="h3 text-yellow-500">Our Mission</span>
+              <span className="h3 text-yellow">
+                Our Mission
+              </span>
 
               <span className="body-large text-left text-white">
                 SKYTECH aims, to achieve customer satisfaction through superior
@@ -184,8 +204,9 @@ const page = () => {
               </span>
             </div>
           </motion.div>
+
         </div>
-      </div>
+      </section>
     </>
   );
 };

@@ -9,7 +9,7 @@ import { FaLinkedin } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary w-full">
+    <footer className="bg-primary w-full lg:px-20">
       <div className="flex flex-col md:flex-row justify-between p-12 sm:p-24 sm:pb-1 gap-content">
         <div className="flex flex-col text-white space-y-small">
           <h4>Skytech General Contracting L.L.C</h4>
