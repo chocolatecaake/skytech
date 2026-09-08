@@ -6,25 +6,27 @@ import Image from "next/image";
 import construction from "@/public/assets/construction.webp";
 import CountUp from "react-countup";
 import { Fragment } from "react";
+import { MdVerified } from "react-icons/md";
+import { RiUser2Fill } from "react-icons/ri";
+import { RiTreeFill } from "react-icons/ri";
+import { MdAddLocationAlt } from "react-icons/md";
 
-const statsData = [
+const skytechValues = [
   {
-    endCountNum: 200,
-    endcountText: "+",
-    text: "Project Completion",
-    desc: "SKYTECH is an innovative company providing cutting edge, cost effective solutions in the supply and installation of Fiberglass.",
+    icon: <MdVerified className="h-8 w-8 text-secondary" />,
+    text: "Highest Quality of international standards",
   },
   {
-    endCountNum: 20,
-    endcountText: "+",
-    text: "Years of Experience",
-    desc: "SKYTECH is an innovative company providing cutting edge, cost effective solutions in the supply and installation of Fiberglass.",
+    icon: <RiUser2Fill className="h-8 w-8 text-secondary" />,
+    text: "Certified engineers and skilled technicians",
   },
   {
-    endCountNum: 150,
-    endcountText: "+",
-    text: "Number of Employees",
-    desc: "SKYTECH is an innovative company providing cutting edge, cost effective solutions in the supply and installation of Fiberglass.",
+    icon: <RiTreeFill className="h-8 w-8 text-secondary" />,
+    text: "Focus on Sustainability, health and safety",
+  },
+  {
+    icon: <MdAddLocationAlt className="h-8 w-8 text-secondary" />,
+    text: "Proven track record of success across the UAE",
   },
 ];
 
@@ -42,34 +44,20 @@ const Statistics = () => {
 
       <div ref={ref} className="container relative mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-12 md:gap-6 lg:gap-10 text-white">
-          {statsData.map((stat, index) => (
-            <Fragment key={index}>
-              <div className="flex flex-1 flex-col items-center text-center space-y-4">
-                <div className="h1 text-accent">
-                  {inView && (
-                    <CountUp
-                      start={1}
-                      end={stat.endCountNum}
-                      delay={0.5}
-                      duration={3}
-                      className="h1"
-                    />
-                  )}
-                  {stat.endcountText}
-                </div>
+          {skytechValues.map((stat, index) => (
+            <div key={index} className="contents">
+              {/* Stat */}
+              <div className="flex flex-col items-center flex-1 space-y-small">
+                <div className="bg-red-100 p-2 rounded-full">{stat.icon}</div>
 
-                {/* Line */}
-                <div className="h-1 w-full max-w-[200px] bg-white" />
-
-                <div className="h4 !font-bold">{stat.text}</div>
-
-                <p className="body-large max-w-sm">{stat.desc}</p>
+                <div className="h4 text-center leading-tight">{stat.text}</div>
               </div>
 
-              {index < statsData.length - 1 && (
-                <div className="hidden md:block w-2 h-2 rounded-full bg-yellow flex-shrink-0" />
+              {/* Separator */}
+              {index !== skytechValues.length - 1 && (
+                <div className="md:block w-2 h-2 rounded-full bg-yellow flex-shrink-0" />
               )}
-            </Fragment>
+            </div>
           ))}
         </div>
       </div>

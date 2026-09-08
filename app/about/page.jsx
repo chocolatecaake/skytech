@@ -120,28 +120,9 @@ const page = () => {
           </motion.div>
         </div>
       </section>
-      <section className="bg-background">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-default">
-          {skytechValues.map((stat, index) => (
-            <div key={index} className="contents">
-              {/* Stat */}
-              <div className="flex flex-col items-center flex-1 space-y-small">
-                <div className="bg-red-100 p-2 rounded-full">{stat.icon}</div>
-
-                <div className="h4 text-center leading-tight">{stat.text}</div>
-              </div>
-
-              {/* Separator */}
-              {index !== skytechValues.length - 1 && (
-                <div className="md:block w-2 h-2 rounded-full bg-yellow flex-shrink-0" />
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
       <Statistics />
       <div className="px-4 sm:px-8 xl:px-section py-10 overflow-hidden">
-        <div className="relative flex flex-col lg:flex-row justify-center items-center gap-0 xl:gap-content">
+        <div className="relative flex flex-col lg:flex-row justify-center items-stretch gap-0 xl:gap-content">
           {/* Vision */}
           <motion.div
             variants={fadeIn("right", 0.2)}
@@ -152,13 +133,13 @@ const page = () => {
           >
             <FaQuoteLeft className="absolute text-accent h-14 w-14 sm:h-20 sm:w-20 -top-2 left-2 sm:left-5" />
 
-            <div className="flex flex-col bg-primary text-center p-6 sm:p-10 lg:p-12 rounded-default space-y-small">
+            <div className="flex flex-col h-full bg-primary text-center p-6 sm:p-10 lg:p-12 rounded-default space-y-small">
               <span className="h3 text-yellow">Our Vision</span>
 
               <span className="body-large text-left text-white">
-                SKYTECH aims, to achieve customer satisfaction through superior
-                services and commitment, without any compromise on international
-                quality standards.
+                To be the region's most trusted GRE/GRP piping and MEP
+                contracting partner, recognized for engineering excellence,
+                reliability, and innovation in every project we deliver.
               </span>
             </div>
           </motion.div>
@@ -174,13 +155,15 @@ const page = () => {
           >
             <FaQuoteRight className="absolute text-accent h-14 w-14 sm:h-20 sm:w-20 -bottom-2 right-2 sm:right-5" />
 
-            <div className="flex flex-col bg-primary text-center p-6 sm:p-10 lg:p-12 rounded-default space-y-small">
+            <div className="flex flex-col h-full bg-primary text-center p-6 sm:p-10 lg:p-12 rounded-default space-y-small">
               <span className="h3 text-yellow-500">Our Mission</span>
 
               <span className="body-large text-left text-white">
-                SKYTECH aims, to achieve customer satisfaction through superior
-                services and commitment, without any compromise on international
-                quality standards.
+                To deliver safe, high-quality, and cost-effective piping and MEP
+                solutions through skilled expertise, rigorous quality standards,
+                and a genuine commitment to our clients' success — while
+                upholding the highest standards of safety and environmental
+                responsibility.
               </span>
             </div>
           </motion.div>
