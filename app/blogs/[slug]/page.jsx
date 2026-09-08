@@ -1,78 +1,93 @@
+"use client";
+
 import { blogs } from "@/constants/blogs";
 import TableOfContents from "./toc.jsx";
-import Title from "@/components/common/Title";
-
 import { FaUser, FaCalendarAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { useParams } from "next/navigation";
 
-export default async function BlogPage({ params }) {
-  const { slug } = await params;
+export default function BlogPage() {
+  const { slug } = useParams();
 
-  const blog = blogs.find(
-    (item) => item.slug === slug
-  );
+  const blog = blogs.find((item) => item.slug === slug);
+
+  if (!blog) {
+    return <div>Blog not found</div>;
+  }
 
   return (
-    <div className="py-10 px-4 sm:px-8 lg:px-100 xl:px-100">
-    <span className="hero inline-block border-b-4 border-red-600 pb-1">
-      {blog.title}
+   <section>
+  <main className="max-w-6xl mx-auto">
+
+    {/* Blog Header */}
+    <motion.header
+      className="max-w-4xl mx-auto"
+      initial={{ opacity: 0, y: -15 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <h1 className="hero font-bold leading-tight inline-block border-b-4 border-red-600 pb-1">
+        {blog.title}
+      </h1>
+    </motion.header>
+
+    {/* Hero Image */}
+<motion.div
+  className="max-w-4xl mx-auto mt-6"
+  initial={{ opacity: 0, scale: 0.98 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.6 }}
+>
+  <img
+    src={blog.img}
+    alt={blog.title}
+    className="w-full max-h-[450px] object-cover rounded-xl"
+  />
+
+  {/* Author + Date */}
+  <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-4 text-sm text-gray-500">
+    <span className="flex items-center gap-2">
+      <FaUser className="text-gray-400" />
+      {blog.author}
     </span>
 
-    <div className="w-full flex flex-col items-center">
+    <div className="w-1.5 h-1.5 rounded-full bg-yellow flex-shrink-0" />
 
-        <div className="w-full max-w-[600px] mt-5">
+    <span className="flex items-center gap-2">
+      <FaCalendarAlt className="text-gray-400" />
+      {blog.date}
+    </span>
+  </div>
+</motion.div>
+    {/* Blog Content */}
+    <article className="max-w-4xl mx-auto mt-10">
+  {blog.sections.map((section, index) => (
+    <motion.div
+      key={section.id}
+      id={section.id}
+      className="mb-20"
+      initial={{ opacity: 0, y: 15 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{
+        once: true,
+        amount: 0.15,
+      }}
+      transition={{
+        duration: 0.4,
+      }}
+    >
+      <h2 className="h2 font-bold border-l-4 border-red-600 pl-3 mb-4">
+        {section.title}
+      </h2>
 
-          <img
-            src={blog.img}
-            alt={blog.title}
-            className="w-full h-auto rounded-lg"
-          />
+      <p className="body-large text-gray-700 leading-7">
+        {section.content}
+      </p>
+    </motion.div>
+  ))}
+</article>
 
-
-          {/* Author + Date */}
-          <div className="flex flex-wrap justify-start gap-4 mt-3 text-xs sm:text-sm text-gray-500 uppercase">
-
-            <span className="flex items-center gap-2">
-              <FaUser className="text-gray-400" />
-              {blog.author}
-            </span>
-
-            <span className="flex items-center gap-2">
-              <FaCalendarAlt className="text-gray-400" />
-              {blog.date}
-            </span>
-
-          </div>
-
-        </div>
-
-
-      <div className="w-full mt-8 grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8 lg:gap-12">
-      {/* Blog Content */}
-      <div>
-
-      {blog.sections.map((section) => (
-        <section
-          key={section.id}
-          id={section.id}
-          className="mb-10 scroll-mt-20"
-        >
-          <span className="h2 font-bold border-l-4 border-red-600 pl-3 mb-4">
-            {section.title}
-          </span>
-
-          <p className="body-large text-gray-700">
-            {section.content}
-          </p>
-        </section>
-      ))}
-
-      </div>
-
-      <TableOfContents sections={blog.sections} />
-
-    </div>
-
-    </div>
-    </div>
+  </main>
+</section>
   );
 }

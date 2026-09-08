@@ -273,3 +273,22 @@ section {
 .form-field:focus {
   border-color: var(--secondary-accent);
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(11, 28, 44, 1);
+}
+
+/* Thumb */
+::-webkit-scrollbar-thumb {
+  background: rgba(230, 0, 27, 1);
+}
+
+/* Thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(230, 0, 27, 1);
+}
