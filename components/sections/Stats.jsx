@@ -6,7 +6,7 @@ import CountUp from "react-countup";
 
 const statsData = [
   {
-    endCountNum: 20,
+    endCountNum: 15,
     endcountText: "+",
     text: "Years of Experience",
   },
