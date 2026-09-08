@@ -31,7 +31,7 @@ const page = () => {
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 custom={idx}
               >
                 <DetailCard

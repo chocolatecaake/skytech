@@ -39,7 +39,7 @@ const GalleryPage = () => {
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             custom={index}
             className="relative aspect-[4/3] overflow-hidden rounded-default shadow-lg"
           >

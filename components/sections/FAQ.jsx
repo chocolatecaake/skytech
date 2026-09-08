@@ -66,7 +66,7 @@ const FAQ = () => {
               variants={faqVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
               custom={index}
             >
               <FAQItem title={item.title} description={item.description} />

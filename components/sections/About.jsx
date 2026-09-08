@@ -17,7 +17,7 @@ const About = () => {
           variants={fadeIn("right", 0.2)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="relative flex-1 flex justify-center xl:justify-start"
         >
           <div
@@ -48,7 +48,7 @@ const About = () => {
           variants={fadeIn("left", 0.2)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           className="flex flex-col flex-2"
         >
           <Quote
