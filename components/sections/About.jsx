@@ -58,14 +58,18 @@ const About = () => {
           <div className="flex flex-col space-y-default bg-background">
             <Title header="What we stand for" />
             <p>
-              With over two decades of experience, we combine engineering
-              expertise, certified processes, and skilled execution to deliver
-              reliable results across complex projects in the UAE.
+              At Skytech General Contracting LLC, our journey has been built on
+              a simple principle: deliver engineering excellence without
+              compromise. From our roots in GRE/GRP piping and MEP contracting,
+              we have grown into a trusted partner for some of the region's most
+              demanding oil, gas, and infrastructure projects.
             </p>
             <p>
-              With over two decades of experience, we combine engineering
-              expertise, certified processes, and skilled execution to deliver
-              reliable results across complex projects in the UAE.
+              Every pipe we lay and every system we install carries our
+              commitment to quality, safety, and long-term reliability. As we
+              look ahead, we remain focused on innovation, sustainability, and
+              building lasting relationships with the clients and communities we
+              serve.
             </p>
             <div className="font-sign">- Skytech Team</div>
           </div>
