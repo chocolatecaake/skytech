@@ -71,7 +71,7 @@ export default function Hero() {
                 variants={fadeIn("up", 0.2)}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: false, amount: 0.0 }}
+                viewport={{ once: true, amount: 0.0 }}
                 className="hero mt-18"
               >
                 Engineering Reliable Pipeline Infrastructure
@@ -82,7 +82,7 @@ export default function Hero() {
                 variants={fadeIn("up", 0.4)}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: false, amount: 0.0 }}
+                viewport={{ once: true, amount: 0.0 }}
                 className="max-w-3xl"
               >
                 Delivering High-Performance Infrastructure Projects Across The
@@ -93,7 +93,7 @@ export default function Hero() {
               variants={fadeIn("up", 0.6)}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: false, amount: 0.0 }}
+              viewport={{ once: true, amount: 0.0 }}
               className="flex gap-small"
             >
               <Button
@@ -111,7 +111,7 @@ export default function Hero() {
           variants={fadeIn("up", 0.8)}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.0 }}
+          viewport={{ once: true, amount: 0.0 }}
           className="flex gap-small"
         >
           {certImages.map((certImage, index) => (

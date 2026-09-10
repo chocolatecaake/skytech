@@ -26,7 +26,7 @@ export default function BlogPage() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <h1 className="hero font-bold leading-tight inline-block border-b-4 border-red-600 pb-1">
+      <h1 className="hero font-bold leading-tight inline-block border-b-4 border-red-600 pb-1 bg-background">
         {blog.title}
       </h1>
     </motion.header>
@@ -46,14 +46,14 @@ export default function BlogPage() {
 
   {/* Author + Date */}
   <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mt-4 text-sm text-gray-500">
-    <span className="flex items-center gap-2">
+    <span className="flex items-center gap-2 bg-background">
       <FaUser className="text-gray-400" />
       {blog.author}
     </span>
 
     <div className="w-1.5 h-1.5 rounded-full bg-yellow flex-shrink-0" />
 
-    <span className="flex items-center gap-2">
+    <span className="flex items-center gap-2 bg-background">
       <FaCalendarAlt className="text-gray-400" />
       {blog.date}
     </span>
@@ -76,11 +76,11 @@ export default function BlogPage() {
         duration: 0.4,
       }}
     >
-      <h2 className="h2 font-bold border-l-4 border-red-600 pl-3 mb-4">
+      <h2 className="h2 font-bold border-l-4 border-red-600 pl-3 mb-4 bg-background">
         {section.title}
       </h2>
 
-      <p className="body-large text-gray-700 leading-7">
+      <p className="body-large text-gray-700 leading-7 bg-background">
         {section.content}
       </p>
     </motion.div>

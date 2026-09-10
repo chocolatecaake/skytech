@@ -47,7 +47,7 @@ const page = () => {
             variants={fadeIn("left", 0.2)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             className="flex flex-col flex-2"
           >
             <div className="flex flex-col space-y-default bg-background">
@@ -109,7 +109,7 @@ const page = () => {
             variants={fadeIn("right", 0.2)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             className="relative flex-1 flex justify-center xl:justify-start"
           >
             <Image
@@ -128,7 +128,7 @@ const page = () => {
             variants={fadeIn("right", 0.2)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             className="relative w-full max-w-xl py-4 sm:py-10"
           >
             <FaQuoteLeft className="absolute text-accent h-14 w-14 sm:h-20 sm:w-20 -top-2 left-2 sm:left-5" />
@@ -150,7 +150,7 @@ const page = () => {
             variants={fadeIn("left", 0.2)}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
             className="relative w-full max-w-xl py-4 sm:py-10"
           >
             <FaQuoteRight className="absolute text-accent h-14 w-14 sm:h-20 sm:w-20 -bottom-2 right-2 sm:right-5" />

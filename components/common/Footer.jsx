@@ -9,9 +9,9 @@ import { FaLinkedin } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary w-full lg:px-20">
+    <footer className="bg-primary w-full">
       <div className="flex flex-col md:flex-row justify-between p-12 sm:p-24 sm:pb-1 gap-content">
-        <div className="flex flex-col text-white space-y-small">
+        <div className="flex flex-col text-white space-y-small lg:min-w-50">
           <h4>Skytech General Contracting L.L.C</h4>
           <span className="body-large">P.O. Box 132415</span>
           <span className="body-large">
@@ -29,8 +29,8 @@ export default function Footer() {
             ></iframe>
           </div>
         </div>
-        <div className="flex flex-col text-white space-y-default text-base">
-          <h4 className="text-accent">Quick Contact</h4>
+        <div className="flex flex-col text-white space-y-default text-base lg:min-w-55">
+          <h4 className="text-accent lg:min-w-50">Quick Contact</h4>
           <div className="flex flex-col space-y-small">
             <span className="flex body-large items-center">
               <FaPhone className="inline mr-small text-yellow-300" />
@@ -59,7 +59,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex flex-col text-white space-y-default">
-          <h4 className="text-accent">Services</h4>
+          <h4 className="text-accent lg:min-w-50">Services</h4>
           <Link href="/services">
             <div className="flex flex-col space-y-small">
               {services.map((service, idx) => (
@@ -71,13 +71,13 @@ export default function Footer() {
           </Link>
         </div>
         <div className="flex flex-col text-white space-y-default">
-          <h4 className="text-accent">Quick Links</h4>
+          <h4 className="text-accent lg:min-w-50">Quick Links</h4>
           <div className="flex flex-col space-y-small">
             {links.map((link, idx) => (
               <Link
                 key={idx}
                 href={link.path}
-                className="capitalize hover:text-yellow"
+                className="body-large capitalize hover:text-yellow"
               >
                 {link.name}
               </Link>

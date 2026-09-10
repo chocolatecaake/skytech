@@ -29,7 +29,7 @@ const statsData = [
 
 const Stats = () => {
   const ref = useRef(null);
-  const inView = useInView(ref, { amount: 0.2 });
+  const inView = useInView(ref, { once: true, amount: 0.2 });
 
   return (
     <section className="bg-primary">
