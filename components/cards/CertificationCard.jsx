@@ -54,12 +54,7 @@ const CertificationCard = ({
         {/* Header */}
         <div className="flex gap-small justify-between items-center">
           <div className="relative w-12 h-12">
-            <Image
-              src={badge}
-              alt={title}
-              fill
-              className="object-contain"
-            />
+            <Image src={badge} alt={title} fill className="object-contain" />
           </div>
 
           <p className="body-large !font-bold">{title}</p>
@@ -72,6 +67,8 @@ const CertificationCard = ({
             <Image
               src={img}
               alt={title}
+              width={1000}
+              height={1414}
               className="w-full rounded-default object-contain shadow-default"
             />
           </div>
@@ -84,7 +81,7 @@ const CertificationCard = ({
             </div>
 
             <div className="flex justify-between md:flex-col">
-              <p className="text-tertiary">Obtained On</p>
+              <p className="text-tertiary">Registered On</p>
               <p className="body-large">{ObtainOn}</p>
             </div>
 
@@ -103,8 +100,7 @@ const CertificationCard = ({
       </div>
 
       {/* Render modal directly into <body> */}
-      {typeof document !== "undefined" &&
-        createPortal(modal, document.body)}
+      {typeof document !== "undefined" && createPortal(modal, document.body)}
     </>
   );
 };
