@@ -45,16 +45,16 @@ export default function Footer() {
             </span>
             <span>
               <IoMdMail className="inline mr-small text-yellow-300" />
-              sales@skytechuae.com
+              info@skytechuae.com
             </span>
             <span>
-            <Link
-              href="https://www.linkedin.com/company/sky-tech-general-contracting/people/"
-              target="_blank"
-            >
-              <FaLinkedin className="inline mr-small text-yellow-300" />
-              Skytech
-            </Link>
+              <Link
+                href="https://www.linkedin.com/company/sky-tech-general-contracting/people/"
+                target="_blank"
+              >
+                <FaLinkedin className="inline mr-small text-yellow-300" />
+                Skytech
+              </Link>
             </span>
           </div>
         </div>

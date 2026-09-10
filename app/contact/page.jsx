@@ -21,7 +21,7 @@ const ContactForm = () => {
   const contacts = [
     {
       title: "Email Us",
-      value: "info@skytech.ae",
+      value: "info@skytechuae.com",
       icon: Mail,
     },
     {
