@@ -39,7 +39,7 @@ const Stats = () => {
             <div key={index} className="contents">
               {/* Stat */}
               <div className="flex flex-col items-center flex-1 space-y-small">
-                <div className="h3 text-accent">
+                <div className="h4 text-accent">
                   {inView && (
                     <CountUp
                       start={1}
@@ -52,9 +52,7 @@ const Stats = () => {
                   {stat.endcountText}
                 </div>
 
-                <div className="h4 text-center font-medium! leading-tight">
-                  {stat.text}
-                </div>
+                <div className="h4">{stat.text}</div>
               </div>
 
               {/* Separator */}

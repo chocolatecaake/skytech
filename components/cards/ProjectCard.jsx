@@ -39,9 +39,9 @@ const ProjectCard = ({
 
         {/* Bottom Overlay */}
         <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 flex flex-col">
-          <h4 className="text-lg font-semibold text-white md:text-xl">
+          {/* <h4 className="text-lg font-semibold text-white md:text-xl">
             {title}
-          </h4>
+          </h4> */}
 
           <div className="mt-2 flex items-center gap-2 text-sm text-white">
             <FaLocationDot className="text-yellow shrink-0" />
@@ -70,7 +70,9 @@ const ProjectCard = ({
             isExpanded ? "max-h-60 opacity-100" : "max-h-60 opacity-100"
           }`}
         > */}
-        <div className="overflow-hidden transition-all duration-500 max-h-60 opacity-100">
+        <span className="body-large !font-semibold md">{title}</span>
+
+        <div className="overflow-hidden transition-all duration-500 mt-auto max-h-60 opacity-100">
           <div className="border-t border-tertiary/50">
             <div className="flex flex-col gap-2 mt-4">
               <span className="text-gray-500">

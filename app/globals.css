@@ -113,6 +113,7 @@ h2,
 h3,
 h4,
 .hero,
+.body-large,
 .spaced {
   font-family: var(--font-primary) !important;
 }
@@ -176,7 +177,7 @@ h4,
 
 .body-large {
   font-weight: 500 !important;
-  font-size: clamp(16px, 2.5vw, 18px) !important;
+  font-size: clamp(18px, 2.5vw, 20px) !important;
   line-height: 160% !important;
   letter-spacing: 0% !important;
 }

@@ -57,7 +57,7 @@ const CertificationCard = ({
             <Image src={badge} alt={title} fill className="object-contain" />
           </div>
 
-          <p className="body-large !font-bold">{title}</p>
+          <p className="body-large !font-semibold">{title}</p>
         </div>
 
         {/* Content */}
@@ -77,17 +77,17 @@ const CertificationCard = ({
           <div className="w-full md:flex-1 flex flex-col space-y-small">
             <div className="flex justify-between md:flex-col">
               <p className="text-tertiary">Certificate No</p>
-              <p className="body-large">{CerficationNo}</p>
+              <p className="!text-lg">{CerficationNo}</p>
             </div>
 
             <div className="flex justify-between md:flex-col">
               <p className="text-tertiary">Registered On</p>
-              <p className="body-large">{ObtainOn}</p>
+              <p className="!text-lg">{ObtainOn}</p>
             </div>
 
             <div className="flex justify-between md:flex-col">
               <p className="text-tertiary">Valid Until</p>
-              <p className="body-large">{ValidUntil}</p>
+              <p className="!text-lg">{ValidUntil}</p>
             </div>
 
             <Button

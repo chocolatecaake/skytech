@@ -15,8 +15,6 @@ import CTASection from "@/components/common/CTASection";
 
 import Faq from "@/components/sections/FAQ";
 
-import AccordionSection from "@/components/sections/Accordin";
-
 import Certificate from "@/public/assets/certifications/Certificate.webp";
 import iso from "@/public/assets/about/iso.webp";
 

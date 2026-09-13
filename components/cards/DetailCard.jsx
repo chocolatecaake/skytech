@@ -44,7 +44,9 @@ const DetailCard = ({
         </div>
       )}
       {/* Title */}
-      <h4>{title}</h4>
+      <span className="body-large !font-semibold md">{title}</span>
+
+      {/* <h4>{title}</h4> */}
 
       {/* Description */}
       <div className="flex flex-col space-y-small">

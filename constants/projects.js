@@ -1,5 +1,6 @@
 /*USE THIS FILE TO STORE ALL PROJECTS */
 export const projects = [
+  /*home page*/
   {
     progress: "Ongoing",
     img: "/assets/projects/akoya.webp",
@@ -35,5 +36,81 @@ export const projects = [
     Client: "Adnoc",
     Contractor: "Obaid al Qaubisi",
     ProjType: "GRE/HDPE pipes installation and fittings",
+  },
+
+  /*project page*/
+  {
+    progress: "Ongoing",
+    img: "/assets/projects/akoya.webp",
+    title: "Modification Works AT 190 AND 645 Fields",
+    loc: "FJ",
+    Client: "Adnoc",
+    Contractor: "Robotstone",
+    ProjType: "Installation of GRE pipes and fittings",
+  },
+  {
+    progress: "Ongoing",
+    img: "/assets/projects/akoya.webp",
+    title: "EPC for Modification Works at 190 and 645 Fields",
+    loc: "Fujairah",
+    Client: "Adnoc",
+    Contractor: "Robotstone",
+    ProjType: "Installation of GRE pipes and fittings",
+  },
+  {
+    progress: "Ongoing",
+    img: "/assets/projects/akoya.webp",
+    title: "Tawella Integrated Project",
+    loc: "Tawella",
+    Client: "Adnoc",
+    Contractor: "Multiline",
+    ProjType: "Installation of GRE pipes and fittings",
+  },
+  {
+    progress: "Ongoing",
+    img: "/assets/projects/akoya.webp",
+    title: "Project Lightning - Independent Subsea HVDC System",
+    loc: "Mirfa, Shuwait, Das Island",
+    Client: "Adnoc",
+    Contractor: "Samsung Engineering / Vijay Tanks",
+    ProjType: "Installation of GRE/HDPE pipes and fittings",
+  },
+  {
+    progress: "Completed - 2024",
+    img: "/assets/projects/akoya.webp",
+    title: "Masdar City Square",
+    loc: "Masdar, Abu Dhabi",
+    Client: "Masdar",
+    Contractor: "ASGC",
+    ProjType: "GRP lining for water tank",
+  },
+  {
+    progress: "Completed - 2024",
+    img: "/assets/projects/akoya.webp",
+    title:
+      "EPC Works for Installation of Additional Refrigerant Condensers in Units",
+    loc: "Shah Gas, Abu Dhabi",
+    Client: "Adnoc",
+    Contractor: "Robotstone",
+    ProjType: "Supply and installation of GRE pipes",
+  },
+  {
+    progress: "Completed - 2024",
+    img: "/assets/projects/akoya.webp",
+    title: "EPC 4 Buhasa Integrated Field Development Project",
+    loc: "Buhasa",
+    Client: "Adnoc",
+    Contractor: "Experts & I",
+    ProjType: "GRP/GRE/GRV pipe installation and jointing",
+  },
+  {
+    progress: "Completed - 2024",
+    img: "/assets/projects/akoya.webp",
+    title: "EPC 4 Crude Receiving Facilities at Jebel Dhanna",
+    loc: "Jebel Dhanna",
+    Client: "Adnoc",
+    Contractor: "Target",
+    ProjType:
+      "GRE & GRP lamination, pipe installation, and valve/fittings installation",
   },
 ];

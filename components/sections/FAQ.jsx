@@ -29,9 +29,9 @@ const FAQItem = ({ title, description }) => {
     >
       <div className="glass">
         <div className="flex p-5 items-center justify-between gap-2">
-          <h4 className={`body-large ${isOpen ? "text-accent" : ""}`}>
+          <span className={`body-large ${isOpen ? "text-accent" : ""}`}>
             {title}
-          </h4>
+          </span>
 
           <button className={`cursor-pointer ${isOpen ? "text-accent" : ""}`}>
             {isOpen ? (

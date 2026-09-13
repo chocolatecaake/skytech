@@ -134,9 +134,9 @@ const page = () => {
             <FaQuoteLeft className="absolute text-accent h-14 w-14 sm:h-20 sm:w-20 -top-2 left-2 sm:left-5" />
 
             <div className="flex flex-col h-full bg-primary text-center p-6 sm:p-10 lg:p-12 rounded-default space-y-small">
-              <span className="h3 text-yellow">Our Vision</span>
+              <span className="h4 text-yellow">Our Vision</span>
 
-              <span className="body-large text-left text-white">
+              <span className="text-left text-white">
                 To be the region's most trusted GRE/GRP piping and MEP
                 contracting partner, recognized for engineering excellence,
                 reliability, and innovation in every project we deliver.
@@ -156,9 +156,9 @@ const page = () => {
             <FaQuoteRight className="absolute text-accent h-14 w-14 sm:h-20 sm:w-20 -bottom-2 right-2 sm:right-5" />
 
             <div className="flex flex-col h-full bg-primary text-center p-6 sm:p-10 lg:p-12 rounded-default space-y-small">
-              <span className="h3 text-yellow-500">Our Mission</span>
+              <span className="h4 text-yellow-500">Our Mission</span>
 
-              <span className="body-large text-left text-white">
+              <span className="text-left text-white">
                 To deliver safe, high-quality, and cost-effective piping and MEP
                 solutions through skilled expertise, rigorous quality standards,
                 and a genuine commitment to our clients' success — while

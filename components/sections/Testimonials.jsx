@@ -34,7 +34,7 @@ const TestimonialCard = ({ name, role, content }) => {
         {/* Name */}
         <div className="flex flex-col">
           <span className="body-large text-accent">{name}</span>
-          <span className="small">{role}</span>
+          <span className="body">{role}</span>
         </div>
       </figure>
     </div>

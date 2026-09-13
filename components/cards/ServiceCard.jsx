@@ -5,7 +5,7 @@ const ServiceCard = ({ idx, title, desc, icon }) => {
       <div className="card !p-10 glass !text-center items-center justify-center">
         <div className="text-accent">{icon}</div>
         <h4 className="text-accent">{title}</h4>
-        <span className="body-large text-white">{desc}.</span>
+        <span className="!text-lg text-white">{desc}.</span>
       </div>
     </div>
   );

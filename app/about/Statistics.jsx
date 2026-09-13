@@ -50,7 +50,9 @@ const Statistics = () => {
               <div className="flex flex-col items-center flex-1 space-y-small">
                 <div className="bg-red-100 p-2 rounded-full">{stat.icon}</div>
 
-                <div className="h4 text-center leading-tight">{stat.text}</div>
+                <div className="body-large capitalize text-center leading-tight">
+                  {stat.text}
+                </div>
               </div>
 
               {/* Separator */}

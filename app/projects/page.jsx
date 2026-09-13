@@ -39,7 +39,7 @@ const page = () => {
                   title={project.title}
                   loc={project.loc}
                   Client={project.Client}
-                  Value={project.Value}
+                  Contractor={project.Contractor}
                   ProjType={project.ProjType}
                 />
               </motion.div>
