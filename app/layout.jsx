@@ -44,8 +44,8 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main className="flex-1">
           <WhatsAppButton
-            phoneNumber="+971501234567"
-            message="Hi! I'd like to request a quote."
+            phoneNumber="+971 55 102 9121"
+            message="Hello! I'd like to request a quote."
           />
           {children}
         </main>
