@@ -44,7 +44,7 @@ const FAQItem = ({ title, description }) => {
 
         <div
           className={`overflow-hidden transition-all duration-300 ease-in-out ${
-            isOpen ? "max-h-[200px] opacity-100 p-5" : "max-h-0 opacity-0 p-0"
+            isOpen ? "opacity-100 p-5 pt-0" : "max-h-0 opacity-0 p-0"
           }`}
         >
           <p className="flex items-center">{description}</p>
