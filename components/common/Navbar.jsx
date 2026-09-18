@@ -34,7 +34,7 @@ const Navbar = () => {
             : "bg-primary shadow-lg"
         }`}
     >
-      <div className="min-h-[64px] flex justify-between items-center container mx-auto px-4 xl:px-0">
+      <div className="min-h-[64px] flex justify-between items-center container mx-auto px-4">
         <Link href="/">
           <Image
             src="/assets/logo.webp"

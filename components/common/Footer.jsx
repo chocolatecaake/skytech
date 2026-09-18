@@ -32,19 +32,19 @@ export default function Footer() {
         <div className="flex flex-col text-white space-y-default text-base lg:min-w-55">
           <h4 className="text-accent lg:min-w-50">Quick Contact</h4>
           <div className="flex flex-col space-y-small">
-            <span className="flex body-large items-center">
-              <FaPhone className="inline mr-small text-yellow-300" />
+            <span className="flex items-center">
+              <FaPhone className="body-large inline mr-small text-yellow-300" />
               <div>
-                <p>+971 50 259 7150,</p>
+                <p>+971 50 259 7150, </p>
                 <p>+971 55 646 4942</p>
               </div>
             </span>
             <span>
-              <AiFillPrinter className="inline mr-small text-yellow-300" />
+              <AiFillPrinter className="body-large inline mr-small text-yellow-300" />
               +971 2 553 4307 (Fax)
             </span>
             <span>
-              <IoMdMail className="inline mr-small text-yellow-300" />
+              <IoMdMail className="body-large inline mr-small text-yellow-300" />
               info@skytechuae.com
             </span>
             <span>
@@ -52,7 +52,7 @@ export default function Footer() {
                 href="https://www.linkedin.com/company/sky-tech-general-contracting/people/"
                 target="_blank"
               >
-                <FaLinkedin className="inline mr-small text-yellow-300" />
+                <FaLinkedin className="body-large inline mr-small text-yellow-300" />
                 Skytech
               </Link>
             </span>
@@ -77,9 +77,9 @@ export default function Footer() {
               <Link
                 key={idx}
                 href={link.path}
-                className="body-large capitalize hover:text-yellow"
+                className=" hover:text-yellow"
               >
-                {link.name}
+              <span>{link.name}</span>
               </Link>
             ))}
           </div>

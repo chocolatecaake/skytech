@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { Turnstile } from "@marsidev/react-turnstile";
 import { useState } from "react";
 
 import { useForm } from "react-hook-form";
@@ -16,7 +15,6 @@ import Button from "@/components/common/Button";
 const ContactForm = () => {
   const [success, setSuccess] = useState(false);
   const [submitError, setSubmitError] = useState("");
-  const [captchaToken, setCaptchaToken] = useState(null);
 
   const contacts = [
     {
@@ -49,22 +47,18 @@ const ContactForm = () => {
   });
 
   const onSubmit = async (data) => {
-    if (!captchaToken) {
-      return;
+    setSuccess(false);
+    setSubmitError("");
+
+    try {
+      // Your form submission logic goes here
+      console.log(data);
+
+      setSuccess(true);
+      reset();
+    } catch (error) {
+      setSubmitError("Something went wrong. Please try again.");
     }
-
-    const payload = {
-      ...data,
-      captchaToken,
-    };
-
-    await fetch("/api/quote", {
-      method: "POST",
-      body: JSON.stringify(payload),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
   };
 
   return (
@@ -106,15 +100,19 @@ const ContactForm = () => {
                 <div
                   key={contact.title}
                   className="
-                    glass rounded-default 
+                    glass rounded-default
                     px-8 py-2 backdrop-blur-lg
-                    "
+                  "
                 >
                   <div className="flex items-center">
                     <div>
-                      <p className="body-large text-yellow">{contact.title}</p>
+                      <p className="body-large text-yellow">
+                        {contact.title}
+                      </p>
 
-                      <p className="body-large text-white">{contact.value}</p>
+                      <p className="body-large text-white">
+                        {contact.value}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -127,11 +125,11 @@ const ContactForm = () => {
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="
-            rounded-default
-            bg-background
-            p-4
-            shadow-default
-            space-y-small
+              rounded-default
+              bg-background
+              p-4
+              shadow-default
+              space-y-small
             "
             aria-label="Request quote form"
           >
@@ -221,7 +219,6 @@ const ContactForm = () => {
               )}
             </div>
 
-            {/* TURNSTILE */}
             {/* STATUS */}
 
             {success && (
@@ -230,21 +227,16 @@ const ContactForm = () => {
               </p>
             )}
 
-            {submitError && <p className="text-secondary">{submitError}</p>}
-
-            {/* TURNSTILE */}
-            <div className="flex justify-center">
-              <Turnstile
-                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
-                onSuccess={(token) => setCaptchaToken(token)}
-                onExpire={() => setCaptchaToken(null)}
-              />
-            </div>
+            {submitError && (
+              <p className="text-secondary">
+                {submitError}
+              </p>
+            )}
 
             <div className="flex justify-end">
               <Button
                 type="submit"
-                disabled={isSubmitting || !captchaToken}
+                disabled={isSubmitting}
                 text={isSubmitting ? "Sending..." : "Request Quote"}
                 variant="CTA"
               />

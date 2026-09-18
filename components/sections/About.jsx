@@ -35,7 +35,7 @@ const About = () => {
             remain focused on innovation, sustainability, and building lasting
             relationships with the clients and communities we serve.
           </p>
-          <div className="font-sign">- Skytech Team</div>
+          <div className="font-sign">- CEO Of Skytech</div>
         </div>
       </motion.div>
     </section>

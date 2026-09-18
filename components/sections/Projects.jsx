@@ -7,6 +7,7 @@ import ProjectCard from "../cards/ProjectCard";
 import { motion } from "framer-motion";
 import { cardVariants } from "@/constants/variants";
 import { projects } from "@/constants/projects";
+import Link from "next/link";
 
 const Projects = () => {
   return (
@@ -27,6 +28,7 @@ const Projects = () => {
               viewport={{ once: true, amount: 0.2 }}
               custom={index}
             >
+              <Link href="/projects" className="block">
               <ProjectCard
                 key={index}
                 Progress={project.progress}
@@ -37,6 +39,7 @@ const Projects = () => {
                 Contractor={project.Contractor}
                 ProjType={project.ProjType}
               />
+              </Link>
             </motion.div>
           ))}
         </div>
