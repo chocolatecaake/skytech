@@ -99,10 +99,7 @@ const ContactForm = () => {
               return (
                 <div
                   key={contact.title}
-                  className="
-                    glass rounded-default
-                    px-8 py-2 backdrop-blur-lg
-                  "
+                  className="glass rounded-default px-8 py-2 backdrop-blur-lg"
                 >
                   <div className="flex items-center">
                     <div>
@@ -124,13 +121,7 @@ const ContactForm = () => {
 
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="
-              rounded-default
-              bg-background
-              p-4
-              shadow-default
-              space-y-small
-            "
+            className="rounded-default bg-background p-4 shadow-default space-y-small"
             aria-label="Request quote form"
           >
             {/* NAME */}
