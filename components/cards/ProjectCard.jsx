@@ -85,26 +85,6 @@ const ProjectCard = ({
               </span>
             </div>
 
-            {/* Pipe Type */}
-            <div className="mt-4 flex flex-col gap-2">
-              <span className="text-gray-500">
-                Pipe Type:{" "}
-                <span className="text-gray-900">
-                  {pipeType}
-                </span>
-              </span>
-            </div>
-
-            {/* Inch Diameter */}
-            <div className="mt-4 flex flex-col gap-2">
-              <span className="text-gray-500">
-                Inch Dia:{" "}
-                <span className="text-gray-900">
-                  {inchDia}
-                </span>
-              </span>
-            </div>
-
           </div>
         {/* Expand Button */}
         <button
@@ -125,14 +105,34 @@ const ProjectCard = ({
           }`}
         >
         <div className="border-t border-tertiary/50 pt-4">
-            {/* Scope of work */}
+            {/* Pipe Type */}
             <div className="flex flex-col gap-2">
-              <p className=" body-large text-gray-500">
-                Scope Of Work
-              </p>
-              <span>
+              <span className="text-gray-500">
+                Pipe Type:{" "}
+                <span className="text-gray-900">
+                  {pipeType}
+                </span>
+              </span>
+            </div>
+
+            {/* Inch Diameter */}
+            <div className="mt-4 flex flex-col gap-2">
+              <span className="text-gray-500">
+                Inch Dia:{" "}
+                <span className="text-gray-900">
+                  {inchDia}
+                </span>
+              </span>
+            </div>
+
+            {/* Scope of work */}
+            <div className="mt-4 flex flex-col gap-2">
+              <span className="text-gray-500">
+                Scope Of Work:{" "}
+              <span className="text-gray-900">
                 {scope}
               </span> 
+              </span>
             </div>
         </div>
         </div>

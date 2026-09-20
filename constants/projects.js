@@ -11,7 +11,7 @@ export const projects = [
     projType: "GRE/HDPE pipes installation and fittings",
     pipeType:"Big Circle",
     inchDia:"2000mm",
-    scope:"Our extensive experience and reputation for quality, reliability and integrity embodies our commitment to excellence. We strive to build strong relationships with our clients and depend not only on our in-house capabilities but also our well-established network of affiliated partners, business associates, customers and suppliers."
+    scope:"Installation of GRE/HDPE pipes and fittings"
   },
   {
     progress: "Ongoing",
@@ -23,7 +23,7 @@ export const projects = [
     projType: "GRE pipes Installation and fittings",
     pipeType:"",
     inchDia:"",
-    scope:"Our extensive experience and reputation for quality, reliability and integrity embodies our commitment to excellence. We strive to build strong relationships with our clients and depend not only on our in-house capabilities but also our well-established network of affiliated partners, business associates, customers and suppliers."
+    scope:"Installation of GRE pipes and fittings"
   },
   {
     progress: "Ongoing",
@@ -35,7 +35,7 @@ export const projects = [
     projType: "GRE/HDPE pipes installation and fittings",
     pipeType:"",
     inchDia:"",
-    scope:"Our extensive experience and reputation for quality, reliability and integrity embodies our commitment to excellence. We strive to build strong relationships with our clients and depend not only on our in-house capabilities but also our well-established network of affiliated partners, business associates, customers and suppliers."
+    scope:"Installation of GRE/HDPE pipes and fittings"
   },
   {
     progress: "Ongoing",
@@ -47,7 +47,7 @@ export const projects = [
     projType: "GRE/HDPE pipes installation and fittings",
     pipeType:"",
     inchDia:"",
-    scope:"Our extensive experience and reputation for quality, reliability and integrity embodies our commitment to excellence. We strive to build strong relationships with our clients and depend not only on our in-house capabilities but also our well-established network of affiliated partners, business associates, customers and suppliers."
+    scope:"Installation of GRE/HDPE pipes and fittings"
   },
 
   /*project page*/
@@ -61,7 +61,7 @@ export const projects = [
     projType: "Installation of GRE pipes and fittings",
     pipeType:"",
     inchDia:"",
-    scope:"Our extensive experience and reputation for quality, reliability and integrity embodies our commitment to excellence. We strive to build strong relationships with our clients and depend not only on our in-house capabilities but also our well-established network of affiliated partners, business associates, customers and suppliers."
+    scope:"Installation of GRE pipes and fittings"
   },
   {
     progress: "Ongoing",
@@ -73,7 +73,7 @@ export const projects = [
     projType: "Installation of GRE pipes and fittings",
     pipeType:"",
     inchDia:"",
-    scope:"Our extensive experience and reputation for quality, reliability and integrity embodies our commitment to excellence. We strive to build strong relationships with our clients and depend not only on our in-house capabilities but also our well-established network of affiliated partners, business associates, customers and suppliers."
+    scope:"Installation of GRE pipes and fittings"
   },
   {
     progress: "Ongoing",
@@ -85,7 +85,7 @@ export const projects = [
     projType: "Installation of GRE pipes and fittings",
     pipeType:"",
     inchDia:"",
-    scope:"Our extensive experience and reputation for quality, reliability and integrity embodies our commitment to excellence. We strive to build strong relationships with our clients and depend not only on our in-house capabilities but also our well-established network of affiliated partners, business associates, customers and suppliers."
+    scope:"Installation of GRE pipes and fittings"
   },
   {
     progress: "Ongoing",
@@ -97,7 +97,7 @@ export const projects = [
     projType: "Installation of GRE/HDPE pipes and fittings",
     pipeType:"",
     inchDia:"",
-    scope:"Our extensive experience and reputation for quality, reliability and integrity embodies our commitment to excellence. We strive to build strong relationships with our clients and depend not only on our in-house capabilities but also our well-established network of affiliated partners, business associates, customers and suppliers."
+    scope:"Installation of GRE/HDPE pipes and fittings"
   },
   {
     progress: "Completed - 2024",
@@ -109,7 +109,7 @@ export const projects = [
     projType: "GRP lining for water tank",
     pipeType:"",
     inchDia:"",
-    scope:"Our extensive experience and reputation for quality, reliability and integrity embodies our commitment to excellence. We strive to build strong relationships with our clients and depend not only on our in-house capabilities but also our well-established network of affiliated partners, business associates, customers and suppliers."
+    scope:"GRP Lining For Water Tank"
   },
   {
     progress: "Completed - 2024",
@@ -122,7 +122,7 @@ export const projects = [
     projType: "Supply and installation of GRE pipes",
     pipeType:"",
     inchDia:"",
-    scope:"Our extensive experience and reputation for quality, reliability and integrity embodies our commitment to excellence. We strive to build strong relationships with our clients and depend not only on our in-house capabilities but also our well-established network of affiliated partners, business associates, customers and suppliers."
+    scope:"Supply and installation of GRE pipes"
   },
   {
     progress: "Completed - 2024",
@@ -134,7 +134,7 @@ export const projects = [
     projType: "GRP/GRE/GRV pipe installation and jointing",
     pipeType:"",
     inchDia:"",
-    scope:"Our extensive experience and reputation for quality, reliability and integrity embodies our commitment to excellence. We strive to build strong relationships with our clients and depend not only on our in-house capabilities but also our well-established network of affiliated partners, business associates, customers and suppliers."
+    scope:"GRP/GRE/GRV Pipe Installation and Jointing"
   },
   {
     progress: "Completed - 2024",
@@ -147,6 +147,6 @@ export const projects = [
       "GRE & GRP lamination, pipe installation, and valve/fittings installation",
     pipeType:"",
     inchDia:"",
-    scope:"Our extensive experience and reputation for quality, reliability and integrity embodies our commitment to excellence. We strive to build strong relationships with our clients and depend not only on our in-house capabilities but also our well-established network of affiliated partners, business associates, customers and suppliers."
+    scope:"GRE & GRP Lamination, PipeInstallation, and Valve/Fittings Installation"
   },
 ];
