@@ -44,7 +44,7 @@ const page = () => {
           We are committed to meeting internationally recognized quality
           standards to ensure reliability, safety, and customer satisfaction.
         </span>
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 xl:px-20 2xl:px-80">
           {qualityCerts.map((cert, index) => (
             <motion.div
               key={index}
@@ -60,6 +60,7 @@ const page = () => {
                   src={cert.logo}
                   alt={cert.title}
                   fill
+                  sizes = "100%"
                   className="object-contain"
                 />
               </div>
@@ -71,7 +72,7 @@ const page = () => {
         </div>
         <Title header="Verification Documents" align="left" size="h2" />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 xl:px-20 2xl:px-80">
           {verificationsDocs.map((doc, idx) => (
             <motion.div
               key={idx}

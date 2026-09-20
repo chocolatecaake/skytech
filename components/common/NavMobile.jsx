@@ -44,8 +44,8 @@ const NavMobile = () => {
                 width={156}
                 height={40}
                 alt="skytech logo"
-                className="h-auto"
                 loading="eager"
+                className="w-[156px] h-auto"
               />
             </Link>
             <SheetDescription className="sr-only">

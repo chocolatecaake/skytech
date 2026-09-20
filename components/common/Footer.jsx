@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+
 import { FaPhone } from "react-icons/fa6";
 import { AiFillPrinter } from "react-icons/ai";
 import { IoMdMail } from "react-icons/io";
@@ -85,12 +87,17 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between px-24 pb-6 items-center">
-        <h1 className="footer-font tracking-widest bg-gradient-to-t from-[#77aeff]/0 via-[#547ab3]/75 to-[#486699]/100 bg-clip-text text-transparent">
-          SKYTECH
-        </h1>
+      <div className="flex flex-col md:flex-row justify-between px-24 py-5 items-center gap-5">
+          <Image
+            src="/assets/logo.webp"
+            width={300}
+            height={20}
+            alt="skytech logo"
+            loading="eager"
+             className="w-[300px] h-auto"
+          />
         <span className="text-white text-sm">
-          © 2026 SkyTech General Contracting LLC. All rights reserved.
+          © 2026 Skytech General Contracting LLC. All rights reserved.
         </span>
       </div>
     </footer>

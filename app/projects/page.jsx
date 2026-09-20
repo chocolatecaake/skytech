@@ -23,7 +23,7 @@ const page = () => {
           affiliated partners, business associates, customers and suppliers.
         </span>
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 items-start">
             {projects.map((project, idx) => (
               <motion.div
                 key={idx}
@@ -35,13 +35,16 @@ const page = () => {
               >
                 <ProjectCard
                   key={idx}
-                  Progress={project.progress}
-                  Img={project.img}
+                  progress={project.progress}
+                  img={project.img}
                   title={project.title}
                   loc={project.loc}
-                  Client={project.Client}
-                  Contractor={project.Contractor}
-                  ProjType={project.ProjType}
+                  client={project.client}
+                  contractor={project.contractor}
+                  projType={project.projType}
+                  pipeType={project.pipeType}
+                  inchDia={project.inchDia}
+                  scope={project.scope}
                 />
               </motion.div>
             ))}

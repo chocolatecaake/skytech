@@ -121,13 +121,15 @@ export default function Hero() {
               target="_blank"
               className="glass p-4 flex cursor-pointer items-center justify-center backdrop-blur-lg transition duration-500 hover:scale-105"
             >
-              <Image
-                src={certImage}
-                alt="Certification"
-                width={60}
-                height={60}
-                className="object-contain"
-              />
+              <div className="relative w-[60px] h-[60px]">
+                <Image
+                  src={certImage}
+                  alt="Certification"
+                  fill
+                  sizes="60px"
+                  className="object-contain"
+                />
+              </div>
             </Link>
           ))}
         </motion.div>

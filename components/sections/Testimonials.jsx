@@ -58,14 +58,18 @@ export function Testimonials() {
           className="[--duration:30s] bg-background"
         >
           {clients.map((client) => (
-            <Image
+            <div
               key={client}
-              src={`/assets/clients/${client}.webp`}
-              alt={`${client} logo`}
-              width={180}
-              height={80}
-              className="object-contain mx-8"
-            />
+              className="relative w-[180px] h-[80px] mx-8 shrink-0"
+            >
+              <Image
+                src={`/assets/clients/${client}.webp`}
+                alt={`${client} logo`}
+                fill
+                sizes="180px"
+                className="object-contain"
+              />
+            </div>
           ))}
         </Marquee>
 

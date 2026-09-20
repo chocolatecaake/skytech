@@ -24,7 +24,7 @@ const page = () => {
           values.
         </span>
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 items-start">
             {services.map((service, idx) => (
               <motion.div
                 key={idx}

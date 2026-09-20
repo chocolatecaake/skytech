@@ -42,13 +42,14 @@ const page = () => {
   return (
     <>
       <section className="overflow-x-hidden">
-        <div className="flex flex-col xl:flex-row gap-content xl:gap-section">
+        <div className="flex flex-col xl:flex-row items-center xl:gap-none gap-5">
+          {/* Left Content */}
           <motion.div
             variants={fadeIn("left", 0.2)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
-            className="flex flex-col flex-2"
+            className="flex-1"
           >
             <div className="flex flex-col space-y-default bg-background">
               <Title
@@ -56,17 +57,20 @@ const page = () => {
                 header="Serving Customers Through Innovative Excellence"
                 align="left"
               />
+
               <p>
                 SKYTECH is an innovative company providing cutting edge, cost
-                effective solutions in the supply and installation of
-                Fiberglass, Thermoplastic, CS, and SS Systems.
+                effective solutions in the supply and installation of Fiberglass,
+                Thermoplastic, CS, and SS Systems.
               </p>
+
               <p>
-                We believe that through efficient, timely and economically
-                viable execution, and commitment to international quality
-                standards, we will be able to provide stellar service and
-                achieve customer satisfaction.
+                We believe that through efficient, timely and economically viable
+                execution, and commitment to international quality standards, we
+                will be able to provide stellar service and achieve customer
+                satisfaction.
               </p>
+
               <Link href="/certifications">
                 <div className="flex items-center gap-small">
                   <div className="relative w-12 h-12">
@@ -74,6 +78,7 @@ const page = () => {
                       src={icv}
                       alt="icv logo"
                       fill
+                      sizes="48px"
                       className="object-contain"
                     />
                   </div>
@@ -83,6 +88,7 @@ const page = () => {
                       src={iso}
                       alt="iso logo"
                       fill
+                      sizes="48px"
                       className="object-contain"
                     />
                   </div>
@@ -92,11 +98,13 @@ const page = () => {
                       src={adnoc}
                       alt="adnoc logo"
                       fill
+                      sizes="48px"
                       className="object-contain"
                     />
                   </div>
                 </div>
               </Link>
+
               <Button
                 text="See Our Projects"
                 variant="primary"
@@ -105,17 +113,18 @@ const page = () => {
             </div>
           </motion.div>
 
+          {/* Right Image */}
           <motion.div
             variants={fadeIn("right", 0.2)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
-            className="relative flex-1 flex justify-center xl:justify-start"
+            className="flex-1 flex justify-end"
           >
             <Image
               src={About}
               alt="About Us"
-              className="rounded-default object-cover shadow-default border-3 border-primary xl:border-none"
+              className="w-auto h-auto max-h-[450px] object-cover rounded-default shadow-default"
             />
           </motion.div>
         </div>

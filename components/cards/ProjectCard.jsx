@@ -5,15 +5,21 @@ import Image from "next/image";
 import Button from "../common/Button";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaLocationDot, FaChevronDown, FaChevronUp } from "react-icons/fa6";
+import { FaUser, FaCalendarAlt } from "react-icons/fa";
+import { GiTeePipe } from "react-icons/gi";
+import { TbRulerMeasure } from "react-icons/tb";
 
 const ProjectCard = ({
-  Progress,
-  Img,
+  progress,
+  img,
   title,
   loc,
-  Client,
-  Contractor,
-  ProjType,
+  client,
+  contractor,
+  projType,
+  pipeType,
+  inchDia,
+  scope
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -22,9 +28,11 @@ const ProjectCard = ({
       {/* Image */}
       <div className="card-img">
         <Image
-          src={Img}
+          src={img}
           alt={title}
           fill
+          priority
+          sizes="100%"
           className="object-cover transition-transform duration-500 hover:scale-105"
         />
 
@@ -33,16 +41,12 @@ const ProjectCard = ({
           <Button
             variant="glassBadge"
             icon={<FaCheckCircle />}
-            text={Progress}
+            text={progress}
           />
         </div>
 
         {/* Bottom Overlay */}
         <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 flex flex-col">
-          {/* <h4 className="text-lg font-semibold text-white md:text-xl">
-            {title}
-          </h4> */}
-
           <div className="mt-2 flex items-center gap-2 text-sm text-white">
             <FaLocationDot className="text-yellow shrink-0" />
             <span className="truncate">{loc}</span>
@@ -52,44 +56,88 @@ const ProjectCard = ({
 
       {/* Content */}
       <div className="flex flex-1 flex-col gap-default">
-        <Button text={ProjType} variant="badge" />
+        {/* Project Type */}
+        <Button text={projType} variant="badge" />
 
+        {/* Title */}
+        <span className="body-large !font-semibold">
+          {title}
+        </span>
+          <div className="border-t border-tertiary/50 pt-4">
+            
+            {/* Client */}
+            <div className="flex flex-col gap-2">
+              <span className="text-gray-500">
+                Client:{" "}
+                <span className="text-gray-900">
+                  {client}
+                </span>
+              </span>
+            </div>
+
+            {/* Contractor */}
+            <div className="mt-4 flex flex-col gap-2">
+              <span className="text-gray-500">
+                Contractor:{" "}
+                <span className="text-gray-900">
+                  {contractor}
+                </span>
+              </span>
+            </div>
+
+            {/* Pipe Type */}
+            <div className="mt-4 flex flex-col gap-2">
+              <span className="text-gray-500">
+                Pipe Type:{" "}
+                <span className="text-gray-900">
+                  {pipeType}
+                </span>
+              </span>
+            </div>
+
+            {/* Inch Diameter */}
+            <div className="mt-4 flex flex-col gap-2">
+              <span className="text-gray-500">
+                Inch Dia:{" "}
+                <span className="text-gray-900">
+                  {inchDia}
+                </span>
+              </span>
+            </div>
+
+          </div>
         {/* Expand Button */}
-        {/* <button
+        <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="flex items-center gap-2 self-start font-semibold transition-colors hover:text-accent"
+          className="flex items-center gap-2 self-end font-semibold transition-colors hover:text-accent text-darkblue"
         >
           {isExpanded ? "Hide Details" : "View Details"}
 
           {isExpanded ? <FaChevronUp /> : <FaChevronDown />}
         </button>
- */}
-        {/* Details */}
-        {/* <div
+
+        {/* Expandable */}
+        <div
           className={`overflow-hidden transition-all duration-500 ${
-            isExpanded ? "max-h-60 opacity-100" : "max-h-60 opacity-100"
+            isExpanded
+              ? "max-h-60 opacity-100"
+              : "max-h-0 opacity-0"
           }`}
-        > */}
-        <span className="body-large !font-semibold md">{title}</span>
-
-        <div className="overflow-hidden transition-all duration-500 mt-auto max-h-60 opacity-100">
-          <div className="border-t border-tertiary/50">
-            <div className="flex flex-col gap-2 mt-4">
-              <span className="text-gray-500">
-                Client: <span className="text-gray-900">{Client}</span>
-              </span>
+        >
+        <div className="border-t border-tertiary/50 pt-4">
+            {/* Scope of work */}
+            <div className="flex flex-col gap-2">
+              <p className=" body-large text-gray-500">
+                Scope Of Work
+              </p>
+              <span>
+                {scope}
+              </span> 
             </div>
-
-            <div className="flex flex-col gap-2 mt-4">
-              <span className="text-gray-500">
-                Contractor: <span className="text-gray-900">{Contractor}</span>
-              </span>
-            </div>
-          </div>
+        </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default ProjectCard;

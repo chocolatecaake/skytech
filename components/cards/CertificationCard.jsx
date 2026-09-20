@@ -29,20 +29,20 @@ const CertificationCard = ({
         <button
           type="button"
           onClick={() => setIsOpen(false)}
-          className="absolute top-2 right-2 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white text-black shadow-lg cursor-pointer hover:bg-accent"
+          className="absolute top-2 right-0 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white text-black shadow-lg cursor-pointer hover:bg-accent"
         >
           ✕
         </button>
 
         {/* Certificate */}
-        <Image
-          src={img}
-          alt={title}
-          fill
-          priority
-          className="object-contain rounded-default"
-          sizes="90vw"
-        />
+          <Image
+            src={img}
+            alt={title}
+            fill
+            priority
+            className="object-contain rounded-default"
+            sizes="90vw"
+          />
       </div>
     </div>
   );
@@ -50,11 +50,17 @@ const CertificationCard = ({
   return (
     <>
       {/* Certificate Card */}
-      <div className="card bg-white border border-tertiary/10">
+      <div className="card bg-white border border-tertiary/10 ">
         {/* Header */}
         <div className="flex gap-small justify-between items-center">
           <div className="relative w-12 h-12">
-            <Image src={badge} alt={title} fill className="object-contain" />
+            <Image
+            src={badge} 
+            alt={title} 
+            fill 
+            sizes="100%" 
+            className="object-contain"
+            />
           </div>
 
           <p className="body-large !font-semibold">{title}</p>
@@ -69,7 +75,7 @@ const CertificationCard = ({
               alt={title}
               width={1000}
               height={1414}
-              className="w-full rounded-default object-contain shadow-default"
+              className="rounded-default object-contain shadow-default"
             />
           </div>
 
@@ -90,11 +96,13 @@ const CertificationCard = ({
               <p className="!text-lg">{ValidUntil}</p>
             </div>
 
-            <Button
-              text="View"
-              variant="primary"
-              onClick={() => setIsOpen(true)}
-            />
+            <div className="flex justify-end md:justify-start">
+              <Button
+                text="View"
+                variant="primary"
+                onClick={() => setIsOpen(true)}
+              />
+            </div>
           </div>
         </div>
       </div>
