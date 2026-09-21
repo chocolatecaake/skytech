@@ -13,22 +13,26 @@ const Companies = () => {
     {
       name: "Fiber Glass",
       url: "https://www.mfggulf.com/",
-      logo: "/assets/logo.webp",
+      logo: "/assets/companies/mfGulf-logo.webp",
+      color: "#ffffff",
     },
     {
       name: "Fiber Glass",
       url: "https://www.mfggulf.com/",
       logo: "/assets/logo.webp",
+      color: "bg-primary",
     },
     {
       name: "Fiber Glass",
       url: "https://www.mfggulf.com/",
       logo: "/assets/logo.webp",
+      color: "bg-primary",
     },
     {
       name: "Fiber Glass",
       url: "https://www.mfggulf.com/",
       logo: "/assets/logo.webp",
+      color: "bg-primary",
     },
   ];
 
@@ -53,17 +57,19 @@ const Companies = () => {
               rel="noopener noreferrer"
               className="group aspect-square"
             >
-            <div className=" bg-primary border border-tertiary/10 rounded-default shadow-default flex flex-row items-center justify-center gap-4 p-content transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-lg">
+            <div
+            style={{ backgroundColor: company.color }}
+            className=" bg-primary border border-tertiary/10 rounded-default shadow-default flex flex-row items-center justify-center gap-4 p-content transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-lg">
             
             {/* Logo */}
-            <div className="relative min-h-[64px] shrink-0">
+            <div className="relative w-[200px] h-[80px] flex items-center justify-center">
           <Image
             src={company.logo}
             width={200}
             height={60}
             alt="skytech logo"
             loading="eager"
-            className="w-[200] h-auto"
+            className="w-[200px] h-auto"
           />
             </div>
 
