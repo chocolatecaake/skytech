@@ -36,7 +36,7 @@ const Companies = () => {
    <section>
       <Title header="More From Us" align="left" size="h2" />
         {/* Company Cards */}
-        <div className="flex flex-wrap justify-center gap-content">
+        <div className="flex justify-center gap-content">
           {companies.map((company, index) => (
             <motion.div
             key={index}
