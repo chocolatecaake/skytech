@@ -18,7 +18,7 @@ const Projects = () => {
         <div className="flex justify-end">
           <Button text="See All Projects" variant="primary" href="/projects" />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 items-start">
           {projects.slice(0, 3).map((project, index) => (
             <motion.div
               key={index}
@@ -28,18 +28,19 @@ const Projects = () => {
               viewport={{ once: true, amount: 0.2 }}
               custom={index}
             >
-              <Link href="/projects" className="block">
               <ProjectCard
                 key={index}
-                Progress={project.progress}
-                Img={project.img}
+                progress={project.progress}
+                img={project.img}
                 title={project.title}
                 loc={project.loc}
-                Client={project.Client}
-                Contractor={project.Contractor}
-                ProjType={project.ProjType}
+                client={project.client}
+                contractor={project.contractor}
+                projType={project.projType}
+                pipeType={project.pipeType}
+                inchDia={project.inchDia}
+                scope={project.scope}
               />
-              </Link>
             </motion.div>
           ))}
         </div>

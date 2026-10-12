@@ -38,6 +38,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${inter.variable} ${epilogue.variable} ${mohave.variable} ${momo.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">

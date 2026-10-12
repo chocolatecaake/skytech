@@ -3,6 +3,7 @@ import Stats from "@/components/sections/Stats";
 import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
 import Projects from "@/components/sections/Projects";
+import Companies from "@/components/sections/Companies";
 import { Testimonials } from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 import CTASection from "@/components/common/CTASection";
@@ -18,8 +19,9 @@ export default function Home() {
       <Projects />
       <Testimonials />
       <section className="bg-primary">
-        <FAQ />
+      <FAQ />
       </section>
+      <Companies/>
       <CTASection
         img="/assets/construction.webp"
         title="Ready to build something amazing Together ?"

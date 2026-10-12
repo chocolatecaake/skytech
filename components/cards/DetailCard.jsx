@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
-import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
+
+import { FaChevronUp, FaChevronDown } from "react-icons/fa";
 
 const DetailCard = ({
   variant = "service",
@@ -17,7 +17,8 @@ const DetailCard = ({
   date,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  return (
+
+  const card = (
     <div className="card bg-white">
       {/* Image */}
       <div className="card-img">
@@ -25,17 +26,20 @@ const DetailCard = ({
           src={img}
           alt={title}
           fill
-          className="h-full w-full object-cover"
+          sizes="100%"
+          className="object-cover object-cover"
         />
 
         {variant === "service" && (
           <div className="absolute right-3 top-3 sm:right-4 sm:top-4">
-            <div className="flex rounded-full! h-9 w-9 items-center justify-center rounded-full border font-bold text-white backdrop-blur-md glass shadow-default sm:h-14 sm:w-14">
+            <div className="flex h-9 w-9 items-center justify-center rounded-full! border font-bold text-white backdrop-blur-md glass shadow-default sm:h-14 sm:w-14">
               {id}
             </div>
           </div>
         )}
       </div>
+
+      {/* Blog Metadata */}
       {variant === "blog" && (
         <div className="flex items-center gap-2 text-tertiary">
           <span className="capitalize">{author}</span>
@@ -43,39 +47,60 @@ const DetailCard = ({
           <span>{date}</span>
         </div>
       )}
+
       {/* Title */}
-      <span className="body-large !font-semibold md">{title}</span>
+      <span className="body-large !font-semibold">{title}</span>
 
-      {/* <h4>{title}</h4> */}
-
-      {/* Description */}
+     {/* Description */}
       <div className="flex flex-col space-y-small">
         <p
-          className={`text-tertiary  ${variant === "blog" ? "line-clamp-3" : ""}`}
+          className={`text-tertiary ${
+            variant === "service"
+              ? isExpanded
+                ? ""
+                : "line-clamp-2"
+              : "line-clamp-3"
+          }`}
         >
           {desc}.
         </p>
 
-        <div className="mt-auto flex justify-end">
-          {variant === "blog" && (
-            <Link
-              href={`/blogs/${slug}`}
-              className="font-semibold text-darkblue hover:underline underline-offset-4"
-            >
+        {/* Service View Details */}
+        {variant === "service" && (
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="flex items-center gap-2 self-end font-semibold text-darkblue transition-colors hover:text-accent"
+          >
+            {isExpanded ? "Hide Details" : "View Details"}
+
+            {isExpanded ? <FaChevronUp /> : <FaChevronDown />}
+          </button>
+        )}
+          {/* Read More */}
+        {variant === "blog" && (
+          <div className="mt-auto flex justify-end">
+            <span className="font-semibold text-darkblue">
               Read More <span className="body-large">→</span>
-            </Link>
-          )}
-        </div>
-        {/* <button
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="mt-3 flex w-fit self-end items-center gap-2 font-semibold transition-colors hover:text-accent"
-        >
-          <span>{isExpanded ? "See Less" : "See More"}</span>
-          {isExpanded ? <FaChevronUp /> : <FaChevronDown />} 
-        </button> */}
+            </span>
+          </div>
+        )}
       </div>
     </div>
   );
+
+  // Make the entire card clickable for blogs
+  if (variant === "blog") {
+    return (
+      <Link
+        href={`/blogs/${slug}`}
+        className="block h-full transition-transform duration-300 hover:-translate-y-1"
+      >
+        {card}
+      </Link>
+    );
+  }
+
+  return card;
 };
 
 export default DetailCard;
