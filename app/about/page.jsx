@@ -20,6 +20,11 @@ import { motion } from "framer-motion";
 import { fadeIn } from "@/constants/variants";
 
 const page = () => {
+  //metadata
+  const metadata = {
+    title: "Skytech General Contracting LLC - About Us",
+  };
+
   const skytechValues = [
     {
       icon: <MdVerified className="h-8 w-8 text-secondary" />,
@@ -57,7 +62,7 @@ const page = () => {
                 align="left"
               />
               <p>
-                SKYTECH is an innovative company providing cutting edge, cost
+                Skytech is an innovative company providing cutting edge, cost
                 effective solutions in the supply and installation of
                 Fiberglass, Thermoplastic, CS, and SS Systems.
               </p>

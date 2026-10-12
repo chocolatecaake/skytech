@@ -10,19 +10,23 @@ import { verificationsDocs } from "@/constants/certifications";
 import { cardVariants } from "@/constants/variants";
 import { motion } from "framer-motion";
 
+const metadata = {
+  title: "Certifications | Skytech General Contracting LLC, UAE",
+  description: "",
+};
 const page = () => {
   const qualityCerts = [
     {
       logo: "/assets/certifications/icv.webp",
       title: "ICV Certified",
       // subtitle: "quality management system",
-      // desc: "Certification provided by International Organisation for Standardisation for SkyTechs Exceptional Quality Processes",
+      // desc: "Certification provided by International Organisation for Standardisation for Skytechs Exceptional Quality Processes",
     },
     {
       logo: "/assets/certifications/iso.webp",
       title: "ISO Certified",
       // subtitle: "quality management system",
-      // desc: "Certification provided by International Organisation for Standardisation for SkyTechs Exceptional Quality Processes",
+      // desc: "Certification provided by International Organisation for Standardisation for Skytechs Exceptional Quality Processes",
     },
     {
       logo: "/assets/certifications/adnoc.webp",
@@ -96,7 +100,7 @@ const page = () => {
       </section>
       <CTASection
         img="/assets/construction.webp"
-        title="Want to learn more about skytech ?"
+        title="Want to learn more about Skytech?"
         subtitle="Get a quotation from our Experienced Engineers"
         button={<Button variant="CTA" text="Download our Brochure" />}
       />

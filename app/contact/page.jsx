@@ -51,8 +51,20 @@ const ContactForm = () => {
     setSubmitError("");
 
     try {
-      // Your form submission logic goes here
-      console.log(data);
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...data,
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!result.success) {
+        throw new Error(result.message || "Submission failed.");
+      }
 
       setSuccess(true);
       reset();

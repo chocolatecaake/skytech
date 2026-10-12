@@ -90,7 +90,7 @@ export default function Footer() {
           SKYTECH
         </h1>
         <span className="text-white text-sm">
-          © 2026 SkyTech General Contracting LLC. All rights reserved.
+          © 2026 Skytech General Contracting LLC. All rights reserved.
         </span>
       </div>
     </footer>

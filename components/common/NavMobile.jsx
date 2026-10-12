@@ -43,7 +43,7 @@ const NavMobile = () => {
                 src="/assets/logo.webp"
                 width={156}
                 height={40}
-                alt="skytech logo"
+                alt="Skytech logo"
                 className="h-auto"
                 loading="eager"
               />
