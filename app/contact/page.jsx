@@ -115,13 +115,9 @@ const ContactForm = () => {
                 >
                   <div className="flex items-center">
                     <div>
-                      <p className="body-large text-yellow">
-                        {contact.title}
-                      </p>
+                      <p className="body-large text-yellow">{contact.title}</p>
 
-                      <p className="body-large text-white">
-                        {contact.value}
-                      </p>
+                      <p className="body-large text-white">{contact.value}</p>
                     </div>
                   </div>
                 </div>
@@ -230,11 +226,7 @@ const ContactForm = () => {
               </p>
             )}
 
-            {submitError && (
-              <p className="text-secondary">
-                {submitError}
-              </p>
-            )}
+            {submitError && <p className="text-secondary">{submitError}</p>}
 
             <div className="flex justify-end">
               <Button
