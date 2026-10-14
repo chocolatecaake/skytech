@@ -27,16 +27,16 @@ const page = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="relative isolate rounded-2xl">
+        <div className="relative isolate rounded-2xl shadow-lg">
 
-            <div
-              className="relative h-[220px] w-full rounded-t-2xl bg-cover bg-center bg-no-repeat md:absolute md:inset-y-0 md:right-0 md:h-auto md:w-[45%] md:rounded-r-2xl md:rounded-tl-none"
-              style={{
-                backgroundImage: "url('/assets/services/grplamination.webp')",
-              }}
-            />
+          <div
+            className="relative h-[220px] w-full rounded-t-2xl bg-cover bg-center bg-no-repeat md:absolute md:inset-y-0 md:right-0 md:h-auto md:w-[45%] md:rounded-r-2xl md:rounded-tl-none"
+            style={{
+              backgroundImage: "url('/assets/services/grplamination.webp')",
+            }}
+          />
 
-            <div className="relative z-10 -mt-8 w-full space-y-5 rounded-l-xl border border-gray-200 bg-white p-6 shadow-lg md:mr-auto md:mt-0 md:w-[75%] md:p-8">
+        <div className="relative z-10 -mt-8 w-full space-y-5 rounded-b-2xl border border-gray-200 bg-white p-6 md:mr-auto md:mt-0 md:w-[75%] md:rounded-l-xl md:rounded-br-none md:rounded-tr-none md:p-8">
 
 
             <h2 className = "border-l-4 border-red-600 py-2 pl-4 text-center text-xl font-bold text-primary md:text-left md:text-2xl">GRE / GRP Piping Systems</h2>    
@@ -166,16 +166,16 @@ const page = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="relative isolate rounded-2xl">
+      <div className="relative isolate rounded-2xl shadow-lg">
 
-          <div
-            className="relative h-[220px] w-full rounded-t-2xl bg-cover bg-center bg-no-repeat md:absolute md:inset-y-0 md:left-0 md:h-auto md:w-[45%] md:rounded-l-2xl md:rounded-tr-none"
-            style={{
-              backgroundImage: "url('/assets/services/pvcjointing.webp')",
-            }}
-          />
+        <div
+          className="relative h-[220px] w-full rounded-t-2xl bg-cover bg-center bg-no-repeat md:absolute md:inset-y-0 md:left-0 md:h-auto md:w-[45%] md:rounded-l-2xl md:rounded-tr-none"
+          style={{
+            backgroundImage: "url('/assets/services/pvcjointing.webp')",
+          }}
+        />
 
-          <div className="relative z-10 -mt-8 w-full space-y-5 rounded-r-xl border border-gray-200 bg-white p-6 shadow-lg md:ml-auto md:mt-0 md:w-[75%] md:p-8">
+        <div className="relative z-10 -mt-8 w-full space-y-5 rounded-b-2xl border border-gray-200 bg-white p-6 md:ml-auto md:mt-0 md:w-[75%] md:rounded-l-none md:rounded-r-xl md:p-8">
 
           <h2 className = "border-l-4 border-red-600 py-2 pl-4 text-center text-xl font-bold text-primary md:text-left md:text-2xl">HDPE Piping Systems</h2>    
           <p>
@@ -285,7 +285,7 @@ const page = () => {
         transition={{ duration: 0.6 }}
       >
 
-        <div className="relative isolate rounded-2xl">
+        <div className="relative isolate rounded-2xl shadow-lg">
 
           <div
             className="relative h-[220px] w-full rounded-t-2xl bg-cover bg-center bg-no-repeat md:absolute md:inset-y-0 md:right-0 md:h-auto md:w-[45%] md:rounded-r-2xl md:rounded-tl-none"
@@ -294,7 +294,7 @@ const page = () => {
             }}
           />
 
-          <div className="relative z-10 -mt-8 w-full space-y-5 rounded-l-xl border border-gray-200 bg-white p-6 shadow-lg md:mr-auto md:mt-0 md:w-[75%] md:p-8">
+          <div className="relative z-10 -mt-8 w-full space-y-5 rounded-b-2xl border border-gray-200 bg-white p-6 md:mr-auto md:mt-0 md:w-[75%] md:rounded-l-xl md:rounded-br-none md:rounded-tr-none md:p-8">
 
           <h2 className = "border-l-4 border-red-600 py-2 pl-4 text-center text-xl font-bold text-primary md:text-left md:text-2xl">In-Situ Works – GRP Lamination & Lining</h2>    
           <p>
