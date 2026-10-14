@@ -3,10 +3,37 @@ import { MdEngineering } from "react-icons/md";
 import { GiTeePipe } from "react-icons/gi";
 
 export const services = [
-  {
+    {
+    slug: "grp-gre-jointing",
+    title: "GRE / GRP Piping Systems",
+    desc: "Specialized in GRP and GRE pipe field jointing",
+    details: 
+      "Specialized in GRP and GRE pipe field jointing: lamination, double bell coupling, adhesive & rubber seal lock joints, spools & fittings fabrication",
+    icon: GiPipes,
+    img: "/assets/services/grplamination.webp",
+  },
+    {
+    slug: "hdpe-piping-systems",
+    title: "HDPE Piping Systems",
+    desc: "Expert jointing of PVC & PPR pipes",
+    details: 
+      "Specialized in GRP and GRE pipe field jointing: lamination, double bell coupling, adhesive & rubber seal lock joints, spools & fittings fabrication",
+    icon: MdEngineering,
+    img: "/assets/services/grplamination.webp",
+  },
+    {
+    slug: "in-situ-works–grp",
+    title: "In-Situ Works – GRP Lamination & Lining",
+    desc: "In-situ lamination of chemical storage tanks and benching lamination",
+    details: 
+      "Specialized in GRP and GRE pipe field jointing: lamination, double bell coupling, adhesive & rubber seal lock joints, spools & fittings fabrication",
+    icon: GiTeePipe,
+    img: "/assets/services/grplamination.webp",
+  },
+  /*{
     title: "GRP & GRE Lamination",
     desc: "Specialized in GRP and GRE pipe field jointing",
-    details:
+    details: 
       "Specialized in GRP and GRE pipe field jointing: lamination, double bell coupling, adhesive & rubber seal lock joints, spools & fittings fabrication",
     icon: GiPipes,
     img: "/assets/services/grplamination.webp",
@@ -50,5 +77,5 @@ export const services = [
       "Comprehensive engineering by certified professionals and highly skilled technicians, ensuring timely and budget-compliant project delivery",
     icon: MdEngineering,
     img: "/assets/services/engineering.webp",
-  },
+  },*/
 ];

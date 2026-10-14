@@ -9,8 +9,7 @@ export const projects = [
     client: "Adnoc",
     contractor: "China Petroleum Engineering",
     projType: "GRE/HDPE pipes installation and fittings",
-    pipeType:"Big Circle",
-    inchDia:"2000mm",
+    inchDia:"24,000",
     scope:"Installation of GRE/HDPE pipes and fittings"
   },
   {
@@ -21,8 +20,7 @@ export const projects = [
     client: "Adnoc Gas",
     contractor: "PEG",
     projType: "GRE pipes Installation and fittings",
-    pipeType:"",
-    inchDia:"",
+    inchDia:"12,000",
     scope:"Installation of GRE pipes and fittings"
   },
   {
@@ -33,8 +31,7 @@ export const projects = [
     client: "Adnoc",
     contractor: "Target Engineering",
     projType: "GRE/HDPE pipes installation and fittings",
-    pipeType:"",
-    inchDia:"",
+    inchDia:"24,000",
     scope:"Installation of GRE/HDPE pipes and fittings"
   },
   {
@@ -45,8 +42,7 @@ export const projects = [
     client: "Adnoc",
     contractor: "Obaid al Qaubisi",
     projType: "GRE/HDPE pipes installation and fittings",
-    pipeType:"",
-    inchDia:"",
+    inchDia:"30,000",
     scope:"Installation of GRE/HDPE pipes and fittings"
   },
 
@@ -59,7 +55,6 @@ export const projects = [
     client: "Adnoc",
     contractor: "Robotstone",
     projType: "Installation of GRE pipes and fittings",
-    pipeType:"",
     inchDia:"",
     scope:"Installation of GRE pipes and fittings"
   },
@@ -71,32 +66,29 @@ export const projects = [
     client: "Adnoc",
     contractor: "Robotstone",
     projType: "Installation of GRE pipes and fittings",
-    pipeType:"",
     inchDia:"",
     scope:"Installation of GRE pipes and fittings"
   },
   {
-    progress: "Ongoing",
+    progress: "Completed",
     img: "/assets/projects/akoya.webp",
     title: "Tawella Integrated Project",
     loc: "Tawella",
     client: "Adnoc",
     contractor: "Multiline",
     projType: "Installation of GRE pipes and fittings",
-    pipeType:"",
-    inchDia:"",
+    inchDia:"1,000",
     scope:"Installation of GRE pipes and fittings"
   },
   {
-    progress: "Ongoing",
+    progress: "Completed",
     img: "/assets/projects/akoya.webp",
     title: "Project Lightning - Independent Subsea HVDC System",
     loc: "Mirfa, Shuwait, Das Island",
     client: "Adnoc",
     contractor: "Samsung Engineering / Vijay Tanks",
     projType: "Installation of GRE/HDPE pipes and fittings",
-    pipeType:"",
-    inchDia:"",
+    inchDia:"4,000",
     scope:"Installation of GRE/HDPE pipes and fittings"
   },
   {
@@ -107,7 +99,6 @@ export const projects = [
     client: "Masdar",
     contractor: "ASGC",
     projType: "GRP lining for water tank",
-    pipeType:"",
     inchDia:"",
     scope:"GRP Lining For Water Tank"
   },
@@ -120,8 +111,7 @@ export const projects = [
     client: "Adnoc",
     contractor: "Robotstone",
     projType: "Supply and installation of GRE pipes",
-    pipeType:"",
-    inchDia:"",
+    inchDia:"12,000",
     scope:"Supply and installation of GRE pipes"
   },
   {
@@ -132,7 +122,6 @@ export const projects = [
     client: "Adnoc",
     contractor: "Experts & I",
     projType: "GRP/GRE/GRV pipe installation and jointing",
-    pipeType:"",
     inchDia:"",
     scope:"GRP/GRE/GRV Pipe Installation and Jointing"
   },
@@ -145,7 +134,6 @@ export const projects = [
     contractor: "Target",
     projType:
       "GRE & GRP lamination, pipe installation, and valve/fittings installation",
-    pipeType:"",
     inchDia:"",
     scope:"GRE & GRP Lamination, PipeInstallation, and Valve/Fittings Installation"
   },

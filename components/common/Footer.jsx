@@ -87,14 +87,14 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between px-24 py-5 items-center gap-5">
+      <div className="flex flex-col md:flex-row justify-between px-24 py-5 items-end gap-5">
           <Image
             src="/assets/logo.webp"
-            width={300}
-            height={20}
+            width={250}
+            height={10}
             alt="skytech logo"
             loading="eager"
-             className="w-[300px] h-auto"
+             className="w-[250px] h-auto "
           />
         <span className="text-white text-sm">
           © 2026 Skytech General Contracting LLC. All rights reserved.

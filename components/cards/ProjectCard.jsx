@@ -17,7 +17,6 @@ const ProjectCard = ({
   client,
   contractor,
   projType,
-  pipeType,
   inchDia,
   scope
 }) => {
@@ -105,15 +104,6 @@ const ProjectCard = ({
           }`}
         >
         <div className="border-t border-tertiary/50 pt-4">
-            {/* Pipe Type */}
-            <div className="flex flex-col gap-2">
-              <span className="text-gray-500">
-                Pipe Type:{" "}
-                <span className="text-gray-900">
-                  {pipeType}
-                </span>
-              </span>
-            </div>
 
             {/* Inch Diameter */}
             <div className="mt-4 flex flex-col gap-2">

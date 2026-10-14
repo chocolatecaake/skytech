@@ -19,26 +19,26 @@ const Services = () => {
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
-        {services.map((service, index) => (
-          <motion.div
-            key={index}
-            variants={cardVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            custom={index}
-          >
-            <Link href="/services">
-              <ServiceCard
-                idx={String(index + 1).padStart(2, "0")}
-                title={service.title}
-                desc={service.desc}
-                icon={<service.icon className="w-16 h-16" />}
-              />
-            </Link>
-          </motion.div>
-        ))}
-      </div>
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              custom={index}
+            >
+              <Link href={`/services#${service.slug}`}>
+                <ServiceCard
+                  idx={String(index + 1).padStart(2, "0")}
+                  title={service.title}
+                  desc={service.desc}
+                  icon={<service.icon className="w-16 h-16" />}
+                />
+              </Link>
+            </motion.div>
+          ))}
+        </div>
     </section>
   );
 };

@@ -37,7 +37,6 @@ const Projects = () => {
                 client={project.client}
                 contractor={project.contractor}
                 projType={project.projType}
-                pipeType={project.pipeType}
                 inchDia={project.inchDia}
                 scope={project.scope}
               />
