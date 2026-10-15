@@ -62,15 +62,15 @@ export default function Footer() {
         </div>
         <div className="flex flex-col text-white space-y-default">
           <h4 className="text-accent lg:min-w-50">Services</h4>
-          <Link href="/services">
-            <div className="flex flex-col space-y-small">
-              {services.map((service, idx) => (
-                <span key={idx} className="hover:text-yellow">
-                  {service.title}
-                </span>
-              ))}
-            </div>
-          </Link>
+            {services.map((service, idx) => (
+    <Link
+      key={idx}
+      href={`/services#${service.slug}`}
+      className="hover:text-yellow"
+    >
+      {service.title}
+    </Link>
+  ))}
         </div>
         <div className="flex flex-col text-white space-y-default">
           <h4 className="text-accent lg:min-w-50">Quick Links</h4>

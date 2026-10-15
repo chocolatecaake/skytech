@@ -68,7 +68,7 @@ const page = () => {
                   className="object-contain"
                 />
               </div>
-              <Button text={cert.title} variant="badge" />
+              <p className = "    flex items-center gap-2 w-fit h-fit px-5 py-2.5 rounded-default font-semibold transition-all duration-300 shadow-default bg-lightaccent text-darkblue shadow-none cursor-default">{cert.title}</p>
 
               <span className="body-large text-secondary"></span>
             </motion.div>

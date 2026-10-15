@@ -47,6 +47,12 @@ const page = () => {
   return (
     <>
       <section className="overflow-x-hidden">
+              <Title
+                pretitle="About Us"
+                header="Serving Customers Through Innovative Excellence"
+                align="center"
+              />
+
         <div className="flex flex-col xl:flex-row items-center xl:gap-none gap-5">
           {/* Left Content */}
           <motion.div
@@ -57,12 +63,6 @@ const page = () => {
             className="flex-1"
           >
             <div className="flex flex-col space-y-default bg-background">
-              <Title
-                pretitle="About Us"
-                header="Serving Customers Through Innovative Excellence"
-                align="left"
-              />
-
               <p>
                 Skytech is an innovative company providing cutting edge, cost
                 effective solutions in the supply and installation of Fiberglass,
