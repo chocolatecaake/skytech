@@ -129,7 +129,7 @@ const page = () => {
             <Image
               src={About}
               alt="About Us"
-              className="w-auto h-auto max-h-[450px] object-cover rounded-default shadow-default"
+              className="w-auto h-auto mix-h-[450px] object-cover rounded-default shadow-default"
             />
           </motion.div>
         </div>

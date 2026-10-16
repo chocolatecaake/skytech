@@ -28,7 +28,7 @@ const page = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
         >
-        <div className="relative isolate rounded-2xl shadow-lg">
+        <div className="relative isolate rounded-2xl shadow-lg bg-white">
         <div
           className={`relative h-[220px] w-full overflow-hidden rounded-t-2xl
             md:absolute md:inset-y-0 md:right-0 md:h-full
@@ -45,7 +45,7 @@ const page = () => {
           />
         </div>
 
-        <div className="relative z-10 -mt-8 w-full space-y-5 rounded-b-2xl border border-gray-200 bg-white p-6 md:mr-auto md:mt-0 md:w-[75%] md:rounded-l-xl md:rounded-br-none md:rounded-tr-none md:p-8">
+        <div className="relative z-10 -mt-8 w-full space-y-5 rounded-b-2xl bg-white p-6 md:mr-auto md:mt-0 md:w-[75%] md:rounded-l-xl md:rounded-br-none md:rounded-tr-none md:p-8">
 
 
             <h2 className = "border-l-4 border-red-600 py-2 pl-4 text-center text-xl font-bold text-primary md:text-left md:text-2xl">GRE / GRP Piping Systems</h2>    

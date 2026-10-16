@@ -68,7 +68,7 @@ export default function Footer() {
       href={`/services#${service.slug}`}
       className="hover:text-yellow"
     >
-      {service.title}
+    <span>{service.title}</span>
     </Link>
   ))}
         </div>
