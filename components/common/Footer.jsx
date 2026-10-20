@@ -14,15 +14,22 @@ export default function Footer() {
     <footer className="bg-primary w-full">
       <div className="flex flex-col md:flex-row justify-between p-12 sm:p-24 sm:pb-1 gap-content">
         <div className="flex flex-col text-white space-y-small lg:min-w-50">
-          <h4>Skytech General Contracting L.L.C</h4>
+          <Image
+            src="/assets/logo.webp"
+            width={250}
+            height={10}
+            alt="skytech logo"
+            loading="eager"
+             className="w-[250px] h-auto "
+          />
           <span className="body-large">P.O. Box 132415</span>
-          <span className="body-large">
-            <FaLocationDot className="inline mr-small text-yellow-300" />
-            Abu Dhabi, UAE
+          <span className="flex items-center body-large">
+            <FaLocationDot className="body-large inline mr-small text-yellow-300" />
+            86CR13 Sector: - Abu Dhabi Industrial City - ICAD II - Abu Dhabi
           </span>
           <div className="rounded-default overflow-hidden border border-white shadow-xl">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d232565.41897088237!2d54.39381209067177!3d24.387054128669117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e440f723ef2b9%3A0xc7cc2e9341971108!2sAbu%20Dhabi!5e0!3m2!1sen!2sae!4v1782635877707!5m2!1sen!2sae"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3636.768870481484!2d54.4651078!3d24.284802199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e3fffce2dbb61%3A0xd28a7c596c35a5c1!2sStar%20Brand%20Business%20Center!5e0!3m2!1sen!2sae!4v1792513765104!5m2!1sen!2sae"
               width="100%"
               height="200"
               style={{ border: 0 }}
@@ -87,15 +94,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-between px-24 py-5 items-end gap-5">
-          <Image
-            src="/assets/logo.webp"
-            width={250}
-            height={10}
-            alt="skytech logo"
-            loading="eager"
-             className="w-[250px] h-auto "
-          />
+      <div className="w-full text-center p-5 md:text-right">
         <span className="text-white text-sm">
           © 2026 Skytech General Contracting LLC. All rights reserved.
         </span>
