@@ -77,9 +77,9 @@ const page = () => {
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.96 }}
                   transition={{ duration: 0.2 }}
-                  className="font-semibold text-red-600 transition-colors duration-200 hover:text-red-800 "
+                  className="font-semibold text-red-600 transition-colors duration-200 hover:text-red-800"
                 >
-                  {isExpanded1 ? "Read Less ↑" : "Read More ↓"}
+                  {isExpanded1 ? " " : "Read More ↓"}
                 </motion.button>
               </div>
             </div>
@@ -196,6 +196,18 @@ const page = () => {
                           </li>
                         </ul>
                       </div>
+                      <div>
+                        <motion.button
+                          type="button"
+                          onClick={() => setIsExpanded1(false)}
+                          whileHover={{ scale: 1.04 }}
+                          whileTap={{ scale: 0.96 }}
+                          transition={{ duration: 0.2 }}
+                          className="font-semibold text-red-600 transition-colors duration-200 hover:text-red-800"
+                        >
+                          Read Less ↑
+                        </motion.button>
+                      </div>
                     </div>
                   </div>
                 </motion.div>
@@ -261,7 +273,7 @@ const page = () => {
                   transition={{ duration: 0.2 }}
                   className="font-semibold text-red-600 transition-colors duration-200 hover:text-red-800"
                 >
-                  {isExpanded2 ? "Read Less ↑" : "Read More ↓"}
+                  {isExpanded2 ? " " : "Read More ↓"}
                 </motion.button>
               </div>
             </div>
@@ -313,7 +325,7 @@ const page = () => {
                       </p>
                     </div>
 
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:m-5 mb-5">
+                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:m-5">
                       <div className="rounded-lg bg-primary p-5">
                         <h4 className="mb-5 text-center text-lg font-semibold text-accent md:text-left">
                           Applications
@@ -342,6 +354,18 @@ const page = () => {
                           <li>Repairs, Modifications & Tie-ins</li>
                           <li>Welding range: up to _25__ mm diameter 500mm</li>
                         </ul>
+                      </div>
+                      <div>
+                        <motion.button
+                          type="button"
+                          onClick={() => setIsExpanded2(false)}
+                          whileHover={{ scale: 1.04 }}
+                          whileTap={{ scale: 0.96 }}
+                          transition={{ duration: 0.2 }}
+                          className="font-semibold text-red-600 transition-colors duration-200 hover:text-red-800"
+                        >
+                          Read Less ↑
+                        </motion.button>
                       </div>
                     </div>
                   </div>
@@ -401,7 +425,7 @@ const page = () => {
                   transition={{ duration: 0.2 }}
                   className="font-semibold text-red-600 transition-colors duration-200 hover:text-red-800"
                 >
-                  {isExpanded3 ? "Read Less ↑" : "Read More ↓"}
+                  {isExpanded3 ? " " : "Read More ↓"}
                 </motion.button>
               </div>
             </div>
@@ -464,7 +488,7 @@ const page = () => {
                       </p>
                     </div>
 
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:m-5 mb-5">
+                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:m-5">
                       <div className="rounded-lg bg-primary p-5">
                         <h4 className="mb-5 text-center text-lg font-semibold text-accent md:text-left">
                           Applications
@@ -493,6 +517,18 @@ const page = () => {
                           <li>Rehabilitation of Existing Structures</li>
                           <li>Confined-Space Trained Laminating Crews</li>
                         </ul>
+                      </div>
+                      <div>
+                        <motion.button
+                          type="button"
+                          onClick={() => setIsExpanded3(false)}
+                          whileHover={{ scale: 1.04 }}
+                          whileTap={{ scale: 0.96 }}
+                          transition={{ duration: 0.2 }}
+                          className="font-semibold text-red-600 transition-colors duration-200 hover:text-red-800"
+                        >
+                          Read Less ↑
+                        </motion.button>
                       </div>
                     </div>
                   </div>

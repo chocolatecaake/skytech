@@ -12,8 +12,8 @@ import { FaLinkedin } from "react-icons/fa6";
 export default function Footer() {
   return (
     <footer className="bg-primary w-full">
-      <div className="flex flex-col md:flex-row justify-between p-12 sm:p-24 sm:pb-1 gap-content">
-        <div className="flex flex-col text-white space-y-small lg:min-w-50">
+      <div className="flex flex-col xl:flex-row justify-between p-10 xl:p-12 gap-content">
+        <div className="flex flex-col text-white space-y-small">
           <Image
             src="/assets/logo.webp"
             width={250}
@@ -23,7 +23,7 @@ export default function Footer() {
              className="w-[250px] h-auto "
           />
           <span className="body-large">P.O. Box 132415</span>
-          <span className="flex items-center body-large">
+          <span className="body-large">
             <FaLocationDot className="body-large inline mr-small text-yellow-300" />
             86CR13 Sector: - Abu Dhabi Industrial City - ICAD II - Abu Dhabi
           </span>
@@ -38,8 +38,8 @@ export default function Footer() {
             ></iframe>
           </div>
         </div>
-        <div className="flex flex-col text-white space-y-default text-base lg:min-w-55">
-          <h4 className="text-accent lg:min-w-50">Quick Contact</h4>
+        <div className="flex flex-col text-white space-y-default text-base whitespace-nowrap">
+          <h4 className="text-accent whitespace-nowrap">Quick Contact</h4>
           <div className="flex flex-col space-y-small">
             <span className="flex items-center">
               <FaPhone className="body-large inline mr-small text-yellow-300" />
@@ -68,7 +68,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex flex-col text-white space-y-default">
-          <h4 className="text-accent lg:min-w-50">Services</h4>
+          <h4 className="text-accent">Services</h4>
             {services.map((service, idx) => (
     <Link
       key={idx}
@@ -80,7 +80,7 @@ export default function Footer() {
   ))}
         </div>
         <div className="flex flex-col text-white space-y-default">
-          <h4 className="text-accent lg:min-w-50">Quick Links</h4>
+          <h4 className="text-accent whitespace-nowrap">Quick Links</h4>
           <div className="flex flex-col space-y-small">
             {links.map((link, idx) => (
               <Link
@@ -94,7 +94,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="w-full text-center p-5 md:text-right">
+      <div className="w-full text-center py-5 xl:text-right">
         <span className="text-white text-sm">
           © 2026 Skytech General Contracting LLC. All rights reserved.
         </span>

@@ -60,9 +60,9 @@ const page = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
-            className="flex-1"
+            className="flex-2"
           >
-            <div className="flex flex-col space-y-default bg-background">
+            <div className="flex flex-col space-y-default">
               <p>
                 Skytech is an innovative company providing cutting edge, cost
                 effective solutions in the supply and installation of Fiberglass,
