@@ -24,9 +24,13 @@ const page = () => {
 
         <motion.div
           id="grp-gre-jointing"
-          initial={{ opacity: 0, scale: 0.98 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{
+            duration: 0.7,
+            ease: "easeOut",
+          }}
         >
           <div className="relative isolate rounded-2xl shadow-lg bg-white">
             <div className="relative z-10  w-full space-y-5 rounded-b-2xl bg-white md:mr-auto md:mt-0 md:rounded-2xl md:p-8">
@@ -218,9 +222,13 @@ const page = () => {
 
         <motion.div
           id="hdpe-piping-systems"
-          initial={{ opacity: 0, scale: 0.98 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{
+            duration: 0.7,
+            ease: "easeOut",
+          }}
         >
           <div className="relative isolate rounded-2xl shadow-lg bg-white">
             <div className="relative z-10  w-full space-y-5 rounded-b-2xl bg-white md:mr-auto md:mt-0 md:rounded-2xl md:p-8">
@@ -377,9 +385,13 @@ const page = () => {
 
         <motion.div
           id="in-situ-works–grp"
-          initial={{ opacity: 0, scale: 0.98 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{
+            duration: 0.7,
+            ease: "easeOut",
+          }}
         >
           <div className="relative isolate rounded-2xl shadow-lg bg-white">
             <div className="relative z-10  w-full space-y-5 rounded-b-2xl bg-white md:mr-auto md:mt-0 md:rounded-2xl md:p-8">
