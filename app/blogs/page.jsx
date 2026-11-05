@@ -13,8 +13,9 @@ const page = () => {
       <section>
         <Title
           pretitle="Our Blogs"
-          header="Latest insights and trends"
+          header="Piping Insights & Guides"
           align="center"
+          as="h1"
         />
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">

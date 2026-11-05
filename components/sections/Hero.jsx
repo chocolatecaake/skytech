@@ -67,16 +67,16 @@ export default function Hero() {
         <div className="flex-1 flex items-center">
           <div className="max-w-5xl text-white space-y-default">
             <div className="space-y-6">
-              <motion.div
+              <motion.h1
                 variants={fadeIn("up", 0.2)}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.0 }}
                 className="hero mt-18"
               >
-                Engineering Reliable Pipeline Infrastructure
+                GRE, GRP & HDPE Piping Contractor
                 <span className="hero text-yellow"> Across The UAE</span>
-              </motion.div>
+              </motion.h1>
 
               <motion.h4
                 variants={fadeIn("up", 0.4)}

@@ -1,4 +1,5 @@
-const Title = ({ pretitle, header, align, variant, size }) => {
+const Title = ({ pretitle, header, align, variant, size, as: Tag = "div" }) => {
+  // ponytail: defaults to div because globals.css `h2` has !important sizes that would override `.h1`; pass as="h1" once per page
   return (
     <div
       className={`flex flex-col ${variant === "light" ? "text-white" : "bg-background"} text-${align} 
@@ -19,7 +20,7 @@ const Title = ({ pretitle, header, align, variant, size }) => {
             {pretitle}
           </span>
         )}
-        <div className={`${size ?? "h1"} mb-6`}>{header}</div>
+        <Tag className={`${size ?? "h1"} mb-6`}>{header}</Tag>
         <div className="h-[3px] bg-secondary rounded-full" />
       </div>
     </div>

@@ -28,7 +28,7 @@ const momo = Momo_Signature({
 export const metadata = {
   title: {
     default: "Skytech Piping Solutions",
-    template: "%s | Skytech General Contracting LLC, UAE",
+    template: "%s | Skytech UAE",
   },
   description:
     "Skytech specializes in industrial piping solutions including FRP, thermoplastic, carbon steel, and stainless steel systems across the UAE.",

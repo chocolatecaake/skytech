@@ -8,6 +8,9 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import FAQ from "@/components/sections/FAQ";
 import CTASection from "@/components/common/CTASection";
 import Button from "@/components/common/Button";
+import { seo } from "@/constants/SEO";
+
+export const metadata = seo.home;
 
 export default function Home() {
   return (
