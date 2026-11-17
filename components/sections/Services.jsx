@@ -28,7 +28,7 @@ const Services = () => {
               viewport={{ once: true, amount: 0.2 }}
               custom={index}
             >
-              <Link href={`/services#${service.slug}`}>
+              <Link href={`/services?open=${service.slug}#${service.slug}`}>
                 <ServiceCard
                   idx={String(index + 1).padStart(2, "0")}
                   title={service.title}

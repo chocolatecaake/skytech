@@ -8,10 +8,11 @@ import Button from "@/components/common/Button";
 
 import { motion, AnimatePresence } from "framer-motion";
 
-const page = () => {
-  const [isExpanded1, setIsExpanded1] = useState(false);
-  const [isExpanded2, setIsExpanded2] = useState(false);
-  const [isExpanded3, setIsExpanded3] = useState(false);
+// open: slug from ?open= (footer / homepage links), undefined on a normal visit
+const page = ({ open }) => {
+  const [isExpanded1, setIsExpanded1] = useState(open === "grp-gre-jointing");
+  const [isExpanded2, setIsExpanded2] = useState(open === "hdpe-piping-systems");
+  const [isExpanded3, setIsExpanded3] = useState(open === "in-situ-works–grp");
 
   return (
     <>
@@ -25,6 +26,7 @@ const page = () => {
 
         <motion.div
           id="grp-gre-jointing"
+          className="scroll-mt-24"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -223,6 +225,7 @@ const page = () => {
 
         <motion.div
           id="hdpe-piping-systems"
+          className="scroll-mt-24"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -386,6 +389,7 @@ const page = () => {
 
         <motion.div
           id="in-situ-works–grp"
+          className="scroll-mt-24"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}

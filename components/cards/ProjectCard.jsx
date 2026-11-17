@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Button from "../common/Button";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaClock } from "react-icons/fa";
 import { FaLocationDot, FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import { FaUser, FaCalendarAlt } from "react-icons/fa";
 import { GiTeePipe } from "react-icons/gi";
@@ -38,8 +38,8 @@ const ProjectCard = ({
         {/* Status */}
         <div className="absolute left-3 top-3">
           <Button
-            variant="glassBadge"
-            icon={<FaCheckCircle />}
+            variant={progress.startsWith("Completed") ? "completed" : "ongoing"}
+            icon={progress.startsWith("Completed") ? <FaCheckCircle /> : <FaClock />}
             text={progress}
           />
         </div>

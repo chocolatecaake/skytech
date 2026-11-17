@@ -77,7 +77,7 @@ export default function Footer() {
           {services.map((service, idx) => (
             <Link
               key={idx}
-              href={`/services#${service.slug}`}
+              href={`/services?open=${service.slug}#${service.slug}`}
               className="hover:text-yellow"
             >
               <span>{service.title}</span>

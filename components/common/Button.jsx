@@ -1,6 +1,13 @@
 import Link from "next/link";
 
-const Button = ({ text, icon, variant = "primary", href, onClick, download }) => {
+const Button = ({
+  text,
+  icon,
+  variant = "primary",
+  href,
+  onClick,
+  download,
+}) => {
   const variants = {
     CTA: "bg-secondary text-white hover:bg-darkred",
 
@@ -15,6 +22,8 @@ const Button = ({ text, icon, variant = "primary", href, onClick, download }) =>
     //   "inset-border bg-white text-primary backdrop-blur hover:bg-accent",
     badge: "bg-lightaccent text-darkblue shadow-none",
     glassBadge: "glass backdrop-blur",
+    ongoing: "bg-lightaccent text-primary",
+    completed: "bg-primary text-white",
   };
 
   const classes = `
