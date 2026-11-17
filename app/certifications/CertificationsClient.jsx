@@ -41,10 +41,17 @@ const page = () => {
           align="center"
           as="h1"
         />
-        <span className="bg-background block max-w-5xl mx-auto body-large text-center">
-          We are committed to meeting internationally recognized quality
-          standards to ensure reliability, safety, and customer satisfaction.
-        </span>
+        <motion.div
+          variants={cardVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <span className="bg-background block max-w-5xl mx-auto body-large text-center">
+            We are committed to meeting internationally recognized quality
+            standards to ensure reliability, safety, and customer satisfaction.
+          </span>
+        </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
           {qualityCerts.map((cert, index) => (
             <motion.div
@@ -61,11 +68,13 @@ const page = () => {
                   src={cert.logo}
                   alt={cert.title}
                   fill
-                  sizes = "100%"
+                  sizes="100%"
                   className="object-contain"
                 />
               </div>
-              <p className = "    flex items-center gap-2 w-fit h-fit px-5 py-2.5 rounded-default font-semibold transition-all duration-300 shadow-default bg-lightaccent text-darkblue shadow-none cursor-default">{cert.title}</p>
+              <p className="    flex items-center gap-2 w-fit h-fit px-5 py-2.5 rounded-default font-semibold transition-all duration-300 shadow-default bg-lightaccent text-darkblue shadow-none cursor-default">
+                {cert.title}
+              </p>
 
               <span className="body-large text-secondary"></span>
             </motion.div>
@@ -100,7 +109,14 @@ const page = () => {
         img="/assets/construction.webp"
         title="Want to learn more about Skytech?"
         subtitle="Get a quotation from our Experienced Engineers"
-        button={<Button variant="CTA" text="Download our Brochure" href="/assets/Skytech%20Company%20Brochure.pdf" download="Skytech Company Brochure.pdf" />}
+        button={
+          <Button
+            variant="CTA"
+            text="Download our Brochure"
+            href="/assets/Skytech%20Company%20Brochure.pdf"
+            download="Skytech Company Brochure.pdf"
+          />
+        }
       />
     </>
   );

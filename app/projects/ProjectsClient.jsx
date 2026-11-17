@@ -19,14 +19,20 @@ const page = () => {
           align="center"
           as="h1"
         />
-
-        <span className="bg-background block max-w-5xl mx-auto body-large text-center">
-          Our extensive experience and reputation for quality, reliability and
-          integrity embodies our commitment to excellence. We strive to build
-          strong relationships with our clients and depend not only on our
-          in-house capabilities but also our well-established network of
-          affiliated partners, business associates, customers and suppliers.
-        </span>
+        <motion.div
+          variants={cardVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <span className="bg-background block max-w-5xl mx-auto body-large text-center">
+            Our extensive experience and reputation for quality, reliability and
+            integrity embodies our commitment to excellence. We strive to build
+            strong relationships with our clients and depend not only on our
+            in-house capabilities but also our well-established network of
+            affiliated partners, business associates, customers and suppliers.
+          </span>
+        </motion.div>
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 items-start">
             {projects.map((project, idx) => (
