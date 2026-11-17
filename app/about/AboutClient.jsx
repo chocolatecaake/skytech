@@ -18,14 +18,7 @@ const AboutClient = () => {
   return (
     <>
       <section className="overflow-x-hidden">
-        <Title
-          pretitle="About Us"
-          header="ADNOC-Approved Piping Contractor in Abu Dhabi"
-          align="center"
-          as="h1"
-        />
-
-        <div className="flex flex-col xl:flex-row items-center xl:gap-none gap-5">
+        <div className="flex flex-col xl:flex-row items-center xl:gap-20 gap-5">
           {/* Left Content */}
           <motion.div
             variants={fadeIn("left", 0.2)}
@@ -35,6 +28,13 @@ const AboutClient = () => {
             className="flex-2"
           >
             <div className="flex flex-col space-y-default">
+              <Title
+                pretitle="About Us"
+                header="ADNOC-Approved Piping Contractor in Abu Dhabi"
+                align="left"
+                as="h1"
+              />
+
               <p>
                 Skytech General Contracting LLC is an Abu Dhabi-based piping
                 contractor delivering cost-effective, professional services for
@@ -106,7 +106,7 @@ const AboutClient = () => {
             <Image
               src={About}
               alt="About Us"
-              className="w-auto h-auto md:min-h-[300px] md:max-h-[350px] object-cover rounded-default shadow-default"
+              className="w-full aspect-[3/4] object-cover rounded-default shadow-default"
             />
           </motion.div>
         </div>

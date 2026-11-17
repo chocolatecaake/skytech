@@ -100,7 +100,7 @@ const page = () => {
         img="/assets/construction.webp"
         title="Want to learn more about Skytech?"
         subtitle="Get a quotation from our Experienced Engineers"
-        button={<Button variant="CTA" text="Download our Brochure" />}
+        button={<Button variant="CTA" text="Download our Brochure" href="/assets/Skytech%20Company%20Brochure.pdf" download="Skytech Company Brochure.pdf" />}
       />
     </>
   );

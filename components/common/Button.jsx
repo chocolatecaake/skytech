@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Button = ({ text, icon, variant = "primary", href, onClick }) => {
+const Button = ({ text, icon, variant = "primary", href, onClick, download }) => {
   const variants = {
     CTA: "bg-secondary text-white hover:bg-darkred",
 
@@ -28,6 +28,16 @@ const Button = ({ text, icon, variant = "primary", href, onClick }) => {
     cursor-pointer
     ${variants[variant]}
   `;
+
+  // plain <a>: Next's Link would try to prefetch the file as a route
+  if (download) {
+    return (
+      <a href={href} download={download} className={classes}>
+        {icon}
+        {text}
+      </a>
+    );
+  }
 
   if (href) {
     return (
