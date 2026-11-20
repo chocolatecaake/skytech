@@ -69,7 +69,7 @@ export default function BlogPage() {
 
   return (
    <section>
-  <main className="max-w-6xl mx-auto">
+  <main className="max-w-6xl mx-auto w-full min-w-0">
 
     {/* Blog Header */}
     <motion.header
@@ -93,7 +93,7 @@ export default function BlogPage() {
   <img
     src={blog.img}
     alt={blog.title}
-    className="w-full max-h-[450px] object-cover rounded-xl"
+    className="w-full h-auto rounded-xl"
   />
 
   {/* Author + Date */}

@@ -5,7 +5,7 @@ export const blogs = [
     author: "Skytech Team",
     date: "20 Nov 2026",
     desc: "Compare GRE, GRP and HDPE pipes by strength, pressure, temperature and cost. Learn which pipe suits oil & gas, water, sewage and industrial projects.",
-    img: "/assets/blogs/gre-vs-grp-vs-hdpe.jpg",
+    img: "/assets/services/grplamination.webp",
     sections: [
       {
         id: "introduction",
