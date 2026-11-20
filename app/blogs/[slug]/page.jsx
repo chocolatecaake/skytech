@@ -5,11 +5,63 @@ import TableOfContents from "./toc.jsx";
 import { FaUser, FaCalendarAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useParams } from "next/navigation";
+import Link from "next/link";
+
+// ponytail: tiny block renderer for rich posts; old posts still use plain `content`
+function Block({ block }) {
+  const text = "body-large text-gray-700 leading-7 bg-background";
+  switch (block.type) {
+    case "h3":
+      return <h3 className="h4 font-bold mt-8 mb-2 bg-background">{block.text}</h3>;
+    case "ul":
+      return (
+        <ul className={`${text} list-disc pl-6 mb-4 space-y-1`}>
+          {block.items.map((item) => <li key={item}>{item}</li>)}
+        </ul>
+      );
+    case "table":
+      return (
+        <div className="overflow-x-auto mb-6">
+          <table className="w-full min-w-[600px] border-collapse text-sm text-gray-700 bg-background">
+            <thead>
+              <tr>
+                {block.head.map((h, i) => (
+                  <th key={i} className="border border-gray-300 bg-gray-100 p-3 text-left font-semibold">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {block.rows.map((row, r) => (
+                <tr key={r}>
+                  {row.map((cell, c) => (
+                    <td key={c} className={`border border-gray-300 p-3 align-top ${c === 0 ? "font-semibold" : ""}`}>{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+    case "link":
+      return (
+        <p className={`${text} mb-4`}>
+          <Link href={block.href} className="text-red-600 font-semibold hover:underline">
+            {block.text} →
+          </Link>
+        </p>
+      );
+    default:
+      return <p className={`${text} mb-4`}>{block.text}</p>;
+  }
+}
 
 export default function BlogPage() {
   const { slug } = useParams();
 
-  const blog = blogs.find((item) => item.slug === slug);
+  // drafts only render in `npm run dev`
+  const blog = blogs.find(
+    (item) => item.slug === slug && (!item.draft || process.env.NODE_ENV === "development")
+  );
 
   if (!blog) {
     return <div>Blog not found</div>;
@@ -80,9 +132,13 @@ export default function BlogPage() {
         {section.title}
       </h2>
 
-      <p className="body-large text-gray-700 leading-7 bg-background">
-        {section.content}
-      </p>
+      {section.content && (
+        <p className="body-large text-gray-700 leading-7 bg-background">
+          {section.content}
+        </p>
+      )}
+
+      {section.blocks?.map((block, i) => <Block key={i} block={block} />)}
     </motion.div>
   ))}
 </article>

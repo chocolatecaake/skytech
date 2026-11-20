@@ -19,7 +19,7 @@ const page = () => {
         />
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
-            {blogs.map((blog, idx) => (
+            {blogs.filter((b) => !b.draft || process.env.NODE_ENV === "development").map((blog, idx) => (
               <motion.div
                 key={idx}
                 variants={cardVariants}
