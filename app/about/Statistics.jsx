@@ -14,7 +14,7 @@ import { MdAddLocationAlt } from "react-icons/md";
 const skytechValues = [
   {
     icon: <MdVerified className="h-8 w-8 text-secondary" />,
-    text: "Highest Quality of international standards",
+    text: "Highest quality to international standards",
   },
   {
     icon: <RiUser2Fill className="h-8 w-8 text-secondary" />,
@@ -22,7 +22,7 @@ const skytechValues = [
   },
   {
     icon: <RiTreeFill className="h-8 w-8 text-secondary" />,
-    text: "Focus on Sustainability, health and safety",
+    text: "Focus on sustainability, health and safety",
   },
   {
     icon: <MdAddLocationAlt className="h-8 w-8 text-secondary" />,

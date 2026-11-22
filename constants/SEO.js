@@ -8,7 +8,7 @@ export const seo = {
   contact: {
     title: "Contact Us – Get In Touch with Our Team",
     description:
-      "Get in touch with us on +971 56 464 6739 or email info@skytechuae.com. Our team is ready to assist you with your piping inquiries and quotes.",
+      "Get in touch with us at +971 56 464 6739 or email info@skytechuae.com. Our team is ready to assist you with your piping inquiries and quotes.",
     keywords: [
       "Contact us",
       "Skytech Contact",

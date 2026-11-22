@@ -273,4 +273,81 @@ export const blogs = [
       },
     ],
   },
+  {
+    draft: true,
+    slug: "Why-GRP-Pipes-Last",
+    title: "Why GRP Pipes Last",
+    author: "mawin khant",
+    date: "12 Jun 2023",
+    desc: "Learn why GRP piping systems are preferred for industrial applications why GRP piping systems are preferred..",
+    img: "/assets/services/grplamination.webp",
+     sections: [
+      {
+        id: "introduction",
+        title: "Introduction",
+        content: `
+          Glass Reinforced Plastic (GRP) pipes have become an increasingly popular
+          choice across various industries due to their durability, corrosion
+          resistance, and long service life.
+        `,
+      },
+      {
+        id: "benefits",
+        title: "Benefits",
+        content: `
+          GRP pipes provide several advantages including excellent corrosion
+          resistance, lightweight construction, reduced maintenance costs, and
+          a longer operational lifespan compared to traditional piping materials.
+        `,
+      },
+      {
+        id: "conclusion",
+        title: "Conclusion",
+        content: `
+          GRP piping systems offer a reliable and cost-effective solution for
+          industries requiring durable and high-performance pipelines.
+        `,
+      },
+    ],
+  },
+
+  // ---- DRAFTS: hidden on the live site, visible in `npm run dev` ----
+  {
+    draft: true,
+    slug: "hdpe-butt-fusion-vs-electrofusion",
+    title: "HDPE Butt Fusion vs Electrofusion: Which Jointing Method to Use?",
+    author: "Skytech Team",
+    date: "",
+    desc: "",
+    img: "/assets/services/pvcjointing.webp",
+    sections: [
+      { id: "introduction", title: "Introduction", blocks: [] },
+      { id: "butt-fusion", title: "What is Butt Fusion?", blocks: [] },
+      { id: "electrofusion", title: "What is Electrofusion?", blocks: [] },
+      { id: "comparison", title: "Butt Fusion vs Electrofusion: Quick Comparison", blocks: [] },
+      { id: "how-to-choose", title: "How to Choose the Right Method for Your Project", blocks: [] },
+      { id: "quality-testing", title: "Quality Control and Joint Testing", blocks: [] },
+      { id: "faq", title: "Frequently Asked Questions", blocks: [] },
+      { id: "conclusion", title: "Conclusion", blocks: [] },
+    ],
+  },
+  {
+    draft: true,
+    slug: "chemical-storage-tank-lining",
+    title: "Chemical Storage Tank Lining: Why GRP Lining Protects Your Tanks",
+    author: "Skytech Team",
+    date: "",
+    desc: "",
+    img: "/assets/services/chemicalstorage.webp",
+    sections: [
+      { id: "introduction", title: "Introduction", blocks: [] },
+      { id: "why-tanks-fail", title: "Why Chemical Storage Tanks Fail", blocks: [] },
+      { id: "what-is-grp-lining", title: "What is GRP Tank Lining?", blocks: [] },
+      { id: "lining-options", title: "GRP vs Other Lining Options", blocks: [] },
+      { id: "lining-process", title: "The In-Situ Lining Process", blocks: [] },
+      { id: "inspection-maintenance", title: "Inspection and Maintenance", blocks: [] },
+      { id: "faq", title: "Frequently Asked Questions", blocks: [] },
+      { id: "conclusion", title: "Conclusion", blocks: [] },
+    ],
+  },
 ];

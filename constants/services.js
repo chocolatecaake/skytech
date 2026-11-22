@@ -42,7 +42,7 @@ export const services = [
     title: "PVC, PPR & HDPE Jointing",
     desc: "Expert jointing of PVC & PPR pipes",
     details:
-      "Expert jointing of PVC & PPR pipes and HDPE butt fusion and electro fusion jointing for a wide range of industrial applications",
+      "Expert jointing of PVC & PPR pipes and HDPE butt fusion and electrofusion jointing for a wide range of industrial applications",
     icon: MdEngineering,
     img: "/assets/services/pvcjointing.webp",
   },
@@ -64,9 +64,9 @@ export const services = [
   },
   {
     title: "CS & SS Systems",
-    desc: "Supply and installation of Carbon Steel and Stainless Steel systems",
+    desc: "Supply and installation of carbon steel and stainless steel systems",
     details:
-      "Supply and installation of Carbon Steel and Stainless Steel systems, engineered and executed to international quality standards",
+      "Supply and installation of carbon steel and stainless steel systems, engineered and executed to international quality standards",
     icon: GiPipes,
     img: "/assets/services/CSSystems.webp",
   },

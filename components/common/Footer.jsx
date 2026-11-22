@@ -25,7 +25,7 @@ export default function Footer() {
           <div className="flex items-center">
             <FaLocationDot className="body-large inline mr-small text-yellow-300 shrink-0" />
             <span>
-              Al Bunyan building, 1st floor Office Number-163, ICAD 2 Al Mahdar
+              Al Bunyan Building, 1st Floor, Office No. 163, ICAD 2, Al Mahdar
               Street, Abu Dhabi, UAE
             </span>
           </div>

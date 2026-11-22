@@ -31,7 +31,7 @@ export const metadata = {
     template: "%s | Skytech UAE",
   },
   description:
-    "Skytech specializes in industrial piping solutions including FRP, thermoplastic, carbon steel, and stainless steel systems across the UAE.",
+    "Skytech specializes in industrial piping solutions, including FRP, thermoplastic, carbon steel, and stainless steel systems across the UAE.",
 };
 
 export default function RootLayout({ children }) {

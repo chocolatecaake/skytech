@@ -26,7 +26,7 @@ const page = () => {
     },
     {
       logo: "/assets/certifications/adnoc.webp",
-      title: "Adnoc Approved Contractor",
+      title: "ADNOC-Approved Contractor",
       // subtitle: "quality management system",
       // desc: "Skytech is an ADNOC Approved Contractor",
     },
@@ -108,11 +108,11 @@ const page = () => {
       <CTASection
         img="/assets/construction.webp"
         title="Want to learn more about Skytech?"
-        subtitle="Get a quotation from our Experienced Engineers"
+        subtitle="Get a quotation from our experienced engineers"
         button={
           <Button
             variant="CTA"
-            text="Download our Brochure"
+            text="Download our brochure"
             href="/assets/Skytech%20Company%20Brochure.pdf"
             download="Skytech Company Brochure.pdf"
           />

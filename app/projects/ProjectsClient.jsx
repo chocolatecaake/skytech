@@ -27,9 +27,9 @@ const page = () => {
         >
           <span className="bg-background block max-w-5xl mx-auto body-large text-center">
             Our extensive experience and reputation for quality, reliability and
-            integrity embodies our commitment to excellence. We strive to build
+            integrity embody our commitment to excellence. We strive to build
             strong relationships with our clients and depend not only on our
-            in-house capabilities but also our well-established network of
+            in-house capabilities but also on our well-established network of
             affiliated partners, business associates, customers and suppliers.
           </span>
         </motion.div>
@@ -64,7 +64,7 @@ const page = () => {
       <CTASection
         img="/assets/construction2.webp"
         title="start a project with us"
-        subtitle="Get a quotation from our Experienced Engineers"
+        subtitle="Get a quotation from our experienced engineers"
         button={<Button variant="CTA" text="Get a Quote" href="/contact" />}
       />
     </>

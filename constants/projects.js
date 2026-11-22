@@ -15,11 +15,11 @@ export const projects = [
   {
     progress: "Ongoing",
     img: "/assets/projects/akoya.webp",
-    title: "Safety Critical infrastrucutre works",
+    title: "Safety-Critical Infrastructure Works",
     loc: "Buhasa, AD",
-    client: "Adnoc Gas",
+    client: "ADNOC Gas",
     contractor: "PEG",
-    projType: "GRE pipes Installation and fittings",
+    projType: "GRE pipes installation and fittings",
     inchDia:"12,000",
     scope:"Installation of GRE pipes and fittings"
   },
@@ -50,7 +50,7 @@ export const projects = [
   {
     progress: "Ongoing",
     img: "/assets/projects/akoya.webp",
-    title: "Modification Works AT 190 AND 645 Fields",
+    title: "Modification Works at 190 and 645 Fields",
     loc: "FJ",
     client: "Adnoc",
     contractor: "Robotstone",
@@ -100,7 +100,7 @@ export const projects = [
     contractor: "ASGC",
     projType: "GRP lining for water tank",
     inchDia:"",
-    scope:"GRP Lining For Water Tank"
+    scope:"GRP Lining for Water Tank"
   },
   {
     progress: "Completed - 2024",
@@ -135,6 +135,6 @@ export const projects = [
     projType:
       "GRE & GRP lamination, pipe installation, and valve/fittings installation",
     inchDia:"",
-    scope:"GRE & GRP Lamination, PipeInstallation, and Valve/Fittings Installation"
+    scope:"GRE & GRP Lamination, Pipe Installation, and Valve/Fittings Installation"
   },
 ];

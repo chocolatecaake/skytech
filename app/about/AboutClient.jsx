@@ -128,8 +128,8 @@ const AboutClient = () => {
               <span className="h4 text-yellow">Our Vision</span>
 
               <span className="text-left text-white">
-                To be a leading provider of piping and MEP contarcting service
-                in the UAE, Know for our commitment to quality safety and
+                To be a leading provider of piping and MEP contracting services
+                in the UAE, known for our commitment to quality, safety and
                 sustainability, and to be recognized as a trusted partner by our
                 clients, employees, and the communities we serve.
               </span>
