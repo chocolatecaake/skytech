@@ -1,10 +1,7 @@
 "use client";
 
-import { blogs } from "@/constants/blogs";
-import TableOfContents from "./toc.jsx";
 import { FaUser, FaCalendarAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { useParams } from "next/navigation";
 import Link from "next/link";
 
 // ponytail: tiny block renderer for rich posts; old posts still use plain `content`
@@ -55,18 +52,7 @@ function Block({ block }) {
   }
 }
 
-export default function BlogPage() {
-  const { slug } = useParams();
-
-  // drafts only render in `npm run dev`
-  const blog = blogs.find(
-    (item) => item.slug === slug && (!item.draft || process.env.NODE_ENV === "development")
-  );
-
-  if (!blog) {
-    return <div>Blog not found</div>;
-  }
-
+export default function BlogContent({ blog }) {
   return (
    <section>
   <main className="max-w-6xl mx-auto w-full min-w-0">

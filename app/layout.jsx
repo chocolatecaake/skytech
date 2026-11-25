@@ -1,3 +1,4 @@
+import { SITE_URL } from "@/constants/blogs";
 import { Inter, Epilogue, Mohave, Momo_Signature } from "next/font/google";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
@@ -26,6 +27,7 @@ const momo = Momo_Signature({
 });
 
 export const metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Skytech Piping Solutions",
     template: "%s | Skytech UAE",

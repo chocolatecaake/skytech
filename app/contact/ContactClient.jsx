@@ -99,9 +99,8 @@ const ContactForm = () => {
               />
 
               <p className="max-w-lg body-large text-white">
-                Looking for reliable pipeline infrastructure solutions? Contact
-                our team today and we’ll get back to you with the best solution
-                for your project.
+                Tell us about your project and our engineers will get back to
+                you with a quote.
               </p>
             </div>
 

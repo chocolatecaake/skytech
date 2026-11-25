@@ -7,7 +7,7 @@ export const faqItems = [
   {
     title: "Is Skytech approved to work with ADNOC and other major operators?",
     description:
-      "Yes. Skytech holds ADNOC approval for piping works and maintains ISO 9001 (Quality), ISO 14001 (Environmental), and ISO 45001 (Health & Safety) certifications, ensuring our processes meet international standards demanded by major operators and EPC contractors.",
+      "Yes. Skytech holds ADNOC approval for piping works and maintains ISO 9001 (Quality), ISO 14001 (Environmental), and ISO 45001 (Health & Safety) certifications. These are the standards major operators and EPC contractors ask for.",
   },
   {
     title: "What industries and project types does Skytech typically work on?",
@@ -17,7 +17,7 @@ export const faqItems = [
   {
     title: "How does Skytech ensure quality control on piping projects?",
     description:
-      "Every project follows a structured QC process — including isometric drawing verification, RFI (Request for Inspection) documentation, discrepancy tracking, and material traceability — to ensure installations meet client specifications and regulatory standards before handover.",
+      "Every project follows a structured QC process: isometric drawing verification, RFI (Request for Inspection) documentation, discrepancy tracking and material traceability. Installations are checked against the client's specifications and regulatory standards before handover.",
   },
   {
     title: "Where is Skytech based, and what areas do you serve?",

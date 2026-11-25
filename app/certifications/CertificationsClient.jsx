@@ -48,8 +48,9 @@ const page = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <span className="bg-background block max-w-5xl mx-auto body-large text-center">
-            We are committed to meeting internationally recognized quality
-            standards to ensure reliability, safety, and customer satisfaction.
+            We are ADNOC approved, ICV certified and certified to ISO 9001, ISO
+            14001 and ISO 45001. Each certificate is listed below with its
+            number and expiry date.
           </span>
         </motion.div>
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">

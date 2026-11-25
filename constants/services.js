@@ -15,9 +15,9 @@ export const services = [
     {
     slug: "hdpe-piping-systems",
     title: "HDPE Piping Systems",
-    desc: "Expert jointing of PVC & PPR pipes",
+    desc: "HDPE butt fusion and electrofusion jointing",
     details: 
-      "Specialized in GRP and GRE pipe field jointing: lamination, double bell coupling, adhesive & rubber seal lock joints, spools & fittings fabrication",
+      "HDPE butt fusion and electrofusion jointing for water, wastewater, irrigation and industrial pipelines",
     icon: MdEngineering,
     img: "/assets/services/grplamination.webp",
   },
@@ -26,7 +26,7 @@ export const services = [
     title: "In-Situ Works – GRP Lamination & Lining",
     desc: "In-situ lamination of chemical storage tanks and benching lamination",
     details: 
-      "Specialized in GRP and GRE pipe field jointing: lamination, double bell coupling, adhesive & rubber seal lock joints, spools & fittings fabrication",
+      "In-situ GRP lamination of chemical storage tanks, manhole benching and concrete chambers, following the manufacturer's procedures throughout",
     icon: GiTeePipe,
     img: "/assets/services/grplamination.webp",
   },

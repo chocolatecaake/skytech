@@ -27,7 +27,7 @@ export default function Home() {
       <Companies/>
       <CTASection
         img="/assets/construction.webp"
-        title="Ready to build something amazing together?"
+        title="Have a piping project coming up?"
         subtitle="Get a quotation from our experienced engineers"
         button={<Button variant="CTA" text="Get In Touch" href="/contact" />}
       />

@@ -85,8 +85,8 @@ export default function Hero() {
                 viewport={{ once: true, amount: 0.0 }}
                 className="max-w-3xl"
               >
-                Delivering High-Performance Infrastructure Projects Across The
-                UAE For Over 15 Years.
+                Building oil & gas, water and infrastructure projects across the
+                UAE for over 15 years.
               </motion.h4>
             </div>
             <motion.div

@@ -26,7 +26,7 @@ const skytechValues = [
   },
   {
     icon: <MdAddLocationAlt className="h-8 w-8 text-secondary" />,
-    text: "Proven track record of success across the UAE",
+    text: "40+ projects completed across the UAE",
   },
 ];
 

@@ -23,17 +23,15 @@ const About = () => {
         <div className="flex flex-col space-y-default bg-background">
           <Title header="What we stand for" />
           <p>
-            At Skytech General Contracting LLC, our journey has been built on a
-            simple principle: deliver engineering excellence without compromise.
-            From our roots in GRE/GRP piping and MEP contracting, we have grown
-            into a trusted partner for some of the region's most demanding oil,
-            gas, and infrastructure projects.
+            Skytech General Contracting LLC started out in GRE/GRP piping and
+            MEP contracting. Today our crews work on some of the region's most
+            demanding oil, gas and infrastructure projects.
           </p>
           <p>
-            Every pipe we lay and every system we install carries our commitment
-            to quality, safety, and long-term reliability. As we look ahead, we
-            remain focused on innovation, sustainability, and building lasting
-            relationships with the clients and communities we serve.
+            We want every pipe we lay to be installed safely and to last, so
+            our clients never have to come back to it. As we grow, we want to
+            keep sustainability, safety and long-term client relationships part
+            of how we work.
           </p>
           <div className="font-sign">- CEO, Skytech</div>
         </div>

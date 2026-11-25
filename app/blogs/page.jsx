@@ -3,7 +3,7 @@
 import Title from "@/components/common/Title";
 import DetailCard from "@/components/cards/DetailCard";
 
-import { blogs } from "@/constants/blogs";
+import { visibleBlogs } from "@/constants/blogs";
 import { cardVariants } from "@/constants/variants";
 import { motion } from "framer-motion";
 
@@ -19,7 +19,7 @@ const page = () => {
         />
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
-            {blogs.filter((b) => !b.draft || process.env.NODE_ENV === "development").map((blog, idx) => (
+            {visibleBlogs.map((blog, idx) => (
               <motion.div
                 key={idx}
                 variants={cardVariants}

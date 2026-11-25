@@ -8,7 +8,7 @@ export const seo = {
   contact: {
     title: "Contact Us – Get In Touch with Our Team",
     description:
-      "Get in touch with us at +971 56 464 6739 or email info@skytechuae.com. Our team is ready to assist you with your piping inquiries and quotes.",
+      "Get in touch with us at +971 56 464 6739 or email info@skytechuae.com. Call or email us for piping enquiries and quotes.",
     keywords: [
       "Contact us",
       "Skytech Contact",
@@ -20,7 +20,7 @@ export const seo = {
   certifications: {
     title: "Our Certifications – ADNOC Approved, ICV & ISO",
     description:
-      "Learn about our certifications, including ADNOC approval, ICV and ISO, demonstrating our commitment to the highest standards in the piping industry.",
+      "Our ADNOC approval, ICV certificate and ISO 9001, 14001 and 45001 certifications, with certificate numbers and expiry dates.",
     keywords: [
       "Skytech Certifications",
       "ADNOC Approved",
@@ -30,9 +30,9 @@ export const seo = {
     ],
   },
   gallery: {
-    title: "Gallery – A Showcase of Our Works and Projects",
+    title: "Gallery – Photos of Our Piping Projects",
     description:
-      "Look at our gallery of completed projects, showcasing what we have accomplished over 15+ years and our commitment to delivering high-quality piping work.",
+      "Photos from the GRE, GRP and HDPE piping projects we have completed across the UAE over the last 15+ years.",
     keywords: [
       "Gallery Page",
       "Skytech Gallery",
@@ -43,7 +43,7 @@ export const seo = {
   projects: {
     title: "Our Projects – Oil & Gas and Water Piping",
     description:
-      "Explore the wide range of projects we have completed, from oil and gas piping systems to water treatment, industrial piping, renovations and upgrades.",
+      "Oil and gas, water treatment and industrial piping projects we have completed across the UAE, including renovations and upgrades.",
     keywords: [
       "Projects Page",
       "Skytech Projects",
@@ -58,7 +58,7 @@ export const seo = {
   services: {
     title: "GRE, GRP and HDPE Piping Installation in UAE",
     description:
-      "Explore our piping services: ADNOC-approved GRE/GRP systems, HDPE pipelines for water and municipal projects, and GRP lining for manholes and tanks.",
+      "Our piping services: ADNOC-approved GRE/GRP systems, HDPE pipelines for water and municipal projects, and GRP lining for manholes and tanks.",
     keywords: [
       "Services Page",
       "Skytech Services",
@@ -68,10 +68,16 @@ export const seo = {
       "Piping Rehabilitation Projects",
     ],
   },
+  blogs: {
+    title: "Blog – Piping Insights & Guides",
+    description:
+      "Practical guides on GRP, GRE and HDPE piping: jointing methods, pipe selection, installation, lining and maintenance from a UAE piping contractor.",
+    alternates: { canonical: "/blogs" },
+  },
   home: {
     title: "Skytech – Leading GRP Piping Contractor in UAE",
     description:
-      "Welcome to Skytech, your trusted partner for GRE, GRP and HDPE piping systems in the UAE, delivering high-quality services for over 15 years.",
+      "Skytech installs GRE, GRP and HDPE piping for oil & gas, water and infrastructure projects across the UAE, with over 15 years of experience.",
     keywords: [
       "Home Page",
       "Skytech Home",

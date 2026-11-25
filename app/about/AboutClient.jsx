@@ -43,14 +43,12 @@ const AboutClient = () => {
                 specialize in GRE and GRP pipe installation, HDPE piping
                 systems, and in-situ GRP lamination and lining for new and
                 rehabilitation projects. With 40+ projects completed across the
-                UAE, we deliver proven expertise at competitive prices.
+                UAE, we keep our prices competitive.
               </p>
 
               <p>
-                We believe that through efficient, timely and economically
-                viable execution, and commitment to international quality
-                standards, we will be able to provide stellar service and
-                achieve customer satisfaction.
+                We aim to finish every job on time and on budget, built to
+                international quality standards.
               </p>
 
               <Link href="/certifications">
@@ -128,10 +126,8 @@ const AboutClient = () => {
               <span className="h4 text-yellow">Our Vision</span>
 
               <span className="text-left text-white">
-                To be a leading provider of piping and MEP contracting services
-                in the UAE, known for our commitment to quality, safety and
-                sustainability, and to be recognized as a trusted partner by our
-                clients, employees, and the communities we serve.
+                To be the piping and MEP contractor UAE clients call first,
+                known for safe, high-quality and sustainable work.
               </span>
             </div>
           </motion.div>

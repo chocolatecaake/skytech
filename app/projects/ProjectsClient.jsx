@@ -26,11 +26,10 @@ const page = () => {
           viewport={{ once: true, amount: 0.2 }}
         >
           <span className="bg-background block max-w-5xl mx-auto body-large text-center">
-            Our extensive experience and reputation for quality, reliability and
-            integrity embody our commitment to excellence. We strive to build
-            strong relationships with our clients and depend not only on our
-            in-house capabilities but also on our well-established network of
-            affiliated partners, business associates, customers and suppliers.
+            For over 15 years we have installed piping for oil & gas, water and
+            infrastructure projects across the UAE. Alongside our own crews, we
+            work with a network of partners, associates and suppliers we have
+            known for years.
           </span>
         </motion.div>
         <div>

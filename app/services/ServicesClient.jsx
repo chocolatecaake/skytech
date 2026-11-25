@@ -160,10 +160,8 @@ const page = ({ open }) => {
                       </p>
 
                       <p className="text-white">
-                        From new pipeline installation to plant shutdowns,
-                        tie-ins and emergency repairs, Skytech delivers
-                        composite piping you can rely on for the life of the
-                        asset.
+                        We take on new pipeline installation, plant
+                        shutdowns, tie-ins and emergency repairs.
                       </p>
                     </div>
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:m-5 mb-5">
@@ -270,11 +268,10 @@ const page = ({ open }) => {
                 </p>
 
                 <p>
-                  Composite piping performs only as well as its joints. Our
-                  teams are trained and experienced in all the major GRE/GRP
-                  jointing systems, and they follow manufacturer procedures,
-                  approved method statements and project specifications on every
-                  joint.
+                  Our welders are trained in both butt fusion and
+                  electrofusion, and they follow the pipe manufacturer's
+                  procedures, approved method statements and project
+                  specifications on every joint.
                 </p>
 
                 <motion.button
@@ -427,8 +424,8 @@ const page = ({ open }) => {
                 <p>
                   Many structures cannot be lined before installation because of
                   their size, shape or the way they are built on site. For
-                  these, on-site GRP lamination provides a seamless, durable
-                  protective barrier. Skytech carries out in-situ lamination for
+                  these, we laminate GRP on site to form a continuous,
+                  jointless protective lining. Skytech carries out in-situ lamination for
                   new construction and rehabilitation projects, building each
                   laminate to the thickness, resin system and reinforcement the
                   project specifies.
@@ -558,7 +555,7 @@ const page = ({ open }) => {
       <CTASection
         img="/assets/construction.webp"
         title="Need help choosing a service?"
-        subtitle="Talk to our experienced consultants to find the right solution for your project"
+        subtitle="Talk to our engineers about what your project needs"
         button={<Button variant="CTA" text="Contact Us" href="/contact" />}
       />
     </>
