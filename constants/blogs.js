@@ -595,7 +595,6 @@ export const blogs = [
 
   // ---- DRAFTS: hidden on the live site, visible in `npm run dev` ----
   {
-    draft: true,
     slug: "hdpe-butt-fusion-vs-electrofusion",
     title: "HDPE Butt Fusion vs Electrofusion: Which Jointing Method to Use?",
     author: "Skytech Team",
