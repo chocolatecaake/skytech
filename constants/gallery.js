@@ -1,46 +1,26 @@
 export const galleryImages = [
   {
-    src: "/assets/projects/deira.webp",
-    alt: "Deira project",
+    src: "/assets/projects/grp-grating-platform.webp",
+    alt: "GRP platform",
   },
   {
-    src: "/assets/projects/abudhabi.webp",
-    alt: "Abu Dhabi project",
+    src: "/assets/projects/grp-fish-tank-frames.webp",
+    alt: "Fish tank frames",
   },
   {
-    src: "/assets/projects/canal.webp",
-    alt: "Canal project",
+    src: "/assets/projects/grp-folding-stairs.webp",
+    alt: "Customized folding ladders",
   },
   {
-    src: "/assets/projects/noorisland.webp",
-    alt: "Noor Island project",
+    src: "/assets/projects/grp-folding-ladder.webp",
+    alt: "Customized folding ladder",
   },
   {
-    src: "/assets/services/chemicalstorage.webp",
-    alt: "Chemical storage",
+    src: "/assets/projects/grp-piping-platform.webp",
+    alt: "High raised platform for piping",
   },
   {
-    src: "/assets/services/CSSystems.webp",
-    alt: "CS systems",
-  },
-  {
-    src: "/assets/services/engineering.webp",
-    alt: "Engineering",
-  },
-  {
-    src: "/assets/services/pvcjointing.webp",
-    alt: "PVC jointing",
-  },
-  {
-    src: "/assets/projects/deira.webp",
-    alt: "Deira project",
-  },
-  {
-    src: "/assets/projects/abudhabi.webp",
-    alt: "Abu Dhabi project",
-  },
-  {
-    src: "/assets/projects/canal.webp",
-    alt: "Canal project",
+    src: "/assets/projects/grp-storage-tanks.webp",
+    alt: "Storage tanks",
   },
 ];
