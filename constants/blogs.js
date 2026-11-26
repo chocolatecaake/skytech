@@ -5,7 +5,7 @@ export const blogs = [
     author: "Skytech Team",
     date: "20 Nov 2026",
     desc: "Compare GRE, GRP and HDPE pipes by strength, pressure, temperature and cost. Learn which pipe suits oil & gas, water, sewage and industrial projects.",
-    img: "/assets/services/grplamination.webp",
+    img: "/assets/projects/yellow-pipeline.webp",
     sections: [
       {
         id: "introduction",
@@ -240,7 +240,7 @@ export const blogs = [
     author: "Skytech Team",
     date: "22 Nov 2026",
     desc: "How GRP butt and wrap lamination joints are made on site: the 8-step process, the standards that govern them, and the common mistakes that cause joint failure.",
-    img: "/assets/services/grplamination.webp",
+    img: "/assets/projects/grp-piping-platform.webp",
     // ponytail: figures (temps, grits, Barcol, glass weights) come from the merged source doc, confirm against your site procedure before going live
     sections: [
       {
@@ -562,7 +562,7 @@ export const blogs = [
     author: "mawin khant",
     date: "12 Jun 2023",
     desc: "Learn why GRP piping systems are preferred for industrial applications why GRP piping systems are preferred..",
-    img: "/assets/services/grplamination.webp",
+    img: "/assets/projects/refinery-aerial.webp",
     sections: [
       {
         id: "introduction",
@@ -600,7 +600,7 @@ export const blogs = [
     author: "Skytech Team",
     date: "25 Nov 2026",
     desc: "Butt fusion or electrofusion? How each HDPE jointing method works, their pros and cons, and five questions to help you pick the right one for your pipeline.",
-    img: "/assets/services/pvcjointing.webp",
+    img: "/assets/projects/tank-farm-pipeline.webp",
     // ponytail: heater-plate temps, EF voltages and standards are typical values, confirm against the pipe/fitting maker's procedure before going live
     sections: [
       {
@@ -869,7 +869,7 @@ export const blogs = [
     author: "Skytech Team",
     date: "",
     desc: "",
-    img: "/assets/services/chemicalstorage.webp",
+    img: "/assets/projects/grp-storage-tanks.webp",
     sections: [
       { id: "introduction", title: "Introduction", blocks: [] },
       {

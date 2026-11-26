@@ -3,7 +3,7 @@ export const projects = [
   /*home page*/
   {
     progress: "Ongoing",
-    img: "/assets/projects/akoya.webp",
+    img: "/assets/projects/refinery-towers.webp",
     title: "EPC SE AiP5 Project",
     loc: "Qusahwira, AD",
     client: "Adnoc",
@@ -14,7 +14,7 @@ export const projects = [
   },
   {
     progress: "Ongoing",
-    img: "/assets/projects/akoya.webp",
+    img: "/assets/projects/yellow-pipeline.webp",
     title: "Safety-Critical Infrastructure Works",
     loc: "Buhasa, AD",
     client: "ADNOC Gas",
@@ -25,7 +25,7 @@ export const projects = [
   },
   {
     progress: "Ongoing",
-    img: "/assets/projects/akoya.webp",
+    img: "/assets/projects/tank-farm-pipeline.webp",
     title: "MERAM Project - SP-1 Area",
     loc: "Habshan, AD",
     client: "Adnoc",
@@ -36,7 +36,7 @@ export const projects = [
   },
   {
     progress: "Ongoing",
-    img: "/assets/projects/akoya.webp",
+    img: "/assets/projects/refinery-aerial.webp",
     title: "MERAM Project - SP-1 Area",
     loc: "Habshan, AD",
     client: "Adnoc",
@@ -49,7 +49,7 @@ export const projects = [
   /*project page*/
   {
     progress: "Ongoing",
-    img: "/assets/projects/akoya.webp",
+    img: "/assets/projects/refinery-towers.webp",
     title: "Modification Works at 190 and 645 Fields",
     loc: "FJ",
     client: "Adnoc",
@@ -60,7 +60,7 @@ export const projects = [
   },
   {
     progress: "Ongoing",
-    img: "/assets/projects/akoya.webp",
+    img: "/assets/projects/yellow-pipeline.webp",
     title: "EPC for Modification Works at 190 and 645 Fields",
     loc: "Fujairah",
     client: "Adnoc",
@@ -71,7 +71,7 @@ export const projects = [
   },
   {
     progress: "Completed",
-    img: "/assets/projects/akoya.webp",
+    img: "/assets/projects/tank-farm-pipeline.webp",
     title: "Tawella Integrated Project",
     loc: "Tawella",
     client: "Adnoc",
@@ -82,7 +82,7 @@ export const projects = [
   },
   {
     progress: "Completed",
-    img: "/assets/projects/akoya.webp",
+    img: "/assets/projects/refinery-aerial.webp",
     title: "Project Lightning - Independent Subsea HVDC System",
     loc: "Mirfa, Shuwait, Das Island",
     client: "Adnoc",
@@ -93,7 +93,7 @@ export const projects = [
   },
   {
     progress: "Completed - 2024",
-    img: "/assets/projects/akoya.webp",
+    img: "/assets/projects/refinery-towers.webp",
     title: "Masdar City Square",
     loc: "Masdar, Abu Dhabi",
     client: "Masdar",
@@ -104,7 +104,7 @@ export const projects = [
   },
   {
     progress: "Completed - 2024",
-    img: "/assets/projects/akoya.webp",
+    img: "/assets/projects/yellow-pipeline.webp",
     title:
       "EPC Works for Installation of Additional Refrigerant Condensers in Units",
     loc: "Shah Gas, Abu Dhabi",
@@ -116,7 +116,7 @@ export const projects = [
   },
   {
     progress: "Completed - 2024",
-    img: "/assets/projects/akoya.webp",
+    img: "/assets/projects/tank-farm-pipeline.webp",
     title: "EPC 4 Buhasa Integrated Field Development Project",
     loc: "Buhasa",
     client: "Adnoc",
@@ -127,7 +127,7 @@ export const projects = [
   },
   {
     progress: "Completed - 2024",
-    img: "/assets/projects/akoya.webp",
+    img: "/assets/projects/refinery-aerial.webp",
     title: "EPC 4 Crude Receiving Facilities at Jebel Dhanna",
     loc: "Jebel Dhanna",
     client: "Adnoc",
