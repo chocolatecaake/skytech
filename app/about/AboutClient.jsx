@@ -1,6 +1,6 @@
 "use client";
 import Title from "@/components/common/Title";
-import About from "@/public/assets/About.webp";
+import About from "@/public/assets/projects/grp-folding-stairs.webp";
 import icv from "@/public/assets/about/icv.webp";
 import adnoc from "@/public/assets/about/adnoc.webp";
 import iso from "@/public/assets/about/iso.webp";
@@ -103,8 +103,8 @@ const AboutClient = () => {
           >
             <Image
               src={About}
-              alt="About Us"
-              className="w-full aspect-[3/4] object-cover rounded-default shadow-default"
+              alt="Skytech crew on a customized GRP folding staircase"
+              className="w-full aspect-[3/4] object-cover object-top rounded-default shadow-default"
             />
           </motion.div>
         </div>

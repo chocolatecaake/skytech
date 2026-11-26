@@ -48,6 +48,7 @@ const GalleryPage = () => {
               src={image.src}
               alt={image.alt}
               fill
+              style={{ objectPosition: image.position }}
               className="object-cover transition-transform duration-500 hover:scale-105"
               sizes="(max-width: 640px) 100vw,
             (max-width: 1024px) 50vw,

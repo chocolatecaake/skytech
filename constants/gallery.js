@@ -10,6 +10,7 @@ export const galleryImages = [
   {
     src: "/assets/projects/grp-folding-stairs.webp",
     alt: "Customized folding ladders",
+    position: "50% 20%",
   },
   {
     src: "/assets/projects/grp-folding-ladder.webp",
