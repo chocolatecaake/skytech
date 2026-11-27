@@ -22,6 +22,6 @@ export const faqItems = [
   {
     title: "Where is Skytech based, and what areas do you serve?",
     description:
-      "Skytech is headquartered in Mussafah/Sharjah, UAE, and executes projects across the UAE's major industrial and oil & gas hubs, working directly with EPC contractors and operators on-site.",
+      "Skytech is headquartered in Abu Dhabi, UAE, and executes projects across the UAE's major industrial and oil & gas hubs, working directly with EPC contractors and operators on-site.",
   },
 ];
