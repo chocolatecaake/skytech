@@ -3,9 +3,7 @@
 import { useEffect, useState } from "react";
 
 const TableOfContents = ({ sections }) => {
-  const [activeSection, setActiveSection] = useState(
-    sections[0]?.id
-  );
+  const [activeSection, setActiveSection] = useState(sections[0]?.id);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -18,7 +16,7 @@ const TableOfContents = ({ sections }) => {
       },
       {
         rootMargin: "-20% 0px -60% 0px",
-      }
+      },
     );
 
     sections.forEach((section) => {
@@ -28,17 +26,12 @@ const TableOfContents = ({ sections }) => {
         observer.observe(element);
       }
     });
-
-    return () => observer.disconnect();
   }, [sections]);
 
   return (
     <div className="w-full min-w-0">
       <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-        
-        <h3 className="mb-4 h4">
-          Table of Contents
-        </h3>
+        <h3 className="mb-4 h4">Table of Contents</h3>
 
         <ul className="space-y-3 text-sm">
           {sections.map((section) => (
@@ -56,7 +49,6 @@ const TableOfContents = ({ sections }) => {
             </li>
           ))}
         </ul>
-
       </div>
     </div>
   );

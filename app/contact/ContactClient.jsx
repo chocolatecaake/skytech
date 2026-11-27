@@ -193,18 +193,29 @@ const ContactForm = () => {
 
             {/* COMPANY */}
 
-            <input
-              type="text"
-              {...register("company")}
-              placeholder="Company Name"
-              className="form-field placeholder:text-gray-800"
-            />
+            <div>
+              <input
+                type="text"
+                autoComplete="organization"
+                maxLength={100}
+                {...register("company")}
+                placeholder="Company Name"
+                className="form-field placeholder:text-gray-800"
+              />
+
+              {errors.company && (
+                <p role="alert" className="text-sm text-secondary">
+                  {errors.company.message}
+                </p>
+              )}
+            </div>
 
             {/* MESSAGE */}
 
             <div>
               <textarea
                 rows={5}
+                maxLength={2000}
                 {...register("message")}
                 placeholder="Tell us about your project"
                 className="form-field resize-none placeholder:text-gray-800"

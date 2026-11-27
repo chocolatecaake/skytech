@@ -3,6 +3,10 @@
 import { FaUser, FaCalendarAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { FaArrowLeft } from "react-icons/fa";
+import TableOfContents from "./toc";
+import CTASection from "@/components/common/CTASection";
+import Button from "@/components/common/Button";
 
 // ponytail: tiny block renderer for rich posts; old posts still use plain `content`
 function Block({ block }) {
@@ -54,8 +58,18 @@ function Block({ block }) {
 
 export default function BlogContent({ blog }) {
   return (
+   <>
    <section>
   <main className="max-w-6xl mx-auto w-full min-w-0">
+
+    <div className="max-w-4xl mx-auto mb-6">
+      <Link
+        href="/blogs"
+        className="inline-flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-red-600 transition-colors bg-background"
+      >
+        <FaArrowLeft /> Back to Blogs
+      </Link>
+    </div>
 
     {/* Blog Header */}
     <motion.header
@@ -79,7 +93,7 @@ export default function BlogContent({ blog }) {
   <img
     src={blog.img}
     alt={blog.title}
-    className="w-full h-auto rounded-xl"
+    className="w-full aspect-video object-cover rounded-xl"
   />
 
   {/* Author + Date */}
@@ -98,12 +112,17 @@ export default function BlogContent({ blog }) {
   </div>
 </motion.div>
     {/* Blog Content */}
-    <article className="max-w-4xl mx-auto mt-10">
+    <div className="mt-10 grid gap-10 lg:grid-cols-[260px_minmax(0,1fr)]">
+    <aside className="lg:sticky lg:top-32 lg:self-start">
+      <TableOfContents sections={blog.sections} />
+    </aside>
+
+    <article className="min-w-0">
   {blog.sections.map((section, index) => (
     <motion.div
       key={section.id}
       id={section.id}
-      className="mb-20"
+      className="mb-20 scroll-mt-32"
       initial={{ opacity: 0, y: 15 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{
@@ -128,8 +147,23 @@ export default function BlogContent({ blog }) {
     </motion.div>
   ))}
 </article>
+    </div>
 
   </main>
 </section>
+      <CTASection
+        img="/assets/construction.webp"
+        title="Want to learn more about Skytech?"
+        subtitle="Get a quotation from our experienced engineers"
+        button={
+          <Button
+            variant="CTA"
+            text="Download our brochure"
+            href="/assets/Skytech%20Company%20Brochure.pdf"
+            download="Skytech Company Brochure.pdf"
+          />
+        }
+      />
+   </>
   );
 }
