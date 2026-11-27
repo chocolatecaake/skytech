@@ -293,3 +293,8 @@ section {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(230, 0, 27, 1);
 }
+
+/* lock page scroll while a [data-modal] is open (certifications page portals it into body) */
+html:has([data-modal]) {
+  overflow: hidden;
+}
