@@ -26,14 +26,12 @@ const About = () => {
             Skytech General Contracting LLC started out in GRE/GRP piping and
             MEP contracting. Today our crews work on some of the region's most
             demanding oil, gas and infrastructure projects.
-          </p>
-          <p>
             We want every pipe we lay to be installed safely and to last, so
             our clients never have to come back to it. As we grow, we want to
             keep sustainability, safety and long-term client relationships part
             of how we work.
           </p>
-          <div className="font-sign">- CEO, Skytech</div>
+          <div className="font-sign">- K.K. Haris, CEO</div>
         </div>
       </motion.div>
     </section>
