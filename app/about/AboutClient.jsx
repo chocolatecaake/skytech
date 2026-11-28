@@ -14,6 +14,8 @@ import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn } from "@/constants/variants";
 
+import CTASection from "@/components/common/CTASection";
+
 const AboutClient = () => {
   return (
     <>
@@ -155,6 +157,19 @@ const AboutClient = () => {
           </motion.div>
         </div>
       </div>
+      <CTASection
+        img="/assets/construction.webp"
+        title="Want to learn more about Skytech?"
+        subtitle="Get a quotation from our experienced engineers"
+        button={
+          <Button
+            variant="CTA"
+            text="Download our brochure"
+            href="/assets/Skytech%20Company%20Brochure.pdf"
+            download="Skytech Company Brochure.pdf"
+          />
+        }
+      />
     </>
   );
 };

@@ -2,6 +2,8 @@
 
 import Title from "@/components/common/Title";
 import DetailCard from "@/components/cards/DetailCard";
+import CTASection from "@/components/common/CTASection";
+import Button from "@/components/common/Button";
 
 import { visibleBlogs } from "@/constants/blogs";
 import { cardVariants } from "@/constants/variants";
@@ -44,6 +46,19 @@ const page = () => {
           </div>
         </div>
       </section>
+      <CTASection
+        img="/assets/construction.webp"
+        title="Want to learn more about Skytech?"
+        subtitle="Get a quotation from our experienced engineers"
+        button={
+          <Button
+            variant="CTA"
+            text="Download our brochure"
+            href="/assets/Skytech%20Company%20Brochure.pdf"
+            download="Skytech Company Brochure.pdf"
+          />
+        }
+      />
     </>
   );
 };

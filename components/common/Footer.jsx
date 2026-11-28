@@ -23,15 +23,13 @@ export default function Footer() {
             loading="eager"
             className="w-[250px] h-auto "
           />
-          <div className="flex items-center">
-            <FaLocationDot className="body-large inline mr-small text-yellow-300 shrink-0" />
-            <span>
-              Al Bunyan Building, 1st Floor, Office No. 163, ICAD 2, Al Mahdar
-              Street, Abu Dhabi, UAE
+            <span className="flex items-center shrink-0">
+              <FaLocationDot className="body-large inline mr-small text-yellow-300 shrink-0" />
+              <div>
+                <p>Al Bunyan Building, 1st Floor, Office No. 163, ICAD 2, Al Mahdar
+              Street, Abu Dhabi, UAE, P.O. Box 132415</p>
+              </div>
             </span>
-          </div>
-
-          <span>P.O. Box 132415</span>
 
           <MapEmbed />
         </div>
@@ -53,7 +51,7 @@ export default function Footer() {
               <IoMdMail className="body-large inline mr-small text-yellow-300" />
               info@skytechuae.com
             </span>
-            <span>
+            <span className="hover:text-yellow">
               <Link
                 href="https://www.linkedin.com/company/sky-tech-general-contracting/people/"
                 target="_blank"

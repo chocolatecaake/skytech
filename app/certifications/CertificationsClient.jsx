@@ -10,6 +10,7 @@ import { createPortal } from "react-dom";
 import { cardVariants } from "@/constants/variants";
 import { qualityCerts } from "@/constants/certifications";
 import { motion } from "framer-motion";
+import { VscFoldDown } from "react-icons/vsc";
 
 const page = () => {
   const [openCert, setOpenCert] = useState(null);
@@ -118,8 +119,9 @@ const page = () => {
                 ))}
               </div>
               {openCert.images.length > 1 && (
-                <span className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/70 px-3 py-1 text-sm font-semibold text-white pointer-events-none">
+                <span className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/70 px-10 py-1 text-sm font-semibold text-white pointer-events-none flex items-center gap-2">
                   {slide + 1} / {openCert.images.length}
+                  <VscFoldDown size={13} strokeWidth={1} />
                 </span>
               )}
             </div>
