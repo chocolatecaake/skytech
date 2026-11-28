@@ -88,7 +88,7 @@ const ProjectCard = ({
         {/* Expand Button */}
         <button
           onClick={() => setIsExpanded(!isExpanded)}
-          className="flex items-center gap-2 self-end font-semibold transition-colors hover:text-accent text-darkblue"
+          className="flex items-center gap-2 self-end font-semibold transition-colors hover:text-accent text-darkblue cursor-pointer"
         >
           {isExpanded ? "Hide Details" : "View Details"}
 

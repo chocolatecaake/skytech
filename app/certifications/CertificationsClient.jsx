@@ -119,7 +119,7 @@ const page = () => {
               </div>
               {openCert.images.length > 1 && (
                 <span className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/70 px-3 py-1 text-sm font-semibold text-white pointer-events-none">
-                  {slide + 1} / {openCert.images.length} scroll down for more
+                  {slide + 1} / {openCert.images.length}
                 </span>
               )}
             </div>

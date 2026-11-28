@@ -84,7 +84,7 @@ const page = ({ open }) => {
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.96 }}
                   transition={{ duration: 0.2 }}
-                  className="font-semibold text-red-600 transition-colors duration-200 hover:text-red-800"
+                  className="font-semibold text-red-600 transition-colors duration-200 hover:text-red-800 cursor-pointer"
                 >
                   {isExpanded1 ? " " : "Read More ↓"}
                 </motion.button>
@@ -208,7 +208,7 @@ const page = ({ open }) => {
                           whileHover={{ scale: 1.04 }}
                           whileTap={{ scale: 0.96 }}
                           transition={{ duration: 0.2 }}
-                          className="font-semibold text-red-600 transition-colors duration-200 hover:text-red-800"
+                          className="font-semibold text-red-600 transition-colors duration-200 hover:text-red-800 cursor-pointer"
                         >
                           Read Less ↑
                         </motion.button>
@@ -280,7 +280,7 @@ const page = ({ open }) => {
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.96 }}
                   transition={{ duration: 0.2 }}
-                  className="font-semibold text-red-600 transition-colors duration-200 hover:text-red-800"
+                  className="font-semibold text-red-600 transition-colors duration-200 hover:text-red-800 cursor-pointer"
                 >
                   {isExpanded2 ? " " : "Read More ↓"}
                 </motion.button>
@@ -371,7 +371,7 @@ const page = ({ open }) => {
                           whileHover={{ scale: 1.04 }}
                           whileTap={{ scale: 0.96 }}
                           transition={{ duration: 0.2 }}
-                          className="font-semibold text-red-600 transition-colors duration-200 hover:text-red-800"
+                          className="font-semibold text-red-600 transition-colors duration-200 hover:text-red-800 cursor-pointer"
                         >
                           Read Less ↑
                         </motion.button>
@@ -437,7 +437,7 @@ const page = ({ open }) => {
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.96 }}
                   transition={{ duration: 0.2 }}
-                  className="font-semibold text-red-600 transition-colors duration-200 hover:text-red-800"
+                  className="font-semibold text-red-600 transition-colors duration-200 hover:text-red-800 cursor-pointer"
                 >
                   {isExpanded3 ? " " : "Read More ↓"}
                 </motion.button>
@@ -539,7 +539,7 @@ const page = ({ open }) => {
                           whileHover={{ scale: 1.04 }}
                           whileTap={{ scale: 0.96 }}
                           transition={{ duration: 0.2 }}
-                          className="font-semibold text-red-600 transition-colors duration-200 hover:text-red-800"
+                          className="font-semibold text-red-600 transition-colors duration-200 hover:text-red-800 cursor-pointer"
                         >
                           Read Less ↑
                         </motion.button>
