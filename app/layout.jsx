@@ -3,6 +3,7 @@ import { Inter, Epilogue, Mohave, Momo_Signature } from "next/font/google";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import WhatsAppButton from "@/components/common/Whatsapp";
+import CookieBanner from "@/components/common/CookieBanner";
 import "./globals.css";
 
 const inter = Inter({
@@ -53,6 +54,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );

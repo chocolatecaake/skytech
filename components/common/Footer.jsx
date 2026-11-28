@@ -8,6 +8,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { services } from "@/constants/services";
 import { links } from "@/constants/navigation";
 import { FaLinkedin } from "react-icons/fa6";
+import MapEmbed from "./MapEmbed";
 
 export default function Footer() {
   return (
@@ -32,16 +33,7 @@ export default function Footer() {
 
           <span>P.O. Box 132415</span>
 
-          <div className="rounded-default overflow-hidden border border-white shadow-xl">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3636.768870481484!2d54.4651078!3d24.284802199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e3fffce2dbb61%3A0xd28a7c596c35a5c1!2sStar%20Brand%20Business%20Center!5e0!3m2!1sen!2sae!4v1792513765104!5m2!1sen!2sae"
-              width="100%"
-              height="200"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-            ></iframe>
-          </div>
+          <MapEmbed />
         </div>
         <div className="flex flex-col text-white space-y-default text-base whitespace-nowrap">
           <h4 className="text-accent whitespace-nowrap">Quick Contact</h4>
