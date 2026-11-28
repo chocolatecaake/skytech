@@ -78,10 +78,10 @@ export default function BlogContent({ blog }) {
     <>
       <section>
         <main className="max-w-6xl mx-auto w-full min-w-0">
-          <div className="max-w-4xl mx-auto mb-6 sticky top-24 z-10">
+          <div className="mb-6 sticky top-24 z-10 pointer-events-none">
             <Link
               href="/blogs"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-red-600 transition-colors bg-background px-3 py-1.5 rounded-full shadow-sm"
+              className="pointer-events-auto inline-flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-red-600 transition-colors bg-background px-3 py-1.5 rounded-full shadow-sm"
             >
               <FaArrowLeft /> Back to Blogs
             </Link>
