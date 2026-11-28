@@ -57,6 +57,7 @@ export default function Footer() {
               <Link
                 href="https://www.linkedin.com/company/sky-tech-general-contracting/people/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaLinkedin className="body-large inline mr-small text-yellow-300" />
                 Skytech
@@ -69,8 +70,10 @@ export default function Footer() {
           {services.map((service, idx) => (
             <Link
               key={idx}
+              target="_blank"
               href={`/services?open=${service.slug}#${service.slug}`}
               className="hover:text-yellow"
+              rel="noopener"
             >
               <span>{service.title}</span>
             </Link>
@@ -80,7 +83,13 @@ export default function Footer() {
           <h4 className="text-accent whitespace-nowrap">Quick Links</h4>
           <div className="flex flex-col space-y-small">
             {links.map((link, idx) => (
-              <Link key={idx} href={link.path} className=" hover:text-yellow">
+              <Link
+                key={idx}
+                href={link.path}
+                target="_blank"
+                rel="noopener"
+                className=" hover:text-yellow"
+              >
                 <span>{link.name}</span>
               </Link>
             ))}

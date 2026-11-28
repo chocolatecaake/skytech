@@ -51,7 +51,7 @@ const AboutClient = () => {
                 international quality standards.
               </p>
 
-              <Link href="/certifications">
+              <Link href="/certifications" target="_blank" rel="noopener">
                 <div className="flex items-center gap-small">
                   <div className="relative w-12 h-12">
                     <Image

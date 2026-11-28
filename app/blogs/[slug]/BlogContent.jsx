@@ -61,6 +61,8 @@ function Block({ block }) {
       return (
         <p className={`${text} mb-4`}>
           <Link
+            target="_blank"
+            rel="noopener"
             href={block.href}
             className="text-red-600 font-semibold hover:underline"
           >
@@ -80,6 +82,8 @@ export default function BlogContent({ blog }) {
         <main className="max-w-6xl mx-auto w-full min-w-0">
           <div className="mb-6 sticky top-24 z-10 pointer-events-none">
             <Link
+              target="_blank"
+              rel="noopener noreferrer"
               href="/blogs"
               className="pointer-events-auto inline-flex items-center gap-2 text-sm font-semibold text-gray-600 hover:text-red-600 transition-colors bg-background px-3 py-1.5 rounded-full shadow-sm"
             >
