@@ -9,14 +9,14 @@ const Button = ({
   download,
 }) => {
   const variants = {
-    CTA: "bg-secondary text-white hover:bg-darkred",
+    CTA: "bg-secondary text-white hover:bg-darkred cursor-pointer",
 
-    primary: "bg-primary border-transparent text-white hover:bg-accent",
+    primary: "bg-primary border-transparent text-white hover:bg-accent cursor-pointer",
 
-    secondary: "bg-white text-primary hover:bg-accent",
+    secondary: "bg-white text-primary hover:bg-accent cursor-pointer",
 
     tertiary:
-      "bg-white/10 text-white inset-border backdrop-blur hover:bg-accent",
+      "bg-white/10 text-white inset-border backdrop-blur hover:bg-accent cursor-pointer",
 
     // tertiary:
     //   "inset-border bg-white text-primary backdrop-blur hover:bg-accent",
@@ -34,7 +34,6 @@ const Button = ({
     font-semibold
     transition-all duration-300
     shadow-default
-    cursor-pointer
     ${variants[variant]}
   `;
 
