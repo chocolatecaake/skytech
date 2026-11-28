@@ -13,13 +13,15 @@ import { motion } from "framer-motion";
 
 const page = () => {
   const [openCert, setOpenCert] = useState(null);
+  const [slide, setSlide] = useState(0);
 
   return (
     <>
       <section>
         <Title
           pretitle="Our Qualifications"
-          header="ADNOC, ICV & ISO Certifications"
+          header="
+          Certified Standards & Credentials"
           align="center"
           as="h1"
         />
@@ -47,7 +49,10 @@ const page = () => {
             >
               <button
                 type="button"
-                onClick={() => setOpenCert(cert)}
+                onClick={() => {
+                  setSlide(0);
+                  setOpenCert(cert);
+                }}
                 className="card bg-white items-center justify-center border-1 border-tertiary/10 h-full w-full group cursor-pointer"
               >
                 <div className="relative w-32 h-32">
@@ -88,17 +93,35 @@ const page = () => {
               >
                 ✕
               </button>
-              {/* stacked so multi-cert types (ISO) scroll inside the modal */}
-              <div className="h-full w-full overflow-y-auto space-y-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              {/* one full-height snap slide per image; multi-cert types (ISO) scroll inside the modal */}
+              <div
+                onScroll={(e) =>
+                  setSlide(
+                    Math.round(
+                      e.currentTarget.scrollTop / e.currentTarget.clientHeight,
+                    ),
+                  )
+                }
+                className="h-full w-full overflow-y-auto snap-y snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              >
                 {openCert.images.map((src) => (
-                  <img
+                  <div
                     key={src}
-                    src={src}
-                    alt={openCert.title}
-                    className="mx-auto max-h-full max-w-full w-auto object-contain rounded-default shadow-lg"
-                  />
+                    className="h-full snap-start flex items-center justify-center"
+                  >
+                    <img
+                      src={src}
+                      alt={openCert.title}
+                      className="max-h-full max-w-full w-auto object-contain rounded-default shadow-lg"
+                    />
+                  </div>
                 ))}
               </div>
+              {openCert.images.length > 1 && (
+                <span className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/70 px-3 py-1 text-sm font-semibold text-white pointer-events-none">
+                  {slide + 1} / {openCert.images.length} scroll down for more
+                </span>
+              )}
             </div>
           </div>,
           document.body,
