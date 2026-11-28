@@ -1,6 +1,8 @@
 "use client";
 
 import Title from "@/components/common/Title";
+import CTASection from "@/components/common/CTASection";
+import Button from "@/components/common/Button";
 import Image from "next/image";
 
 import { useState } from "react";
@@ -24,60 +26,75 @@ const GalleryPage = () => {
   );
 
   return (
-    <section>
-      <Title
-        pretitle="Gallery"
-        header="Our Piping Projects Gallery"
-        align="center"
-        as="h1"
-      />
+    <>
+      <section>
+        <Title
+          pretitle="Gallery"
+          header="Our Piping Projects Gallery"
+          align="center"
+          as="h1"
+        />
 
-      {/* Gallery Grid */}
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-default">
-        {currentImages.map((image, index) => (
-          <motion.div
-            key={index}
-            variants={cardVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            custom={index}
-            className="relative aspect-[4/3] overflow-hidden rounded-default shadow-lg"
-          >
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              style={{ objectPosition: image.position }}
-              className="object-cover transition-transform duration-500 hover:scale-105"
-              sizes="(max-width: 640px) 100vw,
+        {/* Gallery Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-default">
+          {currentImages.map((image, index) => (
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              custom={index}
+              className="relative aspect-[4/3] overflow-hidden rounded-default shadow-lg"
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                style={{ objectPosition: image.position }}
+                className="object-cover transition-transform duration-500 hover:scale-105"
+                sizes="(max-width: 640px) 100vw,
             (max-width: 1024px) 50vw,
             33vw"
-            />
-          </motion.div>
-        ))}
-      </div>
-
-      {/* Pagination */}
-      {totalPages > 1 && (
-        <div className="flex justify-center gap-small">
-          {Array.from({ length: totalPages }).map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentPage(index + 1)}
-              className={cn(
-                "h-10 w-10 rounded-full border hover:bg-accent cursor-pointer",
-                currentPage === index + 1
-                  ? "bg-primary text-white "
-                  : "bg-white",
-              )}
-            >
-              {index + 1}
-            </button>
+              />
+            </motion.div>
           ))}
         </div>
-      )}
-    </section>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="flex justify-center gap-small">
+            {Array.from({ length: totalPages }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentPage(index + 1)}
+                className={cn(
+                  "h-10 w-10 rounded-full border hover:bg-accent cursor-pointer",
+                  currentPage === index + 1
+                    ? "bg-primary text-white "
+                    : "bg-white",
+                )}
+              >
+                {index + 1}
+              </button>
+            ))}
+          </div>
+        )}
+      </section>
+      <CTASection
+        img="/assets/construction.webp"
+        title="Want to learn more about Skytech?"
+        subtitle="Get a quotation from our experienced engineers"
+        button={
+          <Button
+            variant="CTA"
+            text="Download our brochure"
+            href="/assets/Skytech%20Company%20Brochure.pdf"
+            download="Skytech Company Brochure.pdf"
+          />
+        }
+      />
+    </>
   );
 };
 
